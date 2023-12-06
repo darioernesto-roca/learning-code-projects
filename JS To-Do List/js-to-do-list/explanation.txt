@@ -1,0 +1,12 @@
+HTML:
+We have an input field (taskInput) where the user can type in a task.
+A button to add the task to the list. When this button is clicked, it will call the addTask() function.
+An unordered list (taskList) to display the tasks.
+
+JavaScript:
+The addTask() function is responsible for creating and adding new tasks:
+We first get the taskInput and taskList elements.
+If the input is empty, we alert the user and return without doing anything.
+We then create a new li element (taskItem) and set its text to the value from the input field.
+We also add a delete button for each task, which, when clicked, will remove the task from the list.
+Finally, we add the taskItem to the taskList and clear the input field.

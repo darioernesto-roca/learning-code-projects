@@ -1,0 +1,18 @@
+English
+With this project, you're going to learn:
+Basic HTML structure and how to include a JavaScript file.
+How to manipulate variables in JavaScript.
+How to define and use functions in JavaScript.
+How to interact with HTML elements from JavaScript using the Document Object Model (DOM).
+
+HTML:
+First we've set up a simple structure with a number and two buttons.
+Each button has an onclick attribute which is connected to a function - these functions will be defined in our JavaScript.
+
+JavaScript:
+We have a variable count to keep track of the number.
+The increase() function increments the count variable.
+The decrease() function decrements the count variable.
+After each action (increment or decrement), we call the updateDisplay() function.
+updateDisplay() grabs the HTML element with the ID counter and updates its text content with the current value of count.
+

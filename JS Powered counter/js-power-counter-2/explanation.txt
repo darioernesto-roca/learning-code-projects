@@ -1,0 +1,12 @@
+Updated HTML:
+A <link> element has been added to the <head> to include the styles.css file for styling.
+A new button has been added with the onclick attribute set to the reset() function, which we'll define in JavaScript.
+
+Updated JavaScript:
+A new function called reset() has been introduced. When called, it resets the count variable to zero.
+In the decrease() function, a condition has been added to check that the count is greater than 0 before decrementing. This ensures that the counter doesn't go below zero.
+
+CSS:
+The .container class centers the content and adds a margin to the top.
+The h1 styling increases the font size and sets a color.
+The button styling makes the buttons more visually appealing, sets a hover effect, and adds spacing between them.

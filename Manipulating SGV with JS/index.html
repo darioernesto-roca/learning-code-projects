@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline SVG in HTML</title>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            let circle = document.getElementById('myCircle');
+            let pos = 0;
+            let interval = setInterval(()=> {
+                if (pos>=50) {
+                    clearInterval(interval);
+                }
+                pos++;
+                //moving the circle
+                circle.setAttribute('cx', 50 + pos);
+            }, 16)
+
+            circle.addEventListener('click', () => {
+                circle.style.fill = circle.style.fill === 'blue' ? 'yellow' : 'blue';
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+    <h1>Inline SVG in HTML</h1>
+    <svg width="200" height="200">
+        <circle id="myCircle" cx="80" cy="80" r="70" stroke="tomato" stroke-width="4" fill="yellow" />
+
+    </svg>
+
+</body>
+</html>
