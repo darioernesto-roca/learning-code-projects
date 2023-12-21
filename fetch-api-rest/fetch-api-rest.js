@@ -34,10 +34,10 @@ fetch("https://jsonplaceholder.typicode.com/users/1", {
         username: "johndoe",
         email: "doe.john@outlook.com"
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
 
 // Patch (Update/Modify): Updates a specified resource partially
 
@@ -49,10 +49,10 @@ fetch("https://jsonplaceholder.typicode.com/users/1", {
     body: JSON.stringify({
         email: "doe.john@outlook.com"
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
 
 // Delete (Delete): Deletes a specified resource
 
@@ -64,6 +64,5 @@ fetch("https://jsonplaceholder.typicode.com/users/1", {
     body: JSON.stringify({
         email: ""
     })
-
 });
 
