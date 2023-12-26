@@ -19,3 +19,8 @@ for (let i = 0; i < lunarPhases.length; i++) {
 
     document.body.appendChild(img);
 }
+
+// Replace this with your own function to get the image source based on the moon phase
+function getImageSrc(moonPhase) {
+    return `./img/${moonPhase.toLowerCase().replace(' ', '-')}.png`;
+}
