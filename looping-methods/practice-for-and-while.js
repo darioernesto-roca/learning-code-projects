@@ -64,7 +64,7 @@ do {
     const img = document.createElement('img');
     img.src = imageSrc;
     img.alt = moonPhase;
-
+    
     document.body.appendChild(img);
 
     k++;
