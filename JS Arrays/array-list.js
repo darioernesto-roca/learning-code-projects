@@ -15,10 +15,25 @@ numArray.push(6); // Now numArray is [1, 2, 3, 4, 5, 6]
 numArray.pop(); // Now numArray is [1, 2, 3, 4, 5]
 
 // Accessing length
-numArray.length; // Outputs: 5
+console.log(numArray.length); // Outputs: 5
 
 // Accessing elements
 console.log(numArray[0]); // Outputs: 1
+
+// Adding an element to the beginning
+numArray.unshift(0); // numArray is now [0, 1, 2, 3, 4, 5]
+
+// Removing the first element
+numArray.shift(); // numArray is back to [1, 2, 3, 4, 5]
+
+// Finding an element
+let index = numArray.indexOf(3); // index is 2
+
+// Sorting elements
+numArray.sort((a, b) => b - a); // numArray is now [5, 4, 3, 2, 1]
+
+// Creating a new array with doubled values
+let doubled = numArray.map(x => x * 2); // doubled is [10, 8, 6, 4, 2]
 
 
 // Array-like Objects:
