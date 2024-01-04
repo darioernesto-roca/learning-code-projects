@@ -35,6 +35,12 @@ numArray.sort((a, b) => b - a); // numArray is now [5, 4, 3, 2, 1]
 // Creating a new array with doubled values
 let doubled = numArray.map(x => x * 2); // doubled is [10, 8, 6, 4, 2]
 
+//Filtering elements
+let evens = numArray.filter(x => x % 2 == 0); // evens is [4, 2]
+
+// Slicing elements
+let sliced = numArray.slice(0, 2); // sliced is [5, 4]
+
 
 // Array-like Objects:
 
