@@ -36,6 +36,17 @@ app.use((req, res, next) => {
 });
 
 
+// Multer
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './public/images');
+    },
+    filename: function(req, file, cb) {
+        cb(null, Date.now() + '-' + file.originalname);
+    }
+});
 
 
 app.listen(3000, () => console.log('🌎 Server running on port http://localhost:3000'));
