@@ -49,5 +49,21 @@ const storage = multer.diskStorage({
 });
 
 
+// Create a multer instance with the storage engine
+const upload = multer({ storage: storage });
+
+// Single file upload
+app.post('/upload', upload.single('file'), (req, res) => {
+    res.send('Single file uploaded successfully');
+});
+
+// Multiple files upload
+app.post('/multiple', upload.array('files', 12), (req, res) => {
+    res.send('Multiple files uploaded successfully');
+});
+
+
+
+
 app.listen(3000, () => console.log('🌎 Server running on port http://localhost:3000'));
 
