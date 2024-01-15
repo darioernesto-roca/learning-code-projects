@@ -50,7 +50,12 @@ const storage = multer.diskStorage({
 
 
 // Create a multer instance with the storage engine
-const upload = multer({ storage: storage });
+const upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 1000000 // 1000000 Bytes = 1 MB
+    }
+});
 
 // Single file upload
 app.post('/upload', upload.single('file'), (req, res) => {
