@@ -60,3 +60,7 @@ function exampleFunction() {
   let nodeList = document.querySelectorAll('div'); // This is an array-like object
   nodeList.forEach(node => console.log(node)); // Iterating over the NodeList
   
+
+  //Array Of:
+  const arrayOfNumbers = Array.of(1, 2, 3, 4, 5);
+  console.log(arrayOfNumbers); // [1, 2, 3, 4, 5]
