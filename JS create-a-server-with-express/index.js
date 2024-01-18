@@ -1,5 +1,10 @@
 const express = require('express');
+const helmet = require('helmet');
+const { body } = require('express-validator');
 const app = express();
+
+// Helmet: middleware to set secure HTTP headers: https://helmetjs.github.io/
+app.use(helmet());
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
@@ -67,7 +72,20 @@ app.post('/multiple', upload.array('files', 12), (req, res) => {
     res.send('Multiple files uploaded successfully');
 });
 
-
+app.post('/user', [
+    // Trims and escapes
+    body('username').trim().escape(),
+    // username must be an email
+    body('username').isEmail(),
+    // password must be at least 5 chars long
+    body('password').isLength({ min: 8 }),
+    // password must contain at least one number
+    body('password').matches(/\d/),
+    // password must contain at least one special character
+    body('password').matches(/[!@#$%^&*(),.?":{}|<>]/),
+], (req, res) => {
+    // Handle the request
+});
 
 
 app.listen(3000, () => console.log('🌎 Server running on port http://localhost:3000'));
