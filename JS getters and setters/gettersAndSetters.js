@@ -43,3 +43,6 @@ let person = new Person("John", "Doe", 30);
 console.log(person.age); // 30
 person.age = 31;
 console.log(person.age); // 31
+
+// Setters: Setters are methods that are used to set the value of a private field. They are often used to validate the value being set before setting the field. For example, you might have a Person class with a private field called _age. You could create a setter called age that validates the value being set and then sets the value of _age. You would call this method like so: person.age = 30.
+
