@@ -1,4 +1,4 @@
-//Finding HTML Element by Id
+// Finding HTML Element by Id
 
 //JQuery
 myElement = $("#id01");
@@ -32,4 +32,45 @@ myElements = $("p.intro");
 
 //JavaScript
 myElements = document.querySelectorAll("p.intro");
+
+
+//Set Text Content
+
+//JQuery
+
+myElement.text("Hello Colombia!");
+
+//JavaScript
+
+myElement.textContent = "Hello Colombia!";
+
+
+// Get Text Content
+
+//JQuery
+
+myText = $("#02").text();
+
+//JavaScript
+
+myText = document.getElementById("02").textContent;
+
+
+//Set HTML Content
+
+//JQuery
+myElement.html("<p>Hello World</p>");
+
+//JavaScript
+myElement.innerHTML = "<p>Hello World</p>";
+
+
+//Get HTML Content
+
+//JQuery
+content = myElement.html();
+
+//JavaScript
+content = myElement.innerHTML;
+
 
