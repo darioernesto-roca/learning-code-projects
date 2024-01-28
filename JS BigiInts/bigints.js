@@ -34,3 +34,14 @@ const bigBin = 0b1111111; // 2^53 - 1
 //const rounded = 9007199254740992n; // 9007199254740992n
 //const notRounded = 9007199254740993n; // 9007199254740992n
 
+
+// Minimum and Maximum Safe Integers
+let x = Number.MAX_SAFE_INTEGER; // 9007199254740991
+let y = Number.MIN_SAFE_INTEGER; // -9007199254740991
+
+// Number methods for BigInts
+
+Number.isInteger(9007199254740993n); // true
+Number.isSafeInteger(9007199254740993n); // false
+
+// Safe integers are all integers from -(253 - 1) to +(253 - 1). This is safe: 9007199254740991. This is not safe: 9007199254740992.
