@@ -78,4 +78,13 @@ Number.isNaN(123); // returns false
 Number.isNaN(-1.23); // returns false
 Number.isNaN(NaN); // returns true
 
+// Number.isFinite() returns false if the argument is Infinity or NaN:
+Number.isFinite(10 / 0); // returns false
+Number.isFinite(10 / 1); // returns true
+Number.isFinite(10 / "H"); // returns false
+Number.isFinite(10 / "10"); // returns true
+
+// Number.EPSILON is the smallest interval between two representable numbers:
+Number.EPSILON; // returns 2.220446049250313e-16
+
 
