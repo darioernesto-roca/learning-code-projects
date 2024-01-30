@@ -8,11 +8,26 @@
 let numArray = [1, 2, 3, 4, 5]; // An array of numbers
 let mixedArray = [1, 'text', { a: 1 }, [1, 2, 3]]; // An array containing different types
 
-// Adding elements
+// Select an element from the array
+console.log(numArray[2]); // Outputs: 3
+
+// Many languages allows negative bracket indexing like [-1] to access elements from the end of an object / array / string. This is not possible in JavaScript, because [] is used for accessing both arrays and objects. obj[-1] refers to the value of key -1, not to the last property of the object.The at() method was introduced in ES2022 to solve this problem. It allows you to access elements from the end of an array using negative indices. The at() method is a more readable and safer alternative to using bracket notation with negative indices.
+
+// .at method
+console.log(numArray.at(2)); // Outputs: 3
+console.log(numArray.at(-2)); // Outputs: 4
+
+// Adding elements (pushing is adding at the end)
 numArray.push(6); // Now numArray is [1, 2, 3, 4, 5, 6]
 
-// Removing elements
+// Removing elements (popping is removing from the end)
 numArray.pop(); // Now numArray is [1, 2, 3, 4, 5]
+
+// Adding elements (unshifting is adding at the beginning)
+numArray.unshift(0); // Now numArray is [0, 1, 2, 3, 4, 5]
+
+// Removing elements (shifting is removing from the beginning)
+numArray.shift(); // Now numArray is [1, 2, 3, 4, 5]
 
 // Accessing length
 console.log(numArray.length); // Outputs: 5
@@ -25,6 +40,13 @@ numArray.unshift(0); // numArray is now [0, 1, 2, 3, 4, 5]
 
 // Removing the first element
 numArray.shift(); // numArray is back to [1, 2, 3, 4, 5]
+
+// To string (converts array to a string)
+let string = numArray.toString(); // string is "1, 2, 3, 4, 5"
+
+// Join elements into a string
+let joined = numArray.join(', '); // joined is "1, 2, 3, 4, 5"
+
 
 // Finding an element
 let index = numArray.indexOf(3); // index is 2
