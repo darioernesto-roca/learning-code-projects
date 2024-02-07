@@ -31,9 +31,7 @@ function readLine() {
 
 function aVeryBigSum(ar) {
     // Write your code here
-    function aVeryBigSum(ar) {
-        return ar.reduce((a, b) => a + b, 0);
-    }
+    return ar.reduce((a, b) => a + b, 0);
  
 }
 
@@ -50,3 +48,4 @@ function main() {
 
     ws.end();
 }
+
