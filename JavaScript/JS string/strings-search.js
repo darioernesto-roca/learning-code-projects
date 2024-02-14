@@ -29,3 +29,11 @@ console.log(matches2); // Output: [ 'o', 'o' ]
 
 // What's the difference between indexoOf and search?
 // The difference between indexOf() and search() is that search() can take a regular expression as an argument.
+
+// String includes()
+const str6 = "Hello, world!";
+const includes = str6.includes("o");
+console.log(includes); // Output: true
+console.log(str6.includes("x")); // Output: false
+console.log(str6.includes("o", 5)); // Output: true
+console.log(str6.includes("o", 6)); // Output: false
