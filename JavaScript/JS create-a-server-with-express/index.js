@@ -72,6 +72,7 @@ app.post('/multiple', upload.array('files', 12), (req, res) => {
     res.send('Multiple files uploaded successfully');
 });
 
+// Validation
 app.post('/user', [
     // Trims and escapes
     body('username').trim().escape(),
@@ -86,7 +87,6 @@ app.post('/user', [
 ], (req, res) => {
     // Handle the request
 });
-
 
 app.listen(3000, () => console.log('🌎 Server running on port http://localhost:3000'));
 
