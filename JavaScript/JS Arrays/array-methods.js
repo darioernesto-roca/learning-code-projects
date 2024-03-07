@@ -47,6 +47,7 @@ let string = numArray.toString(); // string is "1, 2, 3, 4, 5"
 // Join elements into a string
 let joined = numArray.join(', '); // joined is "1, 2, 3, 4, 5"
 
+let joinedDash = numArray.join(' - '); // joinedDash is "1 - 2 - 3 - 4 - 5"
 
 // Finding an element
 let index = numArray.indexOf(3); // index is 2
