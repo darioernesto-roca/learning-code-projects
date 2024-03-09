@@ -1,0 +1,13 @@
+<!-- ...HTML -->
+<button id="miBoton">Presióname</button>
+<div id="contador">Veces presionado: 0</div>
+
+<script>
+(function() {
+    let counter = 0;
+    document.getElementById('miBoton').addEventListener('click', function() {
+        counter++; // Incrementa el contador
+        document.getElementById('contador').innerText = 'Veces presionado:   ' + counter;
+    });
+})();
+</script>
