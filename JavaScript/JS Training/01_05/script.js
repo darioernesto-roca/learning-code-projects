@@ -7,6 +7,12 @@
 /* Multi-line comment
 See! this line is also commented out! */
 
+/**
+ * function updateBackpack()
+ * Outputs HTML
+ * @param {string} update 
+ */
+
 const updateBackpack = (update) => {
   let main = document.querySelector("main"); // main is an element
   main.innerHTML = markup(backpack);
@@ -16,11 +22,11 @@ const updateBackpack = (update) => {
 const backpack = {
   name: "Everyday Backpack",
   volume: 30,
-  color: "grey",
-  pocketNum: 15,
-  strapLength: {
-    left: 26,
-    right: 26,
+  // color: "grey",
+  // pocketNum: 15,
+  // strapLength: {
+  //   left: 26,
+  //   right: 26,
   },
   lidOpen: false,
   toggleLid: function (lidStatus) {
