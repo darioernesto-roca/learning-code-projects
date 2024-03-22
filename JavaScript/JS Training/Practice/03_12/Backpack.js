@@ -37,4 +37,28 @@ class Backpack {
   }
 }
 
-export default Backpack;
+class NightTable {
+  constructor(
+    // Defines parameters:
+    name,
+    volume,
+    material,
+    drawerNum,
+    drawerOpen,
+    drawerContent,
+  ) {
+    // Define properties:
+    this.name = name;
+    this.volume = volume;
+    this.material = material;
+    this.drawerNum = drawerNum;
+    this.drawerOpen = false;
+    this.drawerContent = drawerContent;
+    }
+  // Add methods like normal functions:
+  toggleDrawer(drawerStatus) {
+    this.drawerOpen = drawerStatus;
+  }
+}
+
+export {Backpack, NightTable};
