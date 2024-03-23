@@ -17,4 +17,4 @@ const everydayPack = new Backpack(
 );
 
 console.log("The everydayPack object:", everydayPack);
-console.log("Date acquired:", everydayPack.dateAcquired);
+console.log("Date acquired:", everydayPack.dateAcquired); // Output: Date acquired: Wed Dec 05 2018 15:00:00 GMT-0800 (PST)
