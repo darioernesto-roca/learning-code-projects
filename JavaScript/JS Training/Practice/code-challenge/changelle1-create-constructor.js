@@ -1,11 +1,11 @@
-// JavaScript code​​​​​​‌​‌​‌‌‌​‌‌‌​‌​​‌​​‌‌​​​‌​ below
+// JavaScript code below
 // Write your answer here, and then test your code.
 // Your job is to implement the findLargest() method.
 
 // Change these boolean values to control whether you see 
 // the expected answer and/or hints.
-const showExpectedResult = true;
-const showHints = false;
+// const showExpectedResult = true;
+// const showHints = false;
 
 const bookTitle = "Alice's Adventures in Wonderland"
 const bookAuthor = "Lewis Carroll"
