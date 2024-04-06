@@ -44,3 +44,6 @@ console.log(findMax(numbers)); // 10
 // The second argument to `reduce` is `-Infinity`, which is the initial value of `max`. This is a common technique when searching for a maximum value, because any number will be greater than `-Infinity`, so the first number in the array will immediately become the new maximum.
 
 // So, in summary, [`findMax`] works by iterating over the array and keeping track of the maximum number found so far, and then it returns that maximum number.
+
+const c = a.map((number) => number * 2);
+console.log(c); // [2, 4, 6, 8, 10]
