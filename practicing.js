@@ -47,3 +47,35 @@ console.log(findMax(numbers)); // 10
 
 const c = a.map((number) => number * 2);
 console.log(c); // [2, 4, 6, 8, 10]
+
+
+'I am learning Web Dev'
+  .split(' ')
+  .map(s=>
+    s[0].toUpperCase() 
+    + s.slice(1).toLowerCase())
+  .join(' ')
+
+// 'I Am Learning Web Dev'
+
+
+// 1. .split(' '): Splits the string into an array of words using a space ' ' as the separator. The result is ["I", "am", "learning", "Web", "Dev"].
+
+//2. .map(s=> s[0].toUpperCase() + s.slice(1).toLowerCase()): Maps over each word in the array, converting the first character to uppercase and the rest of the word to lowercase. This step ensures that each word starts with a capital letter and the rest of the letters are lowercase, regardless of their original case.
+
+// "I" becomes "I" (no change since it's already a single uppercase letter).
+// "am" becomes "Am" (the first letter is capitalized).
+// "learning" becomes "Learning" (the first letter is capitalized).
+// "Web" becomes "Web" (no change since it already meets the criteria).
+// "Dev" becomes "Dev" (no change since it already meets the criteria).
+// .join(' '): Joins the transformed array elements back into a string, separating each word with a space. The result is "I Am Learning Web Dev".
+
+console.log(null || 'string') // 'string'
+
+let income = 1500
+if (income > 2500) {
+  var tax = 500
+} else {
+  var tax = 200
+}
+console.log(tax); // 200
