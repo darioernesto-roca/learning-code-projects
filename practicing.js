@@ -79,3 +79,16 @@ if (income > 2500) {
   var tax = 200
 }
 console.log(tax); // 200
+
+
+// Object practice
+
+const obj = {
+  "1": a,
+  1: "b",
+  [1]: "c"
+}
+
+console.log(obj["1"]); // "c"
+
+// The object `obj` has three properties: `"1"`, `1`, and `[1]`. These properties are defined using different syntaxes: string literal, number literal, and computed property.
