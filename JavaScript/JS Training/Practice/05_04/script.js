@@ -5,6 +5,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const main = document.querySelector(".maincontent");
+  const mainH1 = main.querySelector("h1");
+  console.log(`Main before change: ${mainH1.textContent}`);
   const h1 = document.createElement("h1");
   h1.textContent = "Hello, World!";
   main.appendChild(h1);
