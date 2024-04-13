@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me Button</title>
+</head>
+<body>
+    <h1>Click Me Button</h1>
+    <div id="div">
+        <button id="btn">Click me</button>
+    </div>
+    
+    <script>
+        const btn = document.getElementById('btn');
+    
+        btn.addEventListener('click', () => {
+             console.log('btn');
+            }, false);
+    
+        const div = document.getElementById('div');
+    
+        div.addEventListener('click', () => {
+            console.log('div');
+            }, false);
+    </script>
+    
+</body>
+</html>
