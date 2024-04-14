@@ -101,3 +101,13 @@ const baz = [...foo, 4, 5];
 console.log(bar, baz); // [1, 2, 3, 4, 5] [1, 2, 3, 4, 5]
 
 // The selected code is demonstrating two different ways to add elements to an array in JavaScript: using the concat method and the spread operator (...).  First, an array foo is declared and initialized with the values [1, 2, 3]. Next, a new array bar is created by calling the concat method on foo and passing in 4 and 5 as arguments. The concat method returns a new array that is a combination of the original array and the values passed as arguments. So, bar will be a new array with the values [1, 2, 3, 4, 5]. Then, another new array baz is created using the spread operator. The spread operator (...) takes all elements from foo and spreads them into the new array. After that, 4 and 5 are added to the end of the array. So, baz will also be an array with the values [1, 2, 3, 4, 5]. Finally, the console.log statement logs the values of bar and baz to the console. Since both bar and baz are [1, 2, 3, 4, 5], the output will be: [1, 2, 3, 4, 5] [1, 2, 3, 4, 5]
+
+
+// Create a function that takes an array of numbers and returns the max value
+function maxNumber (list) {
+  return list.reduce((maxNumber, list) => {
+    return list > max ? number : max;
+  })
+}
+
+console.log(maxNumber([1, 2, 9, 4, 14])); // 14
