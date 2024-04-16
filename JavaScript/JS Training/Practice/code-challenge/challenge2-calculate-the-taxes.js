@@ -13,8 +13,8 @@ const calculateTotal = (prices) => {
     totals.beforeTax = prices.reduce((a,b) => a + b, 0);
 
     // Your code starts here
-    totals.GST = totals.beforeTax * taxGST / 100;
-    totals.PST = totals.beforeTax * taxPST / 100;
+    totals.GST = totals.beforeTax * (taxGST / 100);
+    totals.PST = totals.beforeTax * (taxPST / 100);
 
     totals.sum = totals.beforeTax + totals.GST + totals.PST;
 
