@@ -18,3 +18,5 @@ collection.pop(); // remove last item
 console.log(collection); // ["Piggy", "flashlight", 5]
 collection.push(true); // add item to the end
 
+collection[9] = "new item"; // add item to the 10th position
+console.log(collection); // ["Piggy", "flashlight", 5, true, empty x5, "new item"]
