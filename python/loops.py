@@ -9,3 +9,15 @@ for name in ["Alice", "Bob", "Charlie"]:
 
 for character in "Ernesto":
     print(character) # for loop
+
+box = ['one', 'two', 'three']
+
+for i in range(len(box)):
+    print(box[i]) # for loop
+
+# while loop
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1
