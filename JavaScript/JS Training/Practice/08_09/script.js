@@ -57,3 +57,37 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+// Helper function to create a figure with an image and a caption
+function createImageFigure() {
+  const figure = document.createElement("figure");
+  const img = document.createElement("img");
+  img.src = frogpack.image;
+  img.alt = `Image of ${frogpack.name}`;
+  
+  const figcaption = document.createElement("figcaption");
+  figcaption.textContent = `${frogpack.name} image`;
+
+  figure.appendChild(img);
+  figure.appendChild(figcaption);
+
+  return figure;
+}
+
+// Main function to create and populate an article element
+function createArticle() {
+  const article = document.createElement("article");
+  article.innerHTML = content; // Use the predefined content variable
+
+  const figure = createImageFigure(); // Call helper function to get the figure
+  article.appendChild(figure); // Append the figure to the article
+
+  return article;
+}
+
+// Append the created article to the main element in the document
+document.addEventListener("DOMContentLoaded", () => {
+  const mainElement = document.querySelector("main");
+  const article = createArticle();
+  mainElement.appendChild(article);
+});

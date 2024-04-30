@@ -66,6 +66,7 @@ const content = `
  * - Creates <figure> <img> <figcaption>
  * - Returns <figure>
  */
+
 const addFigure = (dataObj) => {
   let newFigure = document.createElement("figure");
   let newImg = document.createElement("img");
