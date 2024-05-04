@@ -82,5 +82,10 @@ for (const singleObject in nestedObjects) {
   stuffList.append(listItem);
 }
 
+/**
+ * The difference between for...in and for...of loops in JavaScript is that for...in loops iterate over all enumerable properties of an object, while for...of loops iterate over all values of an iterable object.
+ */
+
+
 
 article.append(stuffList);
