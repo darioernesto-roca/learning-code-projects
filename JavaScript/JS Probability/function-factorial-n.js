@@ -18,6 +18,5 @@ let totalCombinations = totalCombinationsArray1 * totalCombinationsArray2;
 
 let probability = 1 / totalCombinations;
 
-console.log(`The probability of the event is ${probability}`);
 let trials = 1 / probability;
-console.log(`The event is expected to occur once in every ${Math.round(trials)} trials.`);
+console.log(`La probabilidad de ganarte el baloto es de ${Math.ceil(probability)} en ${Math.round(trials)} intentos.`);
