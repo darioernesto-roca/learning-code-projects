@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Speech</title>
+    <title>Text to Speech with Voice Selection</title>
     <style>
         .container {
             width: 50%;
@@ -26,7 +26,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Text to Speech</h1>
+        <h1>Text to Speech with Voice Selection</h1>
+        <select id="voiceSelect"></select>
         <textarea name="text" id="text" cols="30" rows="10"></textarea>
         <button id="speak">Speak</button>
     </div>
@@ -34,6 +35,20 @@
     <script>
         const text = document.getElementById('text');
         const speak = document.getElementById('speak');
+        const voiceSelect = document.getElementById('voiceSelect');
+
+        let voices = [];
+
+        function populateVoiceList() {
+            voices = speechSynthesis.getVoices();
+            for (let i = 0; i < voices.length; i++) {
+                const option = document.createElement('option');
+                option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+                option.setAttribute('data-lang', voices[i].lang);
+                option.setAttribute('data-name', voices[i].name);
+                voiceSelect.appendChild(option);
+            }
+        }
 
         speak.addEventListener('click', () => {
             const speech = new SpeechSynthesisUtterance();
@@ -43,8 +58,14 @@
             speech.rate = 1;
             speech.pitch = 1;
 
+            const selectedOption = voiceSelect.selectedOptions[0];
+            const selectedVoice = voices.find(voice => voice.name === selectedOption.getAttribute('data-name'));
+            speech.voice = selectedVoice;
+
             window.speechSynthesis.speak(speech);
         })
+
+        speechSynthesis.onvoiceschanged = populateVoiceList;
         </script>
 </body>
 </html>
