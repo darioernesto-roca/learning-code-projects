@@ -1,4 +1,7 @@
-// Function calculates the BMI based on the height and weight entered by the user
+/*
+An example of a Body Mass Index (BMI) calculator using JavaScript functions,
+if and else if statements, and DOMScripting.
+*/
 
 function calculateBMI() {
     let height = document.getElementById('height').value;
