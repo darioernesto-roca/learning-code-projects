@@ -4,14 +4,11 @@ class Vehicle {
         this.speed = speed;
     }
     addToPage() {
-        const path = document.createElement("marquee");
+        const path = document.createElement("div");
         path.textContent = this.emoji;
-        path.style.fontSize = "3rem";
-        path.style.display = "block";
-        path.style.margin = "20px";
-        path.scrollAmount = this.speed;
+        path.classList.add("vehicle");
+        path.style.animationDuration = `${10 / this.speed}s`;
         document.body.appendChild(path);
-
     }
 }
 

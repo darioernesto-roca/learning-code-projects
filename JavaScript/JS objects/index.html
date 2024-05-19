@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objects</title>
     <style>
-        body {
-            background-color:fuchsia;
+        @keyframes moveRightToLeft {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .vehicle {
+            font-size: 3rem;
+            display: block;
+            width: 100%;
+            margin: 20px;
+            position: absolute;
+            white-space: nowrap;
+            animation: moveRightToLeft linear infinite;
         }
     </style>
 </head>
