@@ -40,9 +40,21 @@ function miniMaxSum(arr) {
         sum += arr[i];
     }
     console.log(sum - max, sum - min);
-    
-
 }
+
+// function miniMaxSum(arr) {
+//     // Sort the array
+//     arr.sort((a, b) => a - b);
+
+//     // Calculate the minimum sum (sum of the first four elements)
+//     let minSum = arr.slice(0, 4).reduce((a, b) => a + b, 0);
+    
+//     // Calculate the maximum sum (sum of the last four elements)
+//     let maxSum = arr.slice(1, 5).reduce((a, b) => a + b, 0);
+
+//     // Print the results
+//     console.log(minSum + ' ' + maxSum);
+// }
 
 function main() {
 
