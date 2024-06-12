@@ -1,4 +1,4 @@
-// Break and continue
+// Break and continue: They are used to control the flow of loops. Break is used to exit the loop and continue is used to skip the current iteration and move to the next iteration.
 
 const scores = [50, 25, 0, 30, 100, 20, 10];
 
