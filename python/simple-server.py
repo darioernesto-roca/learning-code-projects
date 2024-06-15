@@ -1,11 +1,24 @@
-import SimpleHTTPServer
-import SocketServer
+# Create a simple server with python
 
-PORT = 8000
+import socket
 
-Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+# Create a socket object
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-httpd = SocketServer.TCPServer(("", PORT), Handler)
+# Get the local machine name
+host = socket.gethostname()
+port = 9999
 
-print "serving at port", PORT
-httpd.serve_forever()
+# Bind to the port
+server.bind((host, port))
+
+# Queue up to 5 requests
+server.listen(5)
+
+while True:
+    # Establish a connection
+    client, address = server.accept()
+    print("Got a connection from %s" % str(address))
+    message = 'Thank you for connecting'
+    client.send(message.encode('ascii'))
+    client.close()
