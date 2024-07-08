@@ -17,3 +17,17 @@ b = a[::-1]
 print(b)
 # Output: [5, 4, 3, 2, 1]
 
+
+# Trick 3: Combining different lists
+
+a=['a','b','c','d']
+b=['e','f','g','h']
+
+for x, y in zip(a, b):
+    print(x,y)
+
+# Output:
+# a e
+# b f
+# c g
+# d h
