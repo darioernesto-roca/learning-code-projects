@@ -31,3 +31,19 @@ for x, y in zip(a, b):
 # b f
 # c g
 # d h
+
+
+# Trick 4: Negative indexing lists
+
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a[-3:-1]
+
+# Output: [8, 9]
+
+
+# Trick 5: Analyzing the most frequent on the list
+
+a = [1, 2, 3, 4, 2, 2, 3, 1, 4, 4, 4]
+print(max(set(a), key = a.count))
+
+# Output: 4
