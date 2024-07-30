@@ -29,6 +29,18 @@ const rocinante = {
     owner: "Don Quijote",
 };
 
+let house = {
+    name: "My House",
+    address: "Street 2a # 21 - 59",
+    rooms: 5,
+    bathrooms: 3,
+    size: 301,
+    doorOpen: true
+};
+
+console.log(house.name); // Outputs: "My House"
+console.log(house["address"]); // Outputs: "Street 2a # 21 - 59"
+
 // Methods for objects
 
 // Object.keys() returns an array of the keys in an object
