@@ -40,6 +40,45 @@ let house = {
 
 console.log(house.name); // Outputs: "My House"
 console.log(house["address"]); // Outputs: "Street 2a # 21 - 59"
+console.log(Object.keys(house)); // Outputs: ["name", "address", "rooms", "bathrooms", "size", "doorOpen"]
+console.log(Object.values(house)); // Outputs: ["My House", "Street 2a # 21 - 59", 5, 3, 301, true]
+
+house.name = "My New House";
+console.log(house.name); // Outputs: "My New House"
+
+// Change name key
+house["name"] = "My New House";
+
+// Change key
+house["Full Name"] = house.name;
+console.log(house["Full Name"]); // Outputs: "My New House"
+
+// Add new key
+house["floors"] = 2;
+console.log(house.floors); // Outputs: 2
+
+// Delete key
+delete house["floors"];
+console.log(house.floors); // Outputs: undefined
+
+// Nested objects
+const myHouse = {
+    name: "My House",
+    address: {
+        street: "Street 2a",
+        number: "21 - 59",
+    },
+    rooms: 5,
+    bathrooms: 3,
+    size: 301,
+    doorOpen: true,
+};
+
+console.log(myHouse.address.street); // Outputs: "Street 2a"
+
+
+
+
 
 // Methods for objects
 
