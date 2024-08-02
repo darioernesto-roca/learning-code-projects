@@ -28,3 +28,14 @@ def f(x, y):
 print(reduce(f, [1, 2, 3, 4, 5]))
 
 # Output: 15
+
+lambdaFunction = lambda x, y: x + y
+
+print(lambdaFunction(1, 2)) # Output: 3
+
+array = [1, 2, 3, 4, 5]
+
+# Find even numbers
+evenNumbers = list(filter(lambda x: x % 2 == 0, array))
+
+print(evenNumbers) # Output: [2, 4]
