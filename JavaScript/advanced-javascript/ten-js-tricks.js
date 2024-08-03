@@ -25,4 +25,13 @@ const newArray = [...originalArray];
 // Merge objects
 const obj1 = { a: 1, b: 2 };
 const obj2 = { c: 3, d: 4 };
-const mergedObj = { ...obj1, ...obj2 };
+const mergedObj = { ...obj1, ...obj2 }; // { a: 1, b: 2, c: 3, d: 4 }
+
+/* 3. Currying
+Currying is a functional programming technique in which a function that takes multiple arguments is transformed into a sequence of functions, each taking a single argument. This allows for better reuse and composition of the code.
+*/ 
+const multiply = (a) => (b) => a * b;
+const multiplyByTwo = multiply(2);
+const result = multiplyByTwo(5); // 10
+
+
