@@ -34,4 +34,41 @@ const multiply = (a) => (b) => a * b;
 const multiplyByTwo = multiply(2);
 const result = multiplyByTwo(5); // 10
 
+/* 4. Memoization is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+*/
 
+const memoizedFibonacci = (function () {
+    const cache = {};
+  
+    return function fib(n) {
+      if (n in cache) return cache[n];
+      if (n <= 1) return n;
+  
+      cache[n] = fib(n - 1) + fib(n - 2);
+      return cache[n];
+    };
+  })();
+
+/*Promises and Async/Await
+Promises are a way to handle asynchronous operations in JavaScript. They represent a value that may be available now, in the future, or never. The async/await syntax provides a more elegant way to work with promises and handle asynchronous code. Promises and Async/Await are essential to handle asynchronous operations more gracefully and make code more readable and maintainable. They help avoid callbacks hellish and improve error handling.
+*/
+
+// Using Promises
+function fetchData() {
+    return new Promise((resolve, reject) => {
+      // Asynchronous operation, e.g., fetching data from an API
+      // resolve(data) or reject(error) based on the operation result
+    });
+  }
+  
+  // Using Async/Await
+  async function fetchData() {
+    try {
+      const response = await fetch('https://api.example.com/data');
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      throw error;
+    }
+  }
