@@ -49,7 +49,7 @@ const memoizedFibonacci = (function () {
     };
   })();
 
-/*Promises and Async/Await
+/* 5. Promises and Async/Await
 Promises are a way to handle asynchronous operations in JavaScript. They represent a value that may be available now, in the future, or never. The async/await syntax provides a more elegant way to work with promises and handle asynchronous code. Promises and Async/Await are essential to handle asynchronous operations more gracefully and make code more readable and maintainable. They help avoid callbacks hellish and improve error handling.
 */
 
@@ -72,3 +72,18 @@ function fetchData() {
       throw error;
     }
   }
+
+/* 6. Closures
+Closures are functions that remember the environment in which they were created, even if that environment is no longer accessible. They are useful for creating private variables and for behavior encapsulation. In Spanish, closures are commonly referred to as "clausuras" or "cierres". Both terms are used to describe the concept of a function retaining access to its lexical scope.
+*/
+
+function createCounter() {
+  let count = 0;
+  return function () {
+    return ++count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
