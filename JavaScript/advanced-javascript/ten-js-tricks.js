@@ -87,3 +87,13 @@ function createCounter() {
 const counter = createCounter();
 console.log(counter()); // Output: 1
 console.log(counter()); // Output: 2
+
+/* 7. Function Composition
+Function composition is a technique used to combine multiple functions to create a new function. It is a powerful tool for building complex functions from simpler ones. It helps in creating reusable and modular code. Function composition is the process of combining two or more functions to create a new function. It encourages code reuse and helps create transformations complex step by step.
+*/
+
+const add = (x) => x + 1;
+const _multiplyByTwo = (x) => x * 2;
+const compose = (...fns) => (x) => fns.reduceRight((acc, fn) => fn(acc), x);
+const addAndMultiply = compose(_multiplyByTwo, add);
+console.log(addAndMultiply(3)); // Output: 8
