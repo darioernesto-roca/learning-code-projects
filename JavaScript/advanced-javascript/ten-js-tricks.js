@@ -97,3 +97,18 @@ const _multiplyByTwo = (x) => x * 2;
 const compose = (...fns) => (x) => fns.reduceRight((acc, fn) => fn(acc), x);
 const addAndMultiply = compose(_multiplyByTwo, add);
 console.log(addAndMultiply(3)); // Output: 8
+
+/* 8. Proxy
+The proxy object allows you to create custom behavior for basic object operations. It allows you to intercept and modify object operations. ‘object, such as accessing properties, assigning, and calling methods. Proxies are useful for implementing features like validation, logging, and more.
+*/
+
+const handler = {
+  get: (target, prop) => {
+    console.log(`Accessing property: ${prop}`);
+    return target[prop];
+  },
+};
+
+const targetObj = { name: 'Lokesh', age: 25 };
+const proxyObj = new Proxy(targetObj, handler);
+console.log(proxyObj.name); // Output: Accessing property: name \n Lokesh
