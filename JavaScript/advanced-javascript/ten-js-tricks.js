@@ -112,3 +112,13 @@ const handler = {
 const targetObj = { name: 'Lokesh', age: 25 };
 const proxyObj = new Proxy(targetObj, handler);
 console.log(proxyObj.name); // Output: Accessing property: name \n Lokesh
+
+/* 9. Event Delegation
+Event delegation is a technique for handling events by delegating them to a common ancestor. Instead of attaching event listeners to individual elements, you attach a single event listener to a parent element. This technique is useful when you have a large number of elements that need to handle the same event. Event delegation is a technique in which you attach a single event listener to a parent rather than multiple listeners to each child. memory usage and improves performance, especially for large lists or dynamically generated content.
+*/
+
+document.getElementById('parent').addEventListener('click', function (event) {
+  if (event.target.matches('li')) {
+    console.log('You clicked on an li element!');
+  }
+});
