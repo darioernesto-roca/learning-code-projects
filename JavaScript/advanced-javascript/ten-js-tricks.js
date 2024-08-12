@@ -122,3 +122,26 @@ document.getElementById('parent').addEventListener('click', function (event) {
     console.log('You clicked on an li element!');
   }
 });
+
+/* 10. Web Workers
+Web Workers allow you to run JavaScript code in the background, alongside the main thread. They are useful for offloading CPU-intensive tasks, Avoid UI hangs and improve performance Responsiveness. Web Workers are a way to run JavaScript code in the background, separate from the main thread. They are useful for offloading CPU-intensive tasks, avoiding UI hangs, and improving performance and responsiveness.
+*/
+
+// In the main thread
+const worker = new Worker('worker.js');
+worker.postMessage({ data: 'some data' });
+
+// In the worker.js file
+self.addEventListener('message', function (event) {
+  const data = event.data;
+  // Perform heavy computations with the data
+  // Post the result back to the main thread
+  self.postMessage({ result: computedResult });
+});
+
+// Some application of the web workers are as follows:
+// - Image manipulation
+// - Data processing
+// - File I/O
+// - Network requests
+// - Heavy computations
