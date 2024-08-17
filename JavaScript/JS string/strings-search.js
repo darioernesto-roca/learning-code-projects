@@ -25,7 +25,7 @@ console.log(matches); // Output: [ 'o', index: 4, input: 'Hello, world!', groups
 const matchesRegEx = str4.RegExp(/o/);
 console.log(matchesRegEx); // Output: [ 'o', index: 4, input: 'Hello, world!', groups: undefined ]
 
-// It is recommenden to use the regular expression with the global flag to get all matches.
+// It is recommended to use the regular expression with the global flag to get all matches.
 
 // String match() with global flag
 const str5 = "Hello, world!";
