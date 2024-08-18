@@ -59,3 +59,15 @@ async function fetchData2() {
 }
 
 fetchData2(); // Call the async function to fetch data
+
+/* 9. setInterval(): The setInterval function is used to repeatedly execute a function at a specified interval. It's commonly used for animations, timers, and other time-based operations.
+*/
+
+let count = 0;
+const interval = setInterval(() => {
+  count++;
+  console.log(count);
+  if (count === 5) {
+    clearInterval(interval); // Stop the interval after 5 iterations
+  }
+}, 1000);
