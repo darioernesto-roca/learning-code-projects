@@ -71,3 +71,11 @@ const interval = setInterval(() => {
     clearInterval(interval); // Stop the interval after 5 iterations
   }
 }, 1000);
+
+/* 10. setTimeout(): The setTimeout function is used to execute a function after a specified delay. It's commonly used for delaying code execution, animations, and other time-based operations.
+*/
+
+setTimeout(() => {
+  console.log("Delayed message");
+}, 2000); // Display "Delayed message" after 2 seconds
+
