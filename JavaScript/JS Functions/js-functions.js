@@ -79,3 +79,16 @@ setTimeout(() => {
   console.log("Delayed message");
 }, 2000); // Display "Delayed message" after 2 seconds
 
+/* 11. localStorage: The localStorage object is used to store data in the browser's local storage. It allows you to save data locally on the user's device, even after the browser is closed or the page is refreshed.
+*/
+
+localStorage.setItem("username", "JohnDoe"); // Save data to local storage
+const username = localStorage.getItem("username"); // Retrieve data from local storage
+console.log(username); // Result: JohnDoe
+
+/* 12. sessionStorage: The sessionStorage object is similar to localStorage but stores data for the duration of the page session. The data is cleared when the page is closed or refreshed.
+*/
+
+sessionStorage.setItem("theme", "dark"); // Save data to session storage
+const theme = sessionStorage.getItem("theme"); // Retrieve data from session storage
+console.log(theme); // Result: dark
