@@ -79,4 +79,28 @@ function add(x, y) {
 
 let added = (x, y) => x + y;
 
+// Short-Circuiting with Logical Operators. Instead of using an if statement to assign a value based on a condition, you can use short-circuit evaluation:
+// Full form
+if (x) {
+    y = x;
+} else {
+    y = z;
+}
+
+// Abbreviation
+y = x || z;
+
+// Another example
+let a = null;
+let b = "default value";
+let result = a || b; // result will be "default value" because a is falsy
+
+// Optional Chaining. To avoid checking for null or undefined before accessing properties:
+// Full form
+if (obj && obj.property) {
+    console.log(obj.property);
+}
+
+// Abbreviation
+console.log(obj?.property);
 
