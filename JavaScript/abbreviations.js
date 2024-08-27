@@ -91,9 +91,9 @@ if (x) {
 y = x || z;
 
 // Another example
-let a = null;
-let b = "default value";
-let result = a || b; // result will be "default value" because a is falsy
+let c = null;
+let d = "default value";
+let result = c || d; // result will be "default value" because a is falsy
 
 // Optional Chaining. To avoid checking for null or undefined before accessing properties:
 // Full form
