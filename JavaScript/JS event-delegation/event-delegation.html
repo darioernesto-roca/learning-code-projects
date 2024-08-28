@@ -1,0 +1,17 @@
+<!-- HTML Structure -->
+<ul id="item-list">
+  <li data-id="1">Item 1</li>
+  <li data-id="2">Item 2</li>
+  <li data-id="3">Item 3</li>
+  <!-- More items can be dynamically added here -->
+</ul>
+
+<script>
+// Event delegation
+document.getElementById('item-list').addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+        const itemId = event.target.getAttribute('data-id');
+        console.log('Item clicked:', itemId);
+    }
+});
+</script>
