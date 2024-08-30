@@ -1,6 +1,6 @@
 // Using Promises
 function fetchData() {
-    fetch('https://api.example.com/data')
+    fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
         .then(response => response.json())
         .then(data => {
             console.log('Data fetched:', data);
@@ -13,7 +13,7 @@ function fetchData() {
 // Using Async/Await
 async function fetchData() {
     try {
-        const response = await fetch('https://api.example.com/data');
+        const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
         const data = await response.json();
         console.log('Data fetched:', data);
     } catch (error) {
