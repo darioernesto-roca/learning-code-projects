@@ -17,4 +17,8 @@ function calculateBMI() {
     } else {
         document.getElementById('result').textContent = `Your Body Mass Index is ${bmi} - Obese`;
     }
+
 }
+
+document.getElementById('calculate').addEventListener('click', calculateBMI);
+document.getElementBuId('result').textContent = 'Please enter your height and weight to calculate your BMI';
