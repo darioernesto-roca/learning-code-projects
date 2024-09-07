@@ -12,7 +12,6 @@ function fetchDataUsingPromises() {
 
 fetchDataUsingPromises()
 
-
 // Using Async/Await
 async function fetchDataUsingAsyncAwait() {
     try {
@@ -25,7 +24,6 @@ async function fetchDataUsingAsyncAwait() {
 }
 
 fetchDataUsingAsyncAwait();
-
 
 // Using Async/Await with Promise.all()
 async function fetchDataUsingPromiseAll() {
