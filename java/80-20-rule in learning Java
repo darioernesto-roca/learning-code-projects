@@ -6,8 +6,25 @@ To follow the 80/20 rule in learning Java, focus on mastering the 20% of concept
 ### 1\. **Basic Syntax and Data Types**
 
 -   **Variables**: Declaration with types (`int`, `double`, `char`, `boolean`, etc.)
+    - Example:
+        - int age = 25;
+        - double price = 19.99;
+        - char grade = 'A';
+        - boolean isJavaFun = true;
+ 
 -   **Primitive Data Types**: `int`, `double`, `char`, `boolean`
+    - Examples:
+        - int numberOfItems = 50;
+        - double pi = 3.14159;
+        - char firstInitial = 'D';
+        - boolean isAvailable = false;
 -   **Type Casting**: Implicit and explicit conversion (`(int)`, `(double)`)
+    - Example:
+        - Implicit casting:
+            - double myDouble = 9;  // int automatically converted to double
+        - Explicit casting
+            - int myInt = (int) 9.78;  // double explicitly converted to int
+ 
 -   **Operators**: Arithmetic (`+`, `-`, `*`, `/`), Comparison (`==`, `!=`, `>`, `<`), Logical (`&&`, `||`, `!`)
 
 ### 2\. **Control Flow**
