@@ -77,6 +77,106 @@ buttonEventDetails.addEventListener("click", function (event) {
   console.log(event.type); // event.type: the type of event that occurred
 });
 
+// Focus/Blur Event: occurs when an element gets or loses focus
+
+const inputFocused = document.querySelector("#input-focused");
+inputFocused.addEventListener("focus", function (event) {
+  console.log("Input focused");
+});
+
+inputFocused.addEventListener("blur", function (event) {
+    console.log("Input blurred");
+});
+
+// Keydown/Keypress/Keyup Event: occurs when a key is pressed/released
+
+const inputKey = document.querySelector("#input-key");
+inputKey.addEventListener("keydown", function (event) {
+  console.log("Keydown event");
+});
+
+inputKey.addEventListener("keypress", function (event) {
+    console.log("Keypress event");
+});
+
+inputKey.addEventListener("keyup", function (event) {
+    console.log("Keyup event");
+});
+
+// Scroll Event: occurs when an element's scroll position changes
+
+document.addEventListener("scroll", function (event) {
+    console.log("Document scrolled");
+});
+
+// Submit Event: occurs when a form is submitted
+
+const formSubmitted = document.querySelector("#form-submitted");
+formSubmitted.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Form submitted");
+    // We can here, for example:
+    //Redirect to another page
+    window.location.href = "https://www.google.com";
+    // Send data to a server
+    const formData = new FormData(formSubmitted);
+
+    fetch('https://example.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    
+    // Validate the form
+    const nameToValidate = document.querySelector("#name");
+    const emailToValidate = document.querySelector("#email");
+    let isValid = true;
+
+    if (!nameToValidate.value.trim()) {
+        isValid = false;
+        console.error("Name is required");
+    }
+
+    if (!emailToValidate.value.trim()) {
+        isValid = false;
+        console.error("Email is required");
+    }
+
+    if (!isValid) {
+        return;
+    }
+});
+
+// element.addEventListener(event, callback): adds an event listener to an element
+
+const buttonEventToListen = document.querySelector("#button-event-to-listen");
+
+buttonEventToListen.addEventListener("click", function (event) {
+    console.log("Button clicked");
+});
+
+// element.removeEventListener(event, callback): removes an event listener from an element
+
+const buttonEventToRemove = document.querySelector("#button-event-to-remove");
+
+buttonEventToRemove.removeEventListener("click", function (event) {
+     console.log("Button clicked");
+
+});
+
+// event.preventDefault(): prevents the default behavior of an event. Used in Submit Event example
+
 /* HTML Element */
+
+// element.classList.add(className): adds a class to an element
+
+const elementClassListAdd = document.querySelector("#element-class-list-add");
+elementClassListAdd.classList.add("active");
 
 /* Selection */
