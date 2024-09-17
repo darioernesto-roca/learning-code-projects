@@ -179,4 +179,34 @@ buttonEventToRemove.removeEventListener("click", function (event) {
 const elementClassListAdd = document.querySelector("#element-class-list-add");
 elementClassListAdd.classList.add("active");
 
+// element.classList.remove(className): removes a class from an element
+
+const elementClassListRemove = document.querySelector("#element-class-list-remove");
+elementClassListRemove.classList.remove("active");
+
+// element.classList.toggle(className): toggles a class on an element
+
+const elementClassListToggle = document.querySelector("#element-class-list-toggle");
+elementClassListToggle.classList.toggle("active");
+
+// element.classList.contains(className): checks if an element has a class
+
+const elementClassListContains = document.querySelector("#element-class-list-contains");
+console.log(elementClassListContains.classList.contains("active")); // true
+
+// element.classList.replace(oldClassName, newClassName): replaces a class on an element
+
+const elementClassListReplace = document.querySelector("#element-class-list-replace");
+elementClassListReplace.classList.replace("active", "inactive");
+
+// element.getAttribute(attribute): gets the value of an attribute
+
+const elementGetAttribute = document.querySelector("#element-get-attribute");
+console.log(elementGetAttribute.getAttribute("id")); // element-get-attribute
+
+// element.setAttribute(attribute, value): sets the value of an attribute
+
+const elementSetAttribute = document.querySelector("#element-set-attribute");
+elementSetAttribute.setAttribute("id", "new-id");
+
 /* Selection */
