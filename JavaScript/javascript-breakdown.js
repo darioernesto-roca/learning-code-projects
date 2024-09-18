@@ -209,4 +209,92 @@ console.log(elementGetAttribute.getAttribute("id")); // element-get-attribute
 const elementSetAttribute = document.querySelector("#element-set-attribute");
 elementSetAttribute.setAttribute("id", "new-id");
 
+// element.style.property = value: sets the value of a style property
+
+const elementStyle = document.querySelector("#element-style");
+elementStyle.style.color = "red";
+
+// element.textContent: sets the text content of an element
+
+const elementTextContent = document.querySelector("#element-text-content");
+elementTextContent.textContent = "New text content";
+
+// element.value: sets the value of an input element
+
+const elementValue = document.querySelector("#element-value");
+elementValue.value = "New value";
+
+// element.innerHTML: sets the HTML content of an element
+
+const elementInnerHTML = document.querySelector("#element-inner-html");
+elementInnerHTML.innerHTML = "<strong>New HTML content</strong>";
+
+// element.remove(): removes an element from the DOM
+
+const elementRemove = document.querySelector("#element-remove");
+elementRemove.remove();
+
+// HTMLElement: represents any HTML element
+
+const element = document.querySelector("#element");
+console.log(element); // <div id="element"></div>
+
+// element.insertAdjacentHTML(position, text): inserts HTML content relative to an element. The position can be 'beforebegin', 'afterbegin', 'beforeend', 'afterend'.
+
+const elementInsertAdjacentHTML = document.querySelector("#element-insert-adjacent-html");
+elementInsertAdjacentHTML.insertAdjacentHTML("afterend", "<p>New paragraph</p>");
+
+// element.appendChild(childElement): appends a child element to a parent element
+
+const parentElementAppend = document.querySelector("#parent-element-append");
+const childElementAppend = document.createElement("child-element-append");
+
+parentElementAppend.appendChild(childElementAppend);
+
+// element.removeChild(childElement): removes a child element from a parent element
+
+const parentElementRemove = document.querySelector("#parent-element-remove");
+const childElementRemove = document.querySelector("#child-element-remove");
+
+parentElementRemove.removeChild(childElementRemove);
+
+// element.replaceChild(newChildElement, oldChildElement): replaces a child element with a new child element
+
+const parentElementReplace = document.querySelector("#parent-element-replace");
+const newChildElementReplace = document.createElement("new-child-element-replace");
+const oldChildElementReplace = document.querySelector("#old-child-element-replace");
+
+parentElementReplace.replaceChild(newChildElementReplace, oldChildElementReplace);
+
+// element.createElement(): creates an element with the specified tag name
+
+const newElementCreateElement = document.createElement("div");
+newElementCreateElement.textContent = "New element created";
+newElementCreateElement.style.color = "000";
+
+console.log(newElementCreateElement); // <div>New element created</div>
+
 /* Selection */
+
+// NodeList: represents a collection of nodes. It is an array-like object but not an array
+
+const nodeListElements = document.querySelectorAll(".elements-node-list");
+
+nodeListElements.forEach(function (element) {
+  console.log(element);
+}); // NodeList
+
+// NodeList to Array: converts a NodeList to an array
+
+const nodeListToArray = document.querySelectorAll(".elements-node-list");
+const arrayElements = Array.from(nodeListToArray);
+
+console.log(arrayElements); // Array
+
+arrayElements.forEach(function (element) {
+  console.log(element);
+}); // Array
+
+// document: represents the entire HTML document
+
+console.log(document); // HTMLDocument
