@@ -6,26 +6,38 @@ const title = "JavaScript Breakdown";
 {
   // var (levacy)
 
-  var nameFlorentino = "Florentino";
-  var age = 25;
-  var isMale = true;
+  var nameFlorentinoVar = "Florentino";
+  var ageVar = 25;
+  var isMaleVar = true;
+
+  console.log(nameFlorentinoVar); // Florentino
+  console.log(ageVar); // 25
+  console.log(isMaleVar); // true
 
   // let (block scope)
 
-  let nameFlorentino = "Florentino";
-  let age = 25;
-  let isMale = true;
+  let nameFlorentinoLet = "Florentino";
+  let ageLet = 25;
+  let isMaleLet = true;
+
+  console.log(nameFlorentinoLet); // Florentino
+  console.log(ageLet); // 25
+  console.log(isMaleLet); // true
 
   // const (block scope)
 
-  const nameFlorentino = "Florentino";
-  const age = 25;
-  const isMale = true;
+  const nameFlorentinoConst = "Florentino";
+  const ageConst = 25;
+  const isMaleConst = true;
+  
+  console.log(nameFlorentinoConst); // Florentino
+  console.log(ageConst); // 25
+  console.log(isMaleConst); // true
 
   // Temporal Dead Zone (TDZ): let and const are hoisted but not initialized
 
   console.log(lastNameFlorentino); // ReferenceError: Cannot access 'lastNameFlorentino' before initialization
-  let lastName = "Ariza";
+  let lastNameFlorentino = "Ariza";
 
   // Hoisting: var is hoisted and initialized with undefined
 
@@ -34,8 +46,8 @@ const title = "JavaScript Breakdown";
 
   // ?? (Nullish Coalescing Operator): returns the right-hand operand when the left-hand operand is null or undefined
 
-  let lasteNameFemina = null;
-  let result = lastNameFemina ?? "Daza";
+  let lastNameFermina = null;
+  let result = lastNameFermina ?? "Daza";
   console.log(result); // Daza
 }
 
