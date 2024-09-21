@@ -369,6 +369,44 @@ const title = "JavaScript Breakdown";
   console.log(elementClosest.closest(".parent-element-closest")); // HTMLElement
 }
 
+/* Fetch API */
+{
+  // DELETE Request: deletes data from a server
+
+  fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+  
+  // GET Request: gets data from a server
+
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+
+  // POST Request: sends data to a server
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+}
 
 
 
