@@ -406,6 +406,79 @@ const title = "JavaScript Breakdown";
     .then((data) => {
       console.log(data);
     });
+
+  // Error Handling: handles errors when fetching data is important because fetch() does not reject the promise on HTTP errors and to avoid unexpected behavior or breaking the application
+
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("There was a problem with your fetch operation:", error);
+    });
+
+    // Fetch wrapper: creates a wrapper function for fetch() to handle errors
+
+    async function fetchWrapper(url, options) {
+      const response = await fetch(url, options);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    }
+
+    // Response status codes: 200 OK, 201 Created, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error
+
+    function handleResponse(response) {
+      switch(response.status) {
+          case 200:
+              console.log("OK: The request was successful.");
+              // Handle the response data here
+              break;
+          case 201:
+              console.log("Created: The resource was successfully created.");
+              // Handle post-creation logic here
+              break;
+          case 204:
+              console.log("No Content: The request was successful, but there's no content to return.");
+              // Handle cases where no response body is expected
+              break;
+          case 400:
+              console.log("Bad Request: The request could not be understood or was missing required parameters.");
+              break;
+          case 401:
+              console.log("Unauthorized: Authentication is required.");
+              break;
+          case 403:
+              console.log("Forbidden: You don't have permission to access this resource.");
+              break;
+          case 404:
+              console.log("Not Found: The requested resource could not be found.");
+              // Handle 404 - Not Found response here
+              document.body.innerHTML = `<h1>404 Not Found</h1><p>The page you're looking for does not exist.</p>`;
+              break;
+          case 500:
+              console.log("Internal Server Error: There was a problem with the server.");
+              break;
+          default:
+              console.log("Unhandled status code:", response.status);
+              break;
+      }
+  }
+  
+  // Example usage
+  fetch('https://example.com/some-resource')
+      .then(response => handleResponse(response))
+      .catch(error => {
+          console.error('There was an error with the request:', error);
+      });
+  
 }
 
 
