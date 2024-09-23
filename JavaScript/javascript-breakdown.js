@@ -481,7 +481,17 @@ const title = "JavaScript Breakdown";
   
 }
 
+/* Functions */
+{
+  // Arrow Function ()=> : a shorter syntax for writing function expressions
 
+  const arrowFunction = () => {
+    console.log("Arrow function");
+  };
+
+  arrowFunction(); // Arrow function
+
+}
 
 
 
