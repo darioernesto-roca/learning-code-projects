@@ -491,6 +491,20 @@ const title = "JavaScript Breakdown";
 
   arrowFunction(); // Arrow function
 
+  // ?. (Optional Chaining): accesses nested properties without the need to validate each reference in the chain
+
+  const userOptionChaining = {
+    name: "Florentino",
+    address: {
+      city: "Cartagena",
+    },
+  };
+
+  console.log(userOptionChaining?.address?.city); // Cartagena
+
+  // The expression userOptionChaining?.address?.city checks if userOptionChaining and userOptionChaining.address exist. If they do, it accesses the city property.
+  // If any part of the chain (e.g., userOptionChaining or userOptionChaining.address) is null or undefined, it returns undefined instead of throwing an error.
+
 }
 
 
