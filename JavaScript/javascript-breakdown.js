@@ -505,6 +505,32 @@ const title = "JavaScript Breakdown";
   // The expression userOptionChaining?.address?.city checks if userOptionChaining and userOptionChaining.address exist. If they do, it accesses the city property.
   // If any part of the chain (e.g., userOptionChaining or userOptionChaining.address) is null or undefined, it returns undefined instead of throwing an error.
 
+  // Asynchronous callbacks: executes a function asynchronously after a certain time or event has passed.
+
+  setTimeout(() => {
+    console.log("Asynchronous callback");
+  }, 1000);
+
+  const buttonAsynchronousCallback = document.querySelector("#button-asynchronous-callback");
+  buttonAsynchronousCallback.addEventListener("click", function (event) {
+    setTimeout(() => {
+      console.log("Button clicked asynchronously");
+    }, 1000);
+  });
+
+  // Callback patterns: Callbacks can be used to handle asynchronous operations, such as fetching data from a server or waiting for user input.
+
+  function fetchDataCallback(callback) {
+    setTimeout(() => {
+      const data = "Data fetched";
+      callback(data);
+    }, 1000);
+  } // Callback function
+
+  fetchDataCallback((data) => {
+    console.log(data);
+  }); // Data fetched
+
 }
 
 
