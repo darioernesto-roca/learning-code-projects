@@ -531,6 +531,21 @@ const title = "JavaScript Breakdown";
     console.log(data);
   }); // Data fetched
 
+
+  // Closures: Closures in JavaScript allow a function to "remember" and access variables from its lexical scope, even when the function is executed outside that scope. This happens because JavaScript functions form a closure (cierre o clausura) over the scope in which they were created, keeping a reference to that scope even after the outer function has returned. When outerFunction is called, this variable is created and stored in the function's scope. However, outerFunction also defines an inner function (innerFunction) which can access outerVariable.
+
+  function outerFunction() {
+    const outerVariable = "Outer variable";
+
+    function innerFunction() {
+      const innerVariable = "Inner variable";
+      console.log(outerVariable); // Outer variable
+    }
+
+    return innerFunction;
+  }
+
+
 }
 
 
