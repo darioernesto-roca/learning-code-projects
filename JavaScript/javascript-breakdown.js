@@ -545,6 +545,21 @@ const title = "JavaScript Breakdown";
     return innerFunction;
   }
 
+  // Generator functions: Generator functions are a special type of function that can pause and resume their execution. They are defined using the function* syntax and yield keyword. This is useful in various scenarios, such as dealing with asynchronous code, streaming data, or implementing complex iteration behaviors. Generator functions are defined using the function* (with an asterisk) syntax, followed by a block of code. Inside the function, the yield keyword is used to pause the function and return a value to the caller.
+
+  function* generatorFunction() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+
+  const generator = generatorFunction();
+  console.log(generator.next());  // { value: 1, done: false }
+  console.log(generator.next());  // { value: 2, done: false }
+  console.log(generator.next());  // { value: 3, done: false }
+  console.log(generator.next());  // { value: undefined, done: true }
+
+
 
 }
 
