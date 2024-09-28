@@ -559,8 +559,77 @@ const title = "JavaScript Breakdown";
   console.log(generator.next());  // { value: 3, done: false }
   console.log(generator.next());  // { value: undefined, done: true }
 
+  // Hoisting: Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope before code execution. This means that you can use a variable or function before it has been declared.
 
+  console.log(hoistedVariable); // undefined
+  var hoistedVariable = "Hoisted variable";
 
+  // Immediately Invoked Function Expression (IIFE): an anonymous function that is executed immediately after it is defined. It is wrapped in parentheses to prevent it from being treated as a function declaration.
+
+  (function () {
+    console.log("IIFE");
+  })(); // IIFE
+
+  // Lexical scope: Lexical scope is a scope in JavaScript that is determined by the placement of variables and functions in the code. It allows inner functions to access variables from their outer function, even after the outer function has finished executing. See closures example.
+
+  // Passing functions as arguments: Functions can be passed as arguments to other functions, allowing for dynamic behavior and code reusability.
+
+  function sayHello(name) {
+    return `Hello, ${name}!`;
+  }
+
+  function sayHelloToUser(sayHelloFunction, name) {
+    return sayHelloFunction(name);
+  }
+
+  console.log(sayHelloToUser(sayHello, "Florentino")); // Hello, Florentino!
+
+  // Basic functions: Functions in JavaScript are defined using the function keyword, followed by the function name, parameters, and function body.
+
+  function basicFunctionGreet(fullname) {
+    return `Hello, ${fullname}!`;
+  }
+
+  console.log(basicFunctionGreet("Florentino")); // Hello, Florentino!
+  
+  // Default parameters: Default parameters allow us to specify default values for function parameters in case no value is provided when the function is called.
+
+  function greetDefaultParameters(name = "World") {
+    return `Hello, ${name}!`;
+  } 
+
+  console.log(greetDefaultParameters()); // Hello, World!
+  console.log(greetDefaultParameters("Florentino")); // Hello, Florentino!
+
+  // Implicit return: Arrow functions with a single expression can have an implicit return, meaning the return keyword and curly braces are omitted.
+  
+  const implicitReturn = (name) => `Hello, ${name}!`;
+
+  // yield: The yield keyword is used inside generator functions to pause the function and return a value to the caller. It allows the function to be paused and resumed, enabling complex iteration behaviors and asynchronous code handling.
+
+  function* generatorFunctionYield() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+
+  const generatorYield = generatorFunctionYield();
+
+  console.log(generatorYield.next()); // { value: 1, done: false }
+  console.log(generatorYield.next()); // { value: 2, done: false }
+  console.log(generatorYield.next()); // { value: 3, done: false }
+
+  // yield* : The yield* keyword is used inside generator functions to delegate the execution to another generator function or iterable object. It allows for nested iteration and delegation of generator functions.
+
+  function* generatorFunctionYieldNested() {
+    yield* [1, 2, 3];
+  }
+
+  const generatorYieldNested = generatorFunctionYieldNested();
+
+  console.log(generatorYieldNested.next()); // { value: 1, done: false }
+  console.log(generatorYieldNested.next()); // { value: 2, done: false }
+  console.log(generatorYieldNested.next()); // { value: 3, done: false }
 }
 
 
