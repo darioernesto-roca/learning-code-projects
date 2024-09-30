@@ -632,5 +632,18 @@ const title = "JavaScript Breakdown";
   console.log(generatorYieldNested.next()); // { value: 3, done: false }
 }
 
+/*  Miscelaneous */
 
+{
+  // Currying: Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of nested functions, each taking a single argument. This allows for partial application of the function, where some arguments are provided upfront, and the rest are provided later.
+
+  function multiplyCurrying(a) {
+    return function (b) {
+      return a * b;
+    };
+  }
+
+  const multiplyByTwo = multiplyCurrying(2);
+  console.log(multiplyByTwo(3)); // 6
+}
 
