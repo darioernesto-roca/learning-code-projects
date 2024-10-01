@@ -4,7 +4,7 @@ const title = "JavaScript Breakdown";
 
 /* 1. Variables */
 {
-  // var (levacy)
+  // var (legacy)
 
   var nameFlorentinoVar = "Florentino";
   var ageVar = 25;
@@ -632,7 +632,7 @@ const title = "JavaScript Breakdown";
   console.log(generatorYieldNested.next()); // { value: 3, done: false }
 }
 
-/*  Miscelaneous */
+/*  Miscellaneous */
 
 {
   // Currying: Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of nested functions, each taking a single argument. This allows for partial application of the function, where some arguments are provided upfront, and the rest are provided later.
@@ -645,5 +645,55 @@ const title = "JavaScript Breakdown";
 
   const multiplyByTwo = multiplyCurrying(2);
   console.log(multiplyByTwo(3)); // 6
+
+  // Deep equal" is a technique used to compare two objects to see if they are identical in terms of their properties and values, even when the objects contain nested structures such as arrays or other objects. Unlike shallow comparison (using ===), which checks only if two variables point to the same reference in memory, deep equal goes further to recursively compare the values inside the objects.
+
+  const benjamin1 = {
+    name: "Benjamin Button",
+    age: 25, // Looks younger, but is older
+    history: {
+      birthYear: 1918,
+      looksLike: "Young adult",
+      lifeEvents: ["Joins Navy", "Falls in love"]
+    }
+  };
+  
+  const benjamin2 = {
+    name: "Benjamin Button",
+    age: 25, // Same age, same situation
+    history: {
+      birthYear: 1918,
+      looksLike: "Young adult",
+      lifeEvents: ["Joins Navy", "Falls in love"]
+    }
+  };
+  
+  // Deep Equal Function
+  function deepEqual(obj1, obj2) {
+    if (obj1 === obj2) return true;
+  
+    if (typeof obj1 !== "object" || typeof obj2 !== "object" || obj1 === null || obj2 === null) {
+      return false;
+    }
+  
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+  
+    if (keys1.length !== keys2.length) {
+      return false;
+    }
+  
+    for (let key of keys1) {
+      if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  console.log(deepEqual(benjamin1, benjamin2)); // true (They are the same even with nested objects)
+  
+
 }
 
