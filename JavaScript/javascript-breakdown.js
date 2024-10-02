@@ -702,5 +702,11 @@ const title = "JavaScript Breakdown";
 
   // Event loop phases: The event loop in JavaScript consists of several phases, including the callback queue, microtask queue, and rendering. These phases work together to process tasks and ensure that the application remains responsive and performs well.
 
+  // IIFE (Immediately Invoked Function Expression): An IIFE is a common JavaScript pattern that involves defining and immediately executing a function. It is often used to create a new scope for variables and avoid polluting the global namespace.
+  
+  (function () {
+    console.log("IIFE executed");
+  })();
+
 }
 
