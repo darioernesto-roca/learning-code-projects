@@ -708,5 +708,73 @@ const title = "JavaScript Breakdown";
     console.log("IIFE executed");
   })();
 
+  // Inmutability: Inmutability is a key concept in functional programming that refers to the idea that data should not be changed once it is created. Instead of modifying existing data, new data structures are created with the desired changes. This approach helps prevent bugs and makes code easier to reason about.
+
+  // Inmutability Example:
+  const originalArray = [1, 2, 3];
+
+  // Add an element to the original array
+  const newArray = [...originalArray, 4];
+
+  console.log(originalArray); // [1, 2, 3]
+  console.log(newArray); // [1, 2, 3, 4]
+
+
+  // Inmutability - Original character object
+  const aldoRaine = {
+    name: 'Aldo Raine',
+    rank: 'Lieutenant',
+    mission: 'Take down Nazis',
+    team: ['Donny Donowitz', 'Hugo Stiglitz', 'Omar Ulmer']
+  };
+
+  // Let's say Aldo Raine gets promoted to 'Captain' and completes his mission.
+  // Instead of modifying the original object, we'll create a new one with the updated info.
+
+  const updatedAldoRaine = {
+    ...aldoRaine,        // Spread the original object
+    rank: 'Captain',     // Update the rank
+    mission: 'Mission Accomplished' // Update the mission status
+  };
+
+  console.log(aldoRaine);
+  // Output: 
+  // {
+  //   name: 'Aldo Raine',
+  //   rank: 'Lieutenant',
+  //   mission: 'Take down Nazis',
+  //   team: ['Donny Donowitz', 'Hugo Stiglitz', 'Omar Ulmer']
+  // }
+
+  console.log(updatedAldoRaine);
+  // Output: 
+  // {
+  //   name: 'Aldo Raine',
+  //   rank: 'Captain',
+  //   mission: 'Mission Accomplished',
+  //   team: ['Donny Donowitz', 'Hugo Stiglitz', 'Omar Ulmer']
+  // }
+
+  // Now, let's say we want to add a new member to Aldo Raine's team but keep immutability. This time we'll create a new object with an updated team.
+
+  // Aldo Raine recruits a new member to his team
+  const newTeamMember = 'Archie Hicox';
+
+  // Create a new object with the updated team (without mutating the original one)
+  const fullyUpdatedAldoRaine = {
+    ...updatedAldoRaine,
+    team: [...updatedAldoRaine.team, newTeamMember] // Create a new array with the new team member
+  };
+
+  console.log(fullyUpdatedAldoRaine);
+  // Output: 
+  // {
+  //   name: 'Aldo Raine',
+  //   rank: 'Captain',
+  //   mission: 'Mission Accomplished',
+  //   team: ['Donny Donowitz', 'Hugo Stiglitz', 'Omar Ulmer', 'Archie Hicox']
+  // }
+
+
 }
 
