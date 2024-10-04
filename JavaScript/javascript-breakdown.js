@@ -51,9 +51,9 @@ const title = "JavaScript Breakdown";
   console.log(result); // Daza
 }
 
-/* DOM */
+/* 2. DOM */
 
-/* DOM - Events */
+/* 2.1 DOM - Events */
 {
   // Change Event: occurs when the value of an element has been changed
 
@@ -187,7 +187,7 @@ const title = "JavaScript Breakdown";
   // event.preventDefault(): prevents the default behavior of an event. Used in Submit Event example
 }
 
-/* DOM - HTML Element */
+/* 2.2 DOM - HTML Element */
 {
   // element.classList.add(className): adds a class to an element
 
@@ -291,7 +291,7 @@ const title = "JavaScript Breakdown";
 
 }
 
-/* DOM - Selection */
+/* 2.3 DOM - Selection */
 {
   // NodeList: represents a collection of nodes. It is an array-like object but not an array
 
@@ -369,7 +369,7 @@ const title = "JavaScript Breakdown";
   console.log(elementClosest.closest(".parent-element-closest")); // HTMLElement
 }
 
-/* Fetch API */
+/* 3. Fetch API */
 {
   // DELETE Request: deletes data from a server
 
@@ -481,7 +481,7 @@ const title = "JavaScript Breakdown";
   
 }
 
-/* Functions */
+/* 4. Functions */
 {
   // Arrow Function ()=> : a shorter syntax for writing function expressions
 
@@ -632,7 +632,7 @@ const title = "JavaScript Breakdown";
   console.log(generatorYieldNested.next()); // { value: 3, done: false }
 }
 
-/*  Miscellaneous */
+/* 5. Miscellaneous */
 
 {
   // Currying: Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of nested functions, each taking a single argument. This allows for partial application of the function, where some arguments are provided upfront, and the rest are provided later.
@@ -774,6 +774,81 @@ const title = "JavaScript Breakdown";
   //   mission: 'Mission Accomplished',
   //   team: ['Donny Donowitz', 'Hugo Stiglitz', 'Omar Ulmer', 'Archie Hicox']
   // }
+
+  // Regular Expressions
+
+  // Regular expressions (regex or regexp) are patterns used to match character combinations in strings. They are a powerful tool for text processing and validation in JavaScript and other programming languages. They are primarily used for string searching and manipulation, making them extremely useful in various programming tasks, such as validation, parsing, and text processing. In JavaScript, regular expressions can be created using either the RegExp constructor or by using literal notation enclosed in slashes.
+
+  /*
+  Basic Syntax
+    Literals: Characters that match themselves. For example, the regex /abc/ matches the string "abc".
+
+    Metacharacters:
+    Special characters that have specific meanings. For example:
+      .: Matches any single character except newline.
+      ^: Matches the beginning of a string.
+      $: Matches the end of a string.
+      *: Matches 0 or more repetitions of the preceding element.
+      +: Matches 1 or more repetitions of the preceding element.
+      ?: Matches 0 or 1 occurrence of the preceding element.
+      []: Matches any one character within the brackets.
+      |: Acts as an OR operator.
+
+    Quantifiers:
+      {n}: Matches exactly n occurrences of the preceding element.
+      {n,}: Matches n or more occurrences.
+      {n,m}: Matches between n and m occurrences.
+      Escape Characters: Use \ to escape metacharacters. For example, \. matches a literal period.
+
+    Flags
+    Regular expressions can have flags that modify their behavior:
+      i: Case-insensitive matching.
+      g: Global matching (find all matches).
+      m: Multiline matching.
+  */
+
+  // Regular Expression Example: Matching a Simple Pattern
+  const regexSimplePattern = /hello/;
+  const strSimplePattern = "hello world";
+  console.log(regexSimplePattern.test(strSimplePattern)); // true. the regex /hello/ checks if the substring "hello" exists in the string "hello world".
+
+  // Regular Expression Example: Using Metacharacters
+  const regexMetacharacters = /h.llo/;
+  const str1Metacharacters = "hello";
+  const str2Metacharacters = "hallo";
+  console.log(regexMetacharacters.test(str1Metacharacters)); // true. The . matches any character, so both "hello" and "hallo" return true.
+  console.log(regexMetacharacters.test(str2Metacharacters)); // true. The . matches any character, so both "hello" and "hallo" return true.
+
+  // Regular Expression Example: Anchors: Start and End of String
+  const regexStart = /^hello/; // Matches "hello" at the start
+  const regexEnd = /world$/;   // Matches "world" at the end
+  console.log(regexStart.test("hello world")); // true. The caret (^) asserts position at the start
+  console.log(regexEnd.test("hello world"));   // true. The dollar sign ($) asserts position at the end.
+
+  // Regular Expression Example: Using Character Classes
+  const regexCharacterClasses = /[aeiou]/; // Matches any vowel
+  const strCharacterClasses = "sky";
+  console.log(regexCharacterClasses.test(strCharacterClasses)); // false. The brackets [] define a character class, matching any character inside them.
+  const str2CharacterClasses = "sky is blue";
+  console.log(regexCharacterClasses.test(str2CharacterClasses)); // true. The brackets [] define a character class, matching any character inside them.
+
+  // Regular Expression Example: Quantifiers
+  const regexQuantifiers = /\d+/; // Matches one or more digits
+  const strQuantifiers = "There are 123 apples";
+  console.log(strQuantifiers.match(regexQuantifiers)); // ["123"] Here, \d matches any digit, and + ensures it matches one or more occurrences.
+
+  // Regular Expression Example: Global and Case-Insensitive Flags
+  const regexFlags = /hello/gi; // Case-insensitive and global match
+  const strFlags = "Hello hello HeLLo";
+  console.log(strFlags.match(regexFlags)); // ["Hello", "hello", "HeLLo"] Using the g flag finds all occurrences, while i makes the match case-insensitive.
+
+  // Regular Expression Example: Validating Input. We can use regex to validate formats, like email addresses. In this case, the regex checks for a basic email format with local and domain parts:
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailExample1 = "example@example.com";
+  const emailExample2 = "invalid-email.com";
+  console.log(emailRegex.test(emailExample1)); // true
+  console.log(emailRegex.test(emailExample2)); // false.
+
 
 
 }
