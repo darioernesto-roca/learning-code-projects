@@ -849,6 +849,30 @@ const title = "JavaScript Breakdown";
   console.log(emailRegex.test(emailExample1)); // true
   console.log(emailRegex.test(emailExample2)); // false.
 
+  // Functional programming: Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It emphasizes the use of pure functions, higher-order functions, and immutable data structures to create more predictable and maintainable code.
+
+  // Functional programming principles:
+  // 1. Pure functions: Functions that always produce the same output for the same input and have no side effects. Example:
+  function add(a, b) {
+    return a + b;
+  }
+  console.log(add(2, 3)); // 5
+
+  // 2. Higher-order functions: Functions that take other functions as arguments or return functions as results. Example:
+
+  function multiplyByTwo(value) {
+    return value * 2;
+  }
+
+  function operateOnNumber(number, operation) {
+    return operation(number);
+  }
+  console.log(operateOnNumber(5, multiplyByTwo)); // 10
+
+  // 3. Immutability: Data that cannot be changed after it is created. Instead of modifying existing data, new data structures are created with the desired changes. Example:
+  const numbers = [1, 2, 3];
+  const doubledNumbers = numbers.map((number) => number * 2);
+  console.log(doubledNumbers); // [2, 4, 6]
 
 
 }
