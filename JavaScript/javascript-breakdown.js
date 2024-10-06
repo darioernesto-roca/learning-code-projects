@@ -874,6 +874,28 @@ const title = "JavaScript Breakdown";
   const doubledNumbers = numbers.map((number) => number * 2);
   console.log(doubledNumbers); // [2, 4, 6]
 
+  // 4. Recursion: A technique where a function calls itself to solve smaller instances of the same problem. Example:
+  function factorialRecursion(n) {
+    if (n === 0) {
+      return 1;
+    } else {
+      return n * factorialRecursion(n - 1);
+    }
+  }  
+  console.log(factorialRecursion(5)); // 120
 
+  function fibonacci(n) {
+    if (n <= 1) {
+      return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+  
+  console.log(fibonacci(6)); // 8
+
+  // Generate the first 15 Fibonacci numbers
+  for (let i = 0; i < 15; i++) {
+    console.log(fibonacci(i)); // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
+  }
 }
 
