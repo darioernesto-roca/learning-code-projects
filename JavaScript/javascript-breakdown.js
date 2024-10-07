@@ -903,6 +903,33 @@ const title = "JavaScript Breakdown";
   const numbersMap = [1, 2, 3];
   const doubledNumbersMap = numbersMap.map((number) => number * 2);
   console.log(doubledNumbersMap); // [2, 4, 6]
-  
+
+  // Primitive types: In JavaScript, there are six primitive data types: string, number, bigint, boolean, undefined, and symbol. These types are immutable and have corresponding wrapper objects (e.g., String, Number) that provide additional functionality.
+
+  // String: Represents a sequence of characters enclosed in single or double quotes. Example:
+  const stringPrimitive = "Hello, World!";
+  console.log(stringPrimitive); // Hello, World!
+
+  // Number: Represents numeric data, including integers and floating-point numbers. Example:
+  const numberPrimitive = 42;
+  console.log(numberPrimitive); // 42
+
+  // BigInt: Represents integers with arbitrary precision. Example:
+  const bigIntPrimitive = 1234567890123456789012345678901234567890n;
+  console.log(bigIntPrimitive); // 1234567890123456789012345678901234567890n
+
+  // Boolean: Represents a logical value, either true or false. Example:
+  const booleanPrimitive = true;
+  console.log(booleanPrimitive); // true
+
+  // Undefined: Represents an undefined value. Example:
+  let undefinedPrimitive;
+  console.log(undefinedPrimitive); // undefined
+
+  // Symbol: Represents a unique and immutable value used as an identifier for object properties. Example:
+  const symbolPrimitive = Symbol("description");
+  console.log(symbolPrimitive); // Symbol(description)
+
+
 }
 
