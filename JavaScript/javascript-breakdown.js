@@ -849,7 +849,7 @@ const title = "JavaScript Breakdown";
   console.log(emailRegex.test(emailExample1)); // true
   console.log(emailRegex.test(emailExample2)); // false.
 
-  // Functional programming: Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It emphasizes the use of pure functions, higher-order functions, and immutable data structures to create more predictable and maintainable code.
+  // Functional programming: Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It emphasizes the use of pure functions, higher-order functions, and immutable data structures to create more predictable and maintainable code. In JavaScript, many libraries (such as Ramda or Lodash) are built to provide functional utilities and make functional programming easier to apply in day-to-day code.
 
   // Functional programming principles:
   // 1. Pure functions: Functions that always produce the same output for the same input and have no side effects. Example:
@@ -897,5 +897,12 @@ const title = "JavaScript Breakdown";
   for (let i = 0; i < 15; i++) {
     console.log(fibonacci(i)); // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
   }
+
+  // Map: The map() method creates a new array by applying a function to each element of an existing array. It is a common functional programming pattern and is used to transform data without mutating the original array.
+
+  const numbersMap = [1, 2, 3];
+  const doubledNumbersMap = numbersMap.map((number) => number * 2);
+  console.log(doubledNumbersMap); // [2, 4, 6]
+  
 }
 
