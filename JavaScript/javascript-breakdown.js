@@ -930,6 +930,14 @@ const title = "JavaScript Breakdown";
   const symbolPrimitive = Symbol("description");
   console.log(symbolPrimitive); // Symbol(description)
 
+  // Set: The Set object is a collection of unique values, where each value may occur only once. It is useful for storing and managing unique values, such as removing duplicates from an array or checking for the presence of specific values.
+
+  const uniqueNumbers = new Set([1, 2, 3, 1, 2, 3]);
+  console.log(uniqueNumbers); // Set { 1, 2, 3 }
+
+  uniqueNumbers.add(4);
+  console.log(uniqueNumbers); // Set { 1, 2, 3, 4 }
+
 
 }
 
