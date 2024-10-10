@@ -938,6 +938,34 @@ const title = "JavaScript Breakdown";
   uniqueNumbers.add(4);
   console.log(uniqueNumbers); // Set { 1, 2, 3, 4 }
 
+  uniqueNumbers.add('1');
+  console.log(uniqueNumbers); // Set { 1, 2, 3, 4, '1' }
+
+  // Strict mode: Strict mode is a feature in JavaScript that allows you to place a program or a function in a "strict" operating context. It helps catch common coding errors and makes the code more secure and optimized. Strict mode can be enabled at the global level or within a specific function. It is different than typescript, because typescript is a superset of javascript, and strict mode is a feature of javascript. And typescript has its own strict mode and with strict mode JavaScript didn't have the same features, like typescript, e.g. types.
+
+  // Enable strict mode at the global level
+  "use strict";
+  // Example of strict mode behavior:
+  // Variables must be declared before being used
+  // Assigning a value to an undeclared variable throws an error
+  // Deleting a variable or function throws an error
+  // Duplicates in object literals or function parameters throw an error
+  // The this keyword is undefined in functions not called as methods
+  // In strict mode, var can be used to declare variables, but let and const are recommended for block-scoped variables
+  // Strict mode can be enabled at the global level by adding the "use strict" directive at the beginning of a script or function. This enables strict mode for the entire script or function and helps catch common coding errors and improve code quality.
+
+  // Enable strict mode within a function
+  function strictFunction() {
+    "use strict";
+    // Strict mode code here
+    // Example of strict mode behavior:
+    // Variables must be declared before being used
+    // Assigning a value to an undeclared variable throws an error
+    // Deleting a variable or function throws an error
+    // Duplicates in object literals or function parameters throw an error
+    // The this keyword is undefined in functions not called as methods
+    // Strict mode can also be enabled within a specific function by adding the "use strict" directive at the beginning of the function body. This enables strict mode only within that function and helps catch errors specific to that function.
+  }
 
 }
 
