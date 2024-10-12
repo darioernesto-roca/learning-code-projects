@@ -967,5 +967,43 @@ const title = "JavaScript Breakdown";
     // Strict mode can also be enabled within a specific function by adding the "use strict" directive at the beginning of the function body. This enables strict mode only within that function and helps catch errors specific to that function.
   }
 
+  // Window: The window object represents the browser window or tab that contains the JavaScript code. It provides access to the browser's properties and methods, such as the document object, location, history, and more. The window object is the global object in client-side JavaScript and is accessible from any part of the code.
+
+  // Accessing window properties
+  console.log(window.innerWidth); // Current window width
+  console.log(window.innerHeight); // Current window height
+  console.log(window.location.href); // Current URL
+  console.log(window.navigator.userAgent); // User agent string, e.g., browser information
+  console.log(window.document.title); // Document title
+  console.log(window.localStorage); // Local storage object
+  console.log(window.alert); // Alert function
+  console.log(window.confirm); // Confirm function
+  console.log(window.prompt); // Prompt function
+  console.log(window.history); // Browser history object
+  console.log(window.document); // Document object
+  console.log(window.document.body); // Body element
+  console.log(window.document.documentElement); // Root element, e.g., <html>
+  console.log(window.document.getElementById("elementId")); // Get element by ID
+  console.log(window.document.querySelector(".elementClass")); // Query selector
+  console.log(window.document.querySelectorAll(".elementClass")); // Query selector all
+  console.log(window.document.createElement("div")); // Create element
+  console.log(window.document.getElementById("elementId").remove()); // Remove element
+  console.log(window.document.getElementById("elementId").textContent = "New text content"); // Set text content
+  console.log(window.document.getElementById("elementId").value = "New value"); // Set value
+  console.log(window.document.getElementById("elementId").innerHTML = "<strong>New HTML content</strong>"); // Set inner HTML
+  console.log(window.document.getElementById("elementId").insertAdjacentHTML("afterend", "<p>New paragraph</p>")); // Insert adjacent HTML
+  console.log(window.document.getElementById("elementId").appendChild(childElement)); // Append child
+  console.log(window.document.getElementById("elementId").removeChild(childElement)); // Remove child
+  console.log(window.document.getElementById("elementId").replaceChild(newChildElement, oldChildElement)); // Replace child
+  console.log(window.document.querySelectorAll(".elementsNodeList")); // Query selector all
+
+  // Main features of the window object:
+    // Access to browser properties: The window object provides access to various browser properties, such as the current URL, user agent string, and window dimensions.
+    // Access to browser methods: The window object provides access to browser methods, such as alert, confirm, and prompt, for displaying messages and interacting with users.
+    // Access to the document object: The window object contains the document object, which represents the current HTML document and provides methods for interacting with the DOM.
+    // Access to browser history: The window object provides access to the browser's history object, which allows navigation through the browser history.
+    // Access to local storage: The window object provides access to the local storage object, which allows data to be stored locally in the browser.
+
+
 }
 
