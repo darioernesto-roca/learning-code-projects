@@ -969,7 +969,7 @@ const title = "JavaScript Breakdown";
 
   // Window: The window object represents the browser window or tab that contains the JavaScript code. It provides access to the browser's properties and methods, such as the document object, location, history, and more. The window object is the global object in client-side JavaScript and is accessible from any part of the code.
 
-  // Accessing window properties
+  // Window - Accessing window properties
   console.log(window.innerWidth); // Current window width
   console.log(window.innerHeight); // Current window height
   console.log(window.location.href); // Current URL
@@ -997,13 +997,146 @@ const title = "JavaScript Breakdown";
   console.log(window.document.getElementById("elementId").replaceChild(newChildElement, oldChildElement)); // Replace child
   console.log(window.document.querySelectorAll(".elementsNodeList")); // Query selector all
 
-  // Main features of the window object:
+  // Window - Main features of the window object:
     // Access to browser properties: The window object provides access to various browser properties, such as the current URL, user agent string, and window dimensions.
     // Access to browser methods: The window object provides access to browser methods, such as alert, confirm, and prompt, for displaying messages and interacting with users.
     // Access to the document object: The window object contains the document object, which represents the current HTML document and provides methods for interacting with the DOM.
     // Access to browser history: The window object provides access to the browser's history object, which allows navigation through the browser history.
     // Access to local storage: The window object provides access to the local storage object, which allows data to be stored locally in the browser.
 
+  // This: The this keyword in JavaScript refers to the object that the function is a method of. It allows functions to access and operate on the object's properties and methods. The value of this is determined by how a function is called, and it can vary depending on the context in which the function is executed.
 
+  // This - Example 1: Method context
+  const personThisMethodContext = {
+    name: "Alice",
+    greet() {
+      console.log(`Hello, my name is ${this.name}`);
+    }
+  };
+  personThisMethodContext.greet(); // Hello, my name is Alice
+
+  // This - Example 2: Function context
+  function greetThisFunctionContext() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+
+  const personThisFunctionContext = {
+    name: "Bob",
+    greet: greetThisFunctionContext
+  };
+
+  greetThisFunctionContext(); // Hello, my name is undefined
+  personThisFunctionContext.greet(); // Hello, my name is Bob
+
+  // This - Example 3: Constructor context
+  function PersonThisConstructorContext(name) {
+    this.name = name;
+    this.greet = function() {
+      console.log(`Hello, my name is ${this.name}`);
+    };
+  } 
+
+  // This - Example 3: Constructor context - Create a new instance of Person
+  const aliceConstructorContext = new PersonThisConstructorContext("Alice");
+  aliceConstructorContext.greet(); // Hello, my name is Alice
+
+  // This - Example 4: Event handler context
+  const buttonThisEventHandlerContext = document.getElementById("button");
+  buttonThisEventHandlerContext.addEventListener("click", function() {
+    console.log(`Button clicked by ${this.id}`); // In event handlers, this refers to the element that triggered the event. In this case, this refers to the button element that was clicked.
+  });
+
+  // typeof operator: The typeof operator in JavaScript returns the data type of a variable or expression. It is useful for checking the type of a value and handling different data types appropriately.
+
+  // typeof - Example 1: Checking data types
+  console.log(typeof "Shalom"); // string
+  console.log(typeof 38); // number
+  console.log(typeof true); // boolean
+  console.log(typeof undefined); // undefined
+  console.log(typeof null); // object
+  console.log(typeof Symbol("תֵאוּר")); // symbol
+  console.log(typeof { name: "David" }); // object
+  console.log(typeof [3, 5, 8]); // object
+  console.log(typeof function() {}); // function
+
+  // typeof - Example 2: Handling different data types
+  function greetTypeof(name) {
+    if (typeof name === "string") {
+      console.log(`Hello, ${name}!`);
+    } else {
+      console.log("Please provide a valid name.");
+    }
+  }
+  greetTypeof("Alice"); // Hello, Alice!
+  greetTypeof(38); // Please provide a valid name.
+
+  // typeof - Example 3: Checking for null
+  const valueNull = null;
+  if (valueNull === null) {
+    console.log("Value is null");
+  } else {
+    console.log("Value is not null");
+  }
+
+  // typeof - Example 4: Checking for undefined
+  let valueUndefined;
+  if (typeof valueUndefined === "undefined") {
+    console.log("Value is undefined");
+  } else {
+    console.log("Value is defined");
+  }
+
+  // typeof - Example 5: Checking for functions
+  function sayHelloTypeof() {
+    console.log("Hello, World!");
+  }
+
+  if (typeof sayHelloTypeof === "function") {
+    console.log("sayHello is a function");
+  } else {
+    console.log("sayHello is not a function");
+  }
+
+  // typeof - Example 6: Checking for objects
+  const personTypeof = { name: "Alice" };
+  if (typeof personTypeof === "object") {
+    console.log("person is an object");
+  }
+
+  // typeof - Example 7: Checking for arrays
+  const numbersTypeof = [1, 2, 3];
+  if (Array.isArray(numbersTypeof)) {
+    console.log("numbers is an array");
+  }
+
+  // typeof - Example 8: Checking for numbers
+  const ageTypeof = 25;
+  if (typeof ageTypeof === "number") {
+    console.log("age is a number");
+  }
+
+  // typeof - Example 9: Checking for strings
+  const messageTypeof = "Hello, World!";
+  if (typeof messageTypeof === "string") {
+    console.log("message is a string");
+  }
+
+  // typeof - Example 10: Checking for booleans
+  const isActiveTypeof = true;
+  if (typeof isActiveTypeof === "boolean") {
+    console.log("isActive is a boolean");
+  }
+
+  // typeof - Example 11: Checking for symbols
+  const idTypeof = Symbol("id");
+  if (typeof idTypeof === "symbol") {
+    console.log("id is a symbol");
+  }
+
+  // typeof - Example 12: Checking for BigInt
+  const bigNumberTypeof = 1234567890123456789012345678901234567890n;
+  if (typeof bigNumberTypeof === "bigint") {
+    console.log("bigNumber is a bigint");
+  }
 }
 
