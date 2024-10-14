@@ -1197,7 +1197,9 @@ const title = "JavaScript Breakdown";
 
   // Parcel: A zero-configuration module bundler that supports ES Modules, CommonJS, and other module formats. It automatically handles dependencies, code splitting, and optimizations, making it easy to get started with bundling.
 
-  // 4. Tree shaking: Tree shaking is a technique used by module bundlers to eliminate dead code or unused code from the final bundle. It works by analyzing the code and dependencies of a module to determine which parts are not used and can be safely removed. Tree shaking helps reduce the size of the bundle and improve performance by removing unnecessary code.
+  // Vite: A modern build tool that leverages ES Modules and native browser features for fast development and optimized production builds. It provides instant server start, hot module replacement, and optimized bundling for modern web applications.
+
+  // Module bundlers - Tree shaking: Tree shaking is a technique used by module bundlers to eliminate dead code or unused code from the final bundle. It works by analyzing the code and dependencies of a module to determine which parts are not used and can be safely removed. Tree shaking helps reduce the size of the bundle and improve performance by removing unnecessary code.
 
   // 4. Namespace import: In ES Modules, you can import an entire module as a namespace object using the * as syntax. This allows you to access all the exports of the module through the namespace object.
 
@@ -1210,5 +1212,72 @@ const title = "JavaScript Breakdown";
   // import * as math from './math.js';
   // console.log(math.sum(5, 3)); // 8
   // console.log(math.subtract(5, 3)); // 2
+
+  // 5. Package managers: Package managers are tools that help manage dependencies and packages in a project. They automate the process of installing, updating, and removing packages, making it easier to work with external libraries and modules.
+
+  // Package managers - Examples of package managers:
+
+  // npm (Node Package Manager): A popular package manager for JavaScript that is used to install, manage, and publish packages. It is commonly used for Node.js projects and front-end development.
+
+  // Yarn: A fast and secure package manager for JavaScript that is compatible with npm. It provides features like offline installation, deterministic dependency resolution, and parallel package downloads.
+
+  // Package managers - Common commands:
+
+  // npm install package-name: Installs a package locally in the project.
+  // npm install -g package-name: Installs a package globally on the system.
+  // npm install --save package-name: Installs a package and adds it to the dependencies in package.json.
+  // npm install --save-dev package-name: Installs a package and adds it to the devDependencies in package.json.
+  // npm update package-name: Updates a package to the latest version.
+  // npm uninstall package-name: Uninstalls a package from the project.
+  // npm list: Lists all installed packages in the project.
+  // npm search package-name: Searches for a package in the npm registry.
+  // npm init: Initializes a new project and creates a package.json file.
+  // npm run script-name: Runs a script defined in the package.json file.
+
+  // 6.package.json: The package.json file is a metadata file for Node.js projects that contains information about the project, its dependencies, and scripts. It is used by package managers like npm and Yarn to manage project dependencies and scripts.
+
+  // package.json - Example:
+  // {
+  //   "name": "my-project",
+  //   "version": "1.0.0",
+  //   "description": "A sample Node.js project",
+  //   "main": "index.js",
+  //   "scripts": {
+  //     "start": "node index.js",
+  //     "test": "jest"
+  //   },
+  //   "dependencies": {
+  //     "express": "^4.17.1",
+  //     "lodash": "^4.17.21"
+  //   },
+  //   "devDependencies": {
+  //     "jest": "^27.0.6"
+  //   }
+  // }
+
+  // package.json - Main properties:
+  // name: The name of the project.
+  // version: The version number of the project.
+  // description: A brief description of the project.
+  // main: The entry point of the project.
+  // scripts: Custom scripts that can be run using npm or Yarn.
+  // dependencies: Production dependencies required for the project.
+  // devDependencies: Development dependencies required for testing and development.
+  // engines: Specifies the versions of Node.js and npm required by the project.
+  // license: The license under which the project is distributed.
+
+  // 7. script type="module": In HTML, you can use the script type="module" attribute to indicate that a script is an ES Module. This allows you to use ES Modules directly in the browser without the need for a module bundler. The script type="module" attribute is supported in modern browsers and provides a way to load and execute ES Modules in a web page. In the package.json file, you can specify the type of module using the "type" field.
+
+  // script type="module" - Example:
+  // <script type="module" src="main.js"></script>
+  // In this example, the script tag loads the main.js file as an ES Module in the browser. The type="module" attribute indicates that the script is an ES Module and should be treated as such by the browser.
+
+  // package.json - Specify module type:
+  // {
+  //   "type": "module"
+  // }
+
+  // 8. Yarn: Yarn is a fast, reliable, and secure package manager for JavaScript. It is compatible with npm and provides additional features like offline installation, deterministic dependency resolution, and parallel package downloads. Yarn is commonly used for managing dependencies in Node.js projects and front-end development. Yarn can be installed using npm or by downloading the Yarn installer from the official website. The main difference between npm and Yarn is that Yarn uses a lockfile (yarn.lock) to ensure deterministic installs, while npm uses a package-lock.json file. At the end both are package managers for JavaScript, and they have their own features and differences, but the choice of which one to use depends on the project requirements and personal preference.
+
 
 }
