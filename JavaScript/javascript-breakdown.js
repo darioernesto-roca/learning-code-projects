@@ -1199,4 +1199,16 @@ const title = "JavaScript Breakdown";
 
   // 4. Tree shaking: Tree shaking is a technique used by module bundlers to eliminate dead code or unused code from the final bundle. It works by analyzing the code and dependencies of a module to determine which parts are not used and can be safely removed. Tree shaking helps reduce the size of the bundle and improve performance by removing unnecessary code.
 
+  // 4. Namespace import: In ES Modules, you can import an entire module as a namespace object using the * as syntax. This allows you to access all the exports of the module through the namespace object.
+
+  // Namespace import - Example:
+  // math.js
+  // export const sum = (a, b) => a + b;
+  // export const subtract = (a, b) => a - b;
+
+  // Importing the entire module as a namespace object. This allows you to access all the exports of the module through the math namespace object.
+  // import * as math from './math.js';
+  // console.log(math.sum(5, 3)); // 8
+  // console.log(math.subtract(5, 3)); // 2
+
 }
