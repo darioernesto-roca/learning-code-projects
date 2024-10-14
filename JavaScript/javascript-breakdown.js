@@ -1140,3 +1140,53 @@ const title = "JavaScript Breakdown";
   }
 }
 
+/* Modules */
+
+{
+  // ES Modules: ES Modules (ECMAScript Modules) are a standard for working with modules in JavaScript. They provide a way to organize and structure code by splitting it into separate files, each containing a module. ES Modules use the import and export keywords to define dependencies between modules and share code between them.
+
+  // ES Modules - Examples:
+
+  // ES Modules - Exporting a module
+  // math.js
+  // export const sum = (a, b) => a + b;
+  // export const subtract = (a, b) => a - b;
+
+  // ES Modules - Importing a module
+  // import { sum, subtract } from './math.js';
+  // console.log(sum(5, 3)); // 8
+  // console.log(subtract(5, 3)); // 2
+
+  // ES Modules - Exporting default: In addition to named exports, ES Modules also support default exports. A default export is a single value or function that is exported as the default export of a module. When importing a module with a default export, you can choose any name for the imported value.
+  // math.js
+  // const sum = (a, b) => a + b;
+  // const subtract = (a, b) => a - b;
+  // export default { sum, subtract };
+
+  // ES Modules - Importing a default export
+  // import math from './math.js';
+  // console.log(math.sum(5, 3)); // 8
+  // console.log(math.subtract(5, 3)); // 2
+
+  // ES Modules - Dynamic imports: Dynamic imports allow you to import modules asynchronously at runtime, rather than statically at compile time. This can be useful for loading modules conditionally or on-demand, reducing the initial load time of an application.
+  // const module = await import('./math.js');
+  // console.log(module.sum(5, 3)); // 8
+  // console.log(module.subtract(5, 3)); // 2
+
+  // Importing from libraries: ES Modules can also be used to import code from external libraries and modules. Many libraries and frameworks provide ES Modules for easy integration into JavaScript projects.
+
+  // Importing from libraries - Importing a library module
+  // import { sum, subtract } from 'library-module';
+  // console.log(sum(5, 3)); // 8
+
+  // Importing from libraries - Importing a library default export
+  // import library from 'library-module';
+  // console.log(library.sum(5, 3)); // 8
+
+  // Importing from libraries - Importing a library dynamically
+  // const module = await import('library-module');
+  // console.log(module.sum(5, 3)); // 8
+
+
+
+}
