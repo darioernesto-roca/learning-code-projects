@@ -1279,5 +1279,141 @@ const title = "JavaScript Breakdown";
 
   // 8. Yarn: Yarn is a fast, reliable, and secure package manager for JavaScript. It is compatible with npm and provides additional features like offline installation, deterministic dependency resolution, and parallel package downloads. Yarn is commonly used for managing dependencies in Node.js projects and front-end development. Yarn can be installed using npm or by downloading the Yarn installer from the official website. The main difference between npm and Yarn is that Yarn uses a lockfile (yarn.lock) to ensure deterministic installs, while npm uses a package-lock.json file. At the end both are package managers for JavaScript, and they have their own features and differences, but the choice of which one to use depends on the project requirements and personal preference.
 
+}
+
+/* Number */
+
+{
+  // 1. .toString(): The .toString() method in JavaScript converts a number to a string. It takes an optional parameter that specifies the base of the number system to use for the conversion. By default, .toString() converts the number to a base-10 string.
+
+  const numberToString = 38;
+  console.log(numberToString.toString()); // "38"
+
+  // it is useful on this cases:
+  // Converting numbers to strings for display or output
+  // Formatting numbers for specific use cases
+  // Working with numbers in string format
+
+  // 2. Division reminder (%): The division reminder operator (%) in JavaScript returns the remainder of a division operation. It is useful for checking if a number is divisible by another number or for extracting the last digit of a number.
+
+  const numberDivisionReminder = 17;
+  console.log(numberDivisionReminder % 5); // 2
+
+  // Real cases of use:
+  
+  // Checking if a number is even or odd
+
+  const numberEven = 10;
+  const numberOdd = 15;
+
+  console.log(numberEven % 2 === 0); // true
+  console.log(numberOdd % 2 === 0); // false
+
+  function isEven(number) {
+    return number % 2 === 0;
+  } 
+
+  console.log(isEven(10)); // true
+
+  // 3. NaN: NaN (Not-a-Number) is a special value in JavaScript that represents an invalid number. It is returned when a mathematical operation cannot produce a valid result, such as dividing by zero or performing arithmetic with non-numeric values.
+
+  const resultNaN = 0 / 0;
+  console.log(resultNaN); // NaN
+
+  // Real cases of use:
+
+  // Checking for invalid or missing values
+
+  const numbersNaN = [10, 20, NaN, 30];
+
+  function calculateAverage(numbers) {
+    const filteredNumbers = numbers.filter(num => !isNaN(num));
+    if (filteredNumbers.length === 0) return 0; // Handle case with no valid numbers
+    
+    const sum = filteredNumbers.reduce((acc, num) => acc + num, 0);
+    return sum / filteredNumbers.length;
+  }
+  
+  console.log(calculateAverage(numbersNaN)); // 20
+
+  // 4. Number.parseInt(): The Number.parseInt() method in JavaScript parses a string and returns an integer. It is similar to the global parseInt() function, but it is a static method of the Number object. Number.parseInt() is useful for converting strings to integers in a more explicit and predictable way.
+
+  const stringParseInt = "38";
+  console.log(Number.parseInt(stringParseInt)); // 38
+
+  // Real cases of use - Parsing User Input in Forms:
+  const ageInput = "25"; // User input from a form
+  const age = Number.parseInt(ageInput);
+  if (age >= 18) {
+    console.log("User is an adult.");
+  }
+  
+  // Real cases of use - Extracting Numbers from URL Parameters:
+  const url = "https://example.com/product?id=38";
+  const params = new URLSearchParams(url.split('?')[1]);
+  const productId = Number.parseInt(params.get('id'));
+  console.log(productId); // 38
+  
+  // Real cases of use - Parsing CSS Values for Calculations:
+
+  const margin = "15px";
+  const marginValue = Number.parseInt(margin);
+  console.log(marginValue + 5); // 20
+
+  // Real cases of use - Working with Data from External APIs:
+  const apiResponse = { score: "89" }; // API returns score as a string
+  const score = Number.parseInt(apiResponse.score);
+  console.log(score + 1); // 90
+
+  // Real cases of use - Converting String-Based Measurements in Calculations:
+  const discount = "15%";
+  const discountValue = Number.parseInt(discount);
+  const total = 100;
+  const discountedTotal = total - (total * discountValue / 100);
+  console.log(discountedTotal); // 85
+
+  // 5. Numeric separators (_): Numeric separators are a feature in JavaScript that allows you to use underscores (_) as separators in numeric literals. They improve readability by breaking down large numbers into smaller, more manageable parts. Numeric separators make these numbers clearer to developers, reducing errors when reading, verifying, or editing code.
+
+  const largeNumber = 1_000_000;
+  console.log(largeNumber); // 1000000
+
+  // Real cases of use - Representing Large Financial Values:
+  const annualBudget = 12_000_000; // Easier to read as 12 million
+  const transactionAmount = 5_000_000; // 5 million
+  console.log(annualBudget + transactionAmount); // 17000000
+
+  // Real cases of use - Setting Time or Date Constants in Milliseconds:
+  const oneDayInMs = 86_400_000; // 24 * 60 * 60 * 1000 (milliseconds in a day)
+  const fiveMinutesInMs = 300_000; // 5 * 60 * 1000 (milliseconds in five minutes)
+  console.log(oneDayInMs); // 86400000
+  console.log(fiveMinutesInMs); // 300000
+
+  // Real cases of use - Representing Large Numbers in Scientific Notation:
+  const speedOfLight = 299_792_458; // Speed of light in meters per second
+  const earthToSunDistance = 149_597_870_700; // Approximate distance in meters
+  console.log(speedOfLight); // 299792458
+  console.log(earthToSunDistance); // 149597870700
+
+  // Real cases of use - Representing Bitmasks in Readable Chunks:
+  const filePermissions = 0b1111_1111_0000; // Binary representation with underscores for clarity
+  console.log(filePermissions); // 4080
+
+  // Real cases of use - Setting File Sizes and Data Limits:
+  const maxFileSize = 1_073_741_824; // 1 GB in bytes
+  const memoryLimit = 4_294_967_296; // 4 GB in bytes
+  console.log(maxFileSize); // 1073741824
+  console.log(memoryLimit); // 4294967296
+
+  // Real case of use - Internationalization and Currency Conversion Rates:
+  const usdToInrRate = 74_325; // Representing rate in paise for INR
+  const largeTransactionUSD = 1_000_000; // $1 million USD
+  const largeTransactionINR = largeTransactionUSD * usdToInrRate;
+  console.log(largeTransactionINR); // 74325000000
+
+
+  
+
+  
+
 
 }
