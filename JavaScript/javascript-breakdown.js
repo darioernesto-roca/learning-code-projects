@@ -1486,6 +1486,20 @@ const title = "JavaScript Breakdown";
   console.log(numbersOptionalChaining?.[5]) // undefined
   console.log(numbersOptionalChaining[5]) // undefined  This does not use optional chaining, so it assumes numbersOptionalChaining is a defined object or array. If numbersOptionalChaining is null or undefined, trying to access [5] would throw a TypeError.
 
+  // 3. ?? (nullish coalescing): The nullish coalescing operator (??) in JavaScript provides a way to handle default values for null or undefined values. It returns the right-hand operand when the left-hand operand is null or undefined, but not for other falsy values like 0 or an empty string.
 
+  // Nullish coalescing - Examples:
+
+  // Nullish coalescing - Handling default values
+
+  const nameNullishExample = null;
+  const defaultNameNullishExample = "Guest";
+  console.log(nameNullishExample ?? defaultNameNullishExample); // "Guest"
+
+  // Nullish coalescing - Handling missing properties
+
+  const personNullishExample = { name: "Alice", age: null };
+  const ageNullishExample = personNullishExample.age ?? 30;
+  console.log(ageNullishExample); // 30
 
 }
