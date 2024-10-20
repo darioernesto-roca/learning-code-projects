@@ -1502,11 +1502,11 @@ const title = "JavaScript Breakdown";
   const ageNullishExample = personNullishExample.age ?? 30;
   console.log(ageNullishExample); // 30
 
-  // Advanced control flow: Advanced control flow in JavaScript refers to using conditional statements, loops, and other control structures to create complex logic and decision-making in code. It involves combining multiple conditions, handling errors, and controlling the flow of execution based on different scenarios.
+  // 4. Advanced control flow: Advanced control flow in JavaScript refers to using conditional statements, loops, and other control structures to create complex logic and decision-making in code. It involves combining multiple conditions, handling errors, and controlling the flow of execution based on different scenarios. JavaScript supports various control flow statements like if…else, switch, for, and while to manage the execution flow of code.
 
   // Advanced control flow - Real life code examples:
 
-  // Handling user authentication and authorization in web applications:
+  // Advanced control flow - Handling user authentication and authorization in web applications:
 
   function authenticateUser(user) {
     if (user && user.isAuthenticated) {
@@ -1516,7 +1516,7 @@ const title = "JavaScript Breakdown";
     }
   }
 
-  // Handling form validation and error messages in user interfaces:
+  // Advanced control flow - Handling form validation and error messages in user interfaces:
 
   function validateForm(formData) {
     if (!formData.email) {
@@ -1528,7 +1528,7 @@ const title = "JavaScript Breakdown";
     }
   }
 
-  // Implementing search and filtering functionality in web applications:
+  // Advanced control flow - Implementing search and filtering functionality in web applications:
 
   function filterProducts(products, query) {
     if (!query) {
@@ -1537,4 +1537,61 @@ const title = "JavaScript Breakdown";
     return products.filter(product => product.name.includes(query));
   }
 
+  // Advanced control flow - Implementing complex business logic and rules in applications:
+
+  function calculateDiscount(order) {
+    if (order.total >= 100) {
+      return order.total * 0.1;
+    } else if (order.total >= 50) {
+      return order.total * 0.05;
+    } else {
+      return 0;
+    } 
+  }
+
+  // Advanced control flow - Handling asynchronous operations and error handling in JavaScript:
+
+  async function fetchData(url) {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
+  // 5. Object.entries: The Object.entries() method in JavaScript returns an array of key-value pairs from an object. It provides an easy way to iterate over the properties of an object and access both the keys and values. Object.entries() returns an array where each element is an array containing a key-value pair.
+
+  // Object.entries - Example:
+
+  const personEntries = { name: "Alice", age: 30 };
+
+  for (const [key, value] of Object.entries(personEntries)) {
+    console.log(`${key}: ${value}`);
+  }
+
+  // Output:
+  // name: Alice
+  // age: 30
+
+  // Real cases of use:
+
+  // Object.entries - Iterating over object properties:
+
+  const personProperties = { name: "Alice", age: 30, city: "New York" };
+
+  for (const [key, value] of Object.entries(personProperties)) {
+    console.log(`${key}: ${value}`);
+  }
+
+  // Object.entries - Converting object properties to an array:
+
+  const personArray = Object.entries(personProperties);
+  console.log(personArray); // [["name", "Alice"], ["age", 30], ["city", "New York"]]
+
+  // Object.entries - Filtering object properties based on conditions:
+
+  const personFiltered = Object.entries(personProperties).filter(([key, value]) => key !== "age");
+  console.log(personFiltered); // [["name", "Alice"], ["city", "New York"]]
 }
