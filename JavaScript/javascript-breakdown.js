@@ -1561,7 +1561,7 @@ const title = "JavaScript Breakdown";
     }
   }
 
-  // 5. Object.entries: The Object.entries() method in JavaScript returns an array of key-value pairs from an object. It provides an easy way to iterate over the properties of an object and access both the keys and values. Object.entries() returns an array where each element is an array containing a key-value pair.
+  // 5. Object.entries(): The Object.entries() method in JavaScript returns an array of key-value pairs from an object. It provides an easy way to iterate over the properties of an object and access both the keys and values. Object.entries() returns an array where each element is an array containing a key-value pair.
 
   // Object.entries - Example:
 
@@ -1594,4 +1594,34 @@ const title = "JavaScript Breakdown";
 
   const personFiltered = Object.entries(personProperties).filter(([key, value]) => key !== "age");
   console.log(personFiltered); // [["name", "Alice"], ["city", "New York"]]
+
+  // Object.keys(): The Object.keys() method in JavaScript returns an array of the keys of an object. It provides a way to access the keys of an object and iterate over them. Object.keys() returns an array of strings where each element is a key of the object. The difference between Object.keys() and Object.entries() is that Object.keys() returns only the keys, while Object.entries() returns both the keys and values.
+
+  // Object.keys - Example:
+
+  const personKeys = { name: "Alice", age: 30 };
+
+  for (const key of Object.keys(personKeys)) {
+    console.log(key);
+  }
+
+  // Output:
+  // name
+  // age
+
+  // Real cases of use:
+
+  // Object.keys - Iterating over object keys:
+
+  const personKeysIterate = { name: "Alice", age: 30, city: "New York" };
+
+  for (const key of Object.keys(personKeysIterate)) {
+    console.log(key);
+  }
+
+  // Object.keys - Checking for the presence of specific keys:
+
+  const hasAgeKey = Object.keys(personKeysIterate).includes("age");
+
+  console.log(hasAgeKey); // true
 }
