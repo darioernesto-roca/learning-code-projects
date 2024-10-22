@@ -1624,4 +1624,18 @@ const title = "JavaScript Breakdown";
   const hasAgeKey = Object.keys(personKeysIterate).includes("age");
 
   console.log(hasAgeKey); // true
+
+  // Object.values(): The Object.values() method in JavaScript returns an array of the values of an object. It provides a way to access the values of an object and iterate over them. Object.values() returns an array where each element is a value of the object. The difference between Object.values() and Object.entries() is that Object.values() returns only the values, while Object.entries() returns both the keys and values.
+
+  // Object.values - Example:
+
+  const personValues = { name: "Alice", age: 30 };
+
+  for (const value of Object.values(personValues)) {
+    console.log(value);
+  }
+
+  // Output:
+  // Alice
+  // 30
 }
