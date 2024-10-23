@@ -1595,7 +1595,7 @@ const title = "JavaScript Breakdown";
   const personFiltered = Object.entries(personProperties).filter(([key, value]) => key !== "age");
   console.log(personFiltered); // [["name", "Alice"], ["city", "New York"]]
 
-  // Object.keys(): The Object.keys() method in JavaScript returns an array of the keys of an object. It provides a way to access the keys of an object and iterate over them. Object.keys() returns an array of strings where each element is a key of the object. The difference between Object.keys() and Object.entries() is that Object.keys() returns only the keys, while Object.entries() returns both the keys and values.
+  // 6. Object.keys(): The Object.keys() method in JavaScript returns an array of the keys of an object. It provides a way to access the keys of an object and iterate over them. Object.keys() returns an array of strings where each element is a key of the object. The difference between Object.keys() and Object.entries() is that Object.keys() returns only the keys, while Object.entries() returns both the keys and values.
 
   // Object.keys - Example:
 
@@ -1625,7 +1625,7 @@ const title = "JavaScript Breakdown";
 
   console.log(hasAgeKey); // true
 
-  // Object.values(): The Object.values() method in JavaScript returns an array of the values of an object. It provides a way to access the values of an object and iterate over them. Object.values() returns an array where each element is a value of the object. The difference between Object.values() and Object.entries() is that Object.values() returns only the values, while Object.entries() returns both the keys and values.
+  // 7. Object.values(): The Object.values() method in JavaScript returns an array of the values of an object. It provides a way to access the values of an object and iterate over them. Object.values() returns an array where each element is a value of the object. The difference between Object.values() and Object.entries() is that Object.values() returns only the values, while Object.entries() returns both the keys and values.
 
   // Object.values - Example:
 
@@ -1638,4 +1638,26 @@ const title = "JavaScript Breakdown";
   // Output:
   // Alice
   // 30
+
+  // 8. Destructuring: Destructuring in JavaScript is a way to extract values from arrays and objects and assign them to variables. It provides a concise syntax for accessing and unpacking values from complex data structures. Destructuring can be used with arrays, objects, and function parameters to simplify code and improve readability.
+
+  // Destructuring - Examples:
+
+  // Destructuring - Destructuring an array
+
+  const numbersDestructuring = [1, 2, 3];
+
+  const [first, second, third] = numbersDestructuring;
+  console.log(first); // 1
+  console.log(second); // 2
+  console.log(third); // 3
+
+  // Destructuring - Destructuring an object
+
+  const personDestructuring = { name: "Alice", age: 30 };
+
+  const { name, age } = personDestructuring;
+  console.log(name); // "Alice"
+  console.log(age); // 30
+
 }
