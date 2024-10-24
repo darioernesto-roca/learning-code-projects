@@ -1660,4 +1660,65 @@ const title = "JavaScript Breakdown";
   console.log(name); // "Alice"
   console.log(age); // 30
 
+  // 9. Dynamic properties: Dynamic properties in JavaScript refer to object properties whose names are determined at runtime. They allow you to access and modify object properties using variables or expressions. Dynamic properties are useful for working with objects whose properties are not known in advance or are generated dynamically.
+
+  // Dynamic properties - Examples:
+
+  // Dynamic properties - Accessing object properties using variables
+
+  const personDynamic = { name: "Alice", age: 30 };
+
+  const propertyName = "name";
+  console.log(personDynamic[propertyName]); // "Alice"
+
+  // Dynamic properties - Setting object properties using variables
+
+  const personDynamicSet = {};
+
+  const key = "name";
+  const value = "Alice";
+
+  personDynamicSet[key] = value;
+
+  console.log(personDynamicSet); // { name: "Alice" }
+
+  // Dynamic properties - Computed property names
+
+  const keyName = "name";
+  const personComputed = { [keyName]: "Alice" };
+
+  console.log(personComputed.name); // "Alice"
+
+  // Real cases of use:
+
+  // Dynamic properties - Handling form data in web applications:
+
+  const formData = new FormData(formElement);
+
+  const data = {};
+
+  for (const [key, value] of formData.entries()) {
+    data[key] = value;
+  } 
+
+  // Dynamic properties - Working with API responses and data transformations:
+
+  const apiResponse = { "user.name": "Alice", "user.age": 30 };
+
+  const transformedData = {};
+
+  for (const key in apiResponse) {
+    const newKey = key.split(".")[1];
+    transformedData[newKey] = apiResponse[key];
+  }
+
+  // Dynamic properties - Generating dynamic CSS styles in web applications:
+
+  const styles = {};
+  styles["color"] = "red";
+
+  const fontSize = "16px";
+  styles["font-size"] = fontSize;
+
+
 }
