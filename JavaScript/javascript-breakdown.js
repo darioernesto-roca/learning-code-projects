@@ -1772,4 +1772,26 @@ const title = "JavaScript Breakdown";
     console.log("Name is missing in the API response");
   }
 
+
+  // Object shorthand: Object shorthand in JavaScript is a concise way to create objects by using variable names as property names. It allows you to define object properties with the same name as the variables used to assign their values. Object shorthand is useful for reducing redundancy and improving code readability when creating objects.
+
+  // Object shorthand - Examples:
+
+  // Object shorthand - Creating an object with variable properties
+
+  const nameShortHand = "Alice";
+  const ageShortHand = 30;
+
+  const personShorthand = { nameShortHand, ageShortHand };
+  console.log(personShorthand); // { nameShortHand: "Alice", ageShortHand: 30 }
+
+  // Real cases of use:
+
+  // Object shorthand - Simplifying object creation with variable properties:
+
+  const firstName = "Alice";
+  const lastName = "Smith";
+
+  const user = { firstName, lastName };
+  console.log(user); // { firstName: "Alice", lastName: "Smith" }
 }
