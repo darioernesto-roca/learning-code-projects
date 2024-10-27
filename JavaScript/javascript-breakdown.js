@@ -1794,4 +1794,39 @@ const title = "JavaScript Breakdown";
 
   const user = { firstName, lastName };
   console.log(user); // { firstName: "Alice", lastName: "Smith" }
+
+  // Property access: Property access in JavaScript refers to accessing and modifying object properties using dot notation (.) or bracket notation ([]). It allows you to read, write, and delete object properties dynamically based on their names. Property access is a fundamental concept in JavaScript and is used extensively when working with objects.
+
+  // Property access - Examples:
+
+  // Property access - Accessing object properties using dot notation
+
+  const personAccess = { name: "Alice", age: 30 };
+  console.log(personAccess.name); // "Alice"
+
+  // Property access - Accessing object properties using bracket notation
+
+  const propertyNameAccess = "name";
+  console.log(personAccess[propertyNameAccess]); // "Alice"
+
+  // Real cases of use:
+
+  // Property access - Reading object properties dynamically:
+
+  const personDynamicAccess = { name: "Alice", age: 30 };
+  
+  const property = "name";
+  console.log(personDynamicAccess[property]); // "Alice"
+
+  // Property access - Writing object properties dynamically:
+
+  const personDynamicWrite = {};
+
+  const keyAccess = "name";
+  const valueAccess = "Alice";
+
+  personDynamicWrite[keyAccess] = valueAccess;
+
+  console.log(personDynamicWrite); // { name: "Alice" }
+
 }
