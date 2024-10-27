@@ -1830,3 +1830,88 @@ const title = "JavaScript Breakdown";
   console.log(personDynamicWrite); // { name: "Alice" }
 
 }
+
+/* Promises */
+
+{
+  // 1. Promise: A Promise in JavaScript represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It provides a way to handle asynchronous code in a more structured and manageable way. Promises have three states: pending, fulfilled, and rejected. A Promise is created using the new Promise() constructor, which takes a function as an argument with two parameters: resolve and reject.
+
+  // Promise - Example:
+
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const randomValue = Math.random();
+      if (randomValue >= 0.5) {
+        resolve(randomValue);
+      } else {
+        reject(new Error("Value is too low"));
+      }
+    }, 1000);
+  });
+
+  promise.then(value => {
+    console.log("Resolved:", value);
+  }).catch(error => {
+    console.error("Rejected:", error.message);
+  });
+
+  // Real cases of use:
+
+  // Promise - Fetching data from an API:
+
+  function fetchData(url) {
+    return new Promise((resolve, reject) => {
+      fetch(url)
+        .then(response => response.json())
+        .then(data => resolve(data))
+        .catch(error => reject(error));
+    });
+  }
+
+  fetchData("https://api.example.com/data")
+    .then(data => console.log("Data:", data))
+    .catch(error => console.error("Error:", error));
+
+  // Promise - Handling user authentication and authorization:
+
+  function authenticateUser(credentials) {
+    return new Promise((resolve, reject) => {
+      if (isValidCredentials(credentials)) {
+        resolve("User is authenticated");
+      } else {
+        reject(new Error("Invalid credentials"));
+      }
+    });
+  }
+
+  authenticateUser({ username: "alice", password: "password" })
+    .then(message => console.log(message))
+    .catch(error => console.error(error.message));
+
+  // Promise - Loading images and resources in web applications:
+
+  function loadImage(url) {
+    return new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => resolve(image);
+      image.onerror = () => reject(new Error("Failed to load image"));
+      image.src = url;
+    });
+  }
+
+  loadImage("image.jpg")
+    .then(image => console.log("Image loaded:", image))
+    .catch(error => console.error("Error loading image:", error));
+
+  // Promise - Handling form submissions and data processing:
+
+  function submitForm(formData) {
+    return new Promise((resolve, reject) => {
+      if (isValidFormData(formData)) {
+        resolve("Form submitted successfully");
+      } else {
+        reject(new Error("Invalid form data"));
+      }
+    });
+  }
+}
