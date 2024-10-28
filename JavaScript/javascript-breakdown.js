@@ -1914,4 +1914,29 @@ const title = "JavaScript Breakdown";
       }
     });
   }
+
+  // 2. States: A Promise in JavaScript can be in one of three states: pending, fulfilled, or rejected. The state of a Promise determines its behavior and the value it resolves to. When a Promise is created, it starts in the pending state. It transitions to the fulfilled state when the asynchronous operation is successful and resolves with a value. It transitions to the rejected state when an error occurs during the operation and rejects with an error.
+
+  // States - Example:
+
+  const promiseState = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const randomValue = Math.random();
+      if (randomValue >= 0.5) {
+        resolve(randomValue);
+      } else {
+        reject(new Error("Value is too low"));
+      }
+    }, 1000);
+  });
+
+  console.log(promiseState); // Promise { <pending> }
+
+  promiseState.then(value => {
+    console.log("Resolved:", value);
+    console.log(promiseState); // Promise { 0.625 }
+  }).catch(error => {
+    console.error("Rejected:", error.message);
+    console.log(promiseState); // Promise { <rejected> }
+  });
 }
