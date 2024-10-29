@@ -1939,4 +1939,43 @@ const title = "JavaScript Breakdown";
     console.error("Rejected:", error.message);
     console.log(promiseState); // Promise { <rejected> }
   });
+
+  // 3. new Promise(): The new Promise() constructor in JavaScript is used to create a new Promise object. It takes a function as an argument with two parameters: resolve and reject. The resolve parameter is a function that is called when the asynchronous operation is successful and the Promise is fulfilled. The reject parameter is a function that is called when an error occurs during the operation and the Promise is rejected.
+
+  // new Promise() - Example:
+
+  const promiseNew = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const randomValue = Math.random();
+      if (randomValue >= 0.5) {
+        resolve(randomValue);
+      } else {
+        reject(new Error("Value is too low"));
+      }
+    }, 1000);
+  });
+
+  promiseNew.then(value => {
+    console.log("Resolved:", value);
+  }).catch(error => {
+    console.error("Rejected:", error.message);
+  });
+
+  // Real cases of use:
+
+  // new Promise() - Fetching data from an API:
+
+  function fetchData(url) {
+    return new Promise((resolve, reject) => {
+      fetch(url)
+        .then(response => response.json())
+        .then(data => resolve(data))
+        .catch(error => reject(error));
+    });
+  }
+
+  fetchData("https://api.example.com/data")
+    .then(data => console.log("Data:", data))
+    .catch(error => console.error("Error:", error));
+
 }
