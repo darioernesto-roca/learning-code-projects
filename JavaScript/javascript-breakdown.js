@@ -1978,4 +1978,23 @@ const title = "JavaScript Breakdown";
     .then(data => console.log("Data:", data))
     .catch(error => console.error("Error:", error));
 
+    // 4. await keyword: The await keyword in JavaScript is used to pause the execution of an asynchronous function until a Promise is settled (resolved or rejected). It can only be used inside an async function, which allows you to write asynchronous code in a synchronous style. The await keyword simplifies working with Promises and makes asynchronous code easier to read and maintain.
+
+    // await keyword examples:
+
+    function resolveAfter2Seconds(x) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(x);
+        }, 2000);
+      });
+    }
+    
+    async function f1() {
+      const x = await resolveAfter2Seconds(10);
+      console.log(x); // 10
+    }
+    
+    f1();
+
 }
