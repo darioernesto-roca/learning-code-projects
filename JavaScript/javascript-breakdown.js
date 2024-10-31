@@ -1997,4 +1997,64 @@ const title = "JavaScript Breakdown";
     
     f1();
 
+    // Real cases of use:
+
+    // await keyword - Fetching data from an API:
+
+    async function fetchData(url) {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    }
+
+    const data = await fetchData("https://api.example.com/data");
+
+    // await keyword - Handling user authentication and authorization:
+
+    async function authenticateUser(credentials) {
+      if (isValidCredentials(credentials)) {
+        return "User is authenticated";
+      } else {
+        throw new Error("Invalid credentials");
+      }
+    }   
+
+    try {
+      const message = await authenticateUser({ username: "ernestico", password: "password" });
+      console.log(message);
+    } catch (error) {
+      console.error(error.message);
+    }
+
+    // await keyword - Loading images and resources in web applications:
+
+    async function loadImage(url) {
+      const image = new Image();
+      image.src = url;
+      await new Promise((resolve, reject) => {
+        image.onload = resolve;
+        image.onerror = reject;
+      });
+      return image;
+    }
+
+    // async/await: The async/await syntax in JavaScript provides a way to write asynchronous code in a synchronous style. It allows you to define asynchronous functions using the async keyword and use the await keyword to pause the execution of asynchronous operations until they are settled (resolved or rejected). async/await simplifies working with Promises and improves the readability and maintainability of asynchronous code.
+
+    // async/await - Examples:
+
+    async function fetchDataAsync(url) {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    }
+
+    fetchDataAsync("https://api.example.com/data")
+
+    async function authenticateUserAsync(credentials) {
+      if (isValidCredentials(credentials)) {
+        return "User is authenticated";
+      } else {
+        throw new Error("Invalid credentials");
+      }
+    }
 }
