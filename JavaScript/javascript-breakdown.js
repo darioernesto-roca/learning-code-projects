@@ -2038,7 +2038,7 @@ const title = "JavaScript Breakdown";
       return image;
     }
 
-    // async/await: The async/await syntax in JavaScript provides a way to write asynchronous code in a synchronous style. It allows you to define asynchronous functions using the async keyword and use the await keyword to pause the execution of asynchronous operations until they are settled (resolved or rejected). async/await simplifies working with Promises and improves the readability and maintainability of asynchronous code.
+    // 5. async/await: The async/await syntax in JavaScript provides a way to write asynchronous code in a synchronous style. It allows you to define asynchronous functions using the async keyword and use the await keyword to pause the execution of asynchronous operations until they are settled (resolved or rejected). async/await simplifies working with Promises and improves the readability and maintainability of asynchronous code.
 
     // async/await - Examples:
 
@@ -2057,4 +2057,36 @@ const title = "JavaScript Breakdown";
         throw new Error("Invalid credentials");
       }
     }
+
+    // 6. Async Function: An async function in JavaScript is a function that returns a Promise. It allows you to write asynchronous code in a synchronous style using the async/await syntax. An async function can contain one or more await expressions, which pause the execution of the function until the Promise is settled. Async functions simplify working with Promises and make asynchronous code easier to read and maintain.
+
+    // Async function - Example:
+
+    async function fetchDataAsyncFunction(url) {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    }
+
+    fetchDataAsyncFunction("https://api.example.com/data")
+
+    // Async function with error handling:
+
+    async function authenticateUserAsyncFunction(credentials) {
+      if (isValidCredentials(credentials)) {
+        return "User is authenticated";
+      } else {
+        throw new Error("Invalid credentials");
+      }
+    }
+
+    // Async with arrow function: We can create async functions using arrow function syntax. This is useful when defining short asynchronous functions or when using arrow functions in combination with other features like Promises and async/await.
+
+    const fetchDataAsyncArrow = async (url) => {
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+    }
+
+
 }
