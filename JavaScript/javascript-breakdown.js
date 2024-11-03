@@ -2121,12 +2121,25 @@ const title = "JavaScript Breakdown";
           reject(new Error("Value is too low"));
         }
       }, 1000);
-    }
+    }, 1000);
 
     promisePromises.then(value => {
       console.log("Resolved:", value);
     }).catch(error => {
       console.error("Rejected:", error.message);
     });
+
+    // Real cases of use:
+
+    // Promises - Fetching data from an API:
+
+    function fetchDataPromises(url) {
+      return new Promise((resolve, reject) => {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => resolve(data))
+          .catch(error => reject(error));
+      });
+    }
 
 }
