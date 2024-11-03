@@ -2090,6 +2090,8 @@ const title = "JavaScript Breakdown";
 
     // 7. Top-level await: Top-level await is a feature in JavaScript that allows you to use the await keyword outside of async functions at the top level of a module. It simplifies working with asynchronous code in module scripts and provides a more straightforward way to handle asynchronous operations.
 
+    // Note: Top-level await only works at the top level of modules. There is no support for classic scripts or non-async functions. Top-level await enables developers to use the await keyword outside of async functions. It acts like a big async function causing other modules who import them to wait before they start evaluating their body.
+
     // Top-level await - Example:
 
     const responseTopLevelAwait = await fetch("https://api.example.com/data");
@@ -2103,5 +2105,7 @@ const title = "JavaScript Breakdown";
     // Top-level await - Fetching data from an API in module scripts:
 
     // const response = await fetch("https://api.example.com/data");
+
+
 
 }
