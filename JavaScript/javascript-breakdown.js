@@ -2092,6 +2092,8 @@ const title = "JavaScript Breakdown";
 
     // Note: Top-level await only works at the top level of modules. There is no support for classic scripts or non-async functions. Top-level await enables developers to use the await keyword outside of async functions. It acts like a big async function causing other modules who import them to wait before they start evaluating their body.
 
+    // For more info: https://v8.dev/features/top-level-await
+
     // Top-level await - Example:
 
     const responseTopLevelAwait = await fetch("https://api.example.com/data");
@@ -2106,6 +2108,25 @@ const title = "JavaScript Breakdown";
 
     // const response = await fetch("https://api.example.com/data");
 
+    // 8. Promises: Promises in JavaScript are used to handle asynchronous operations and provide a way to work with asynchronous code in a more structured and manageable way. A Promise represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises have three states: pending, fulfilled, and rejected. A Promise is created using the new Promise() constructor, which takes a function as an argument with two parameters: resolve and reject.
 
+    // Promises - Example:
+
+    const promisePromises = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const randomValue = Math.random();
+        if (randomValue >= 0.5) {
+          resolve(randomValue);
+        } else {
+          reject(new Error("Value is too low"));
+        }
+      }, 1000);
+    }
+
+    promisePromises.then(value => {
+      console.log("Resolved:", value);
+    }).catch(error => {
+      console.error("Rejected:", error.message);
+    });
 
 }
