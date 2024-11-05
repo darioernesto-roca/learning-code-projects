@@ -2142,4 +2142,16 @@ const title = "JavaScript Breakdown";
       });
     }
 
+    // 9. Promise.resolve(): The Promise.resolve() method in JavaScript returns a Promise object that is resolved with a given value. It is a convenient way to create a Promise that is already resolved with a specific value. Promise.resolve() is useful for converting non-Promise values into Promises and simplifying asynchronous code.
+
+    // Promise.resolve() - Example:
+
+    const resolvedPromise = Promise.resolve(42);
+
+    resolvedPromise.then(value => {
+      console.log("Resolved:", value);
+    });
+
+    
+
 }
