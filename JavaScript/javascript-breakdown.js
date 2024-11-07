@@ -2152,6 +2152,27 @@ const title = "JavaScript Breakdown";
       console.log("Resolved:", value);
     });
 
-    
+    // 10. Promise.reject(): The Promise.reject() method in JavaScript returns a Promise object that is rejected with a given reason. It is a convenient way to create a Promise that is already rejected with a specific error. Promise.reject() is useful for handling errors and failures in asynchronous code.
+
+    // Promise.reject() - Example:
+
+    const rejectedPromise = Promise.reject(new Error("Promise rejected"));
+
+    rejectedPromise.catch(error => {
+      console.error("Rejected:", error.message);
+    });
+
+    // 11. Promise.all(): The Promise.all() method in JavaScript takes an iterable of Promises and returns a single Promise that resolves when all of the input Promises have resolved, or rejects with the reason of the first Promise that rejects. It is useful for running multiple asynchronous operations in parallel and waiting for all of them to complete.
+
+    // Promise.all() - Example:
+
+    const promise1 = Promise.resolve(1);
+    const promise2 = Promise.resolve(2);
+    const promise3 = Promise.resolve(3);
+
+    Promise.all([promise1, promise2, promise3])
+    .then(values => {
+      console.log("Resolved:", values);
+    });
 
 }
