@@ -2188,4 +2188,25 @@ const title = "JavaScript Breakdown";
       console.log("Resolved:", value);
     });
 
+    // 13. .then(): The .then() method in JavaScript is used to handle the result of a Promise after it has been resolved. It takes two optional callback functions as arguments: onFulfilled and onRejected. The onFulfilled callback is called when the Promise is resolved, and the onRejected callback is called when the Promise is rejected.
+
+    // .then() - Example:
+
+    const promiseThen = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const randomValue = Math.random();
+        if (randomValue >= 0.5) {
+          resolve(randomValue);
+        } else {
+          reject(new Error("Value is too low"));
+        }
+      }, 1000);
+    })
+
+    promiseThen.then(value => {
+      console.log("Resolved:", value);
+    }).catch(error => {
+      console.error("Rejected:", error.message);
+    });
+
 }
