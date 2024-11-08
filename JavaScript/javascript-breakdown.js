@@ -2175,4 +2175,17 @@ const title = "JavaScript Breakdown";
       console.log("Resolved:", values);
     });
 
+    // 12. Promise.any(): The Promise.any() method in JavaScript takes an iterable of Promises and returns a single Promise that resolves as soon as one of the input Promises resolves, or rejects if all of the input Promises reject. It is useful for handling multiple asynchronous operations and waiting for the first one to complete successfully.
+
+    // Promise.any() - Example:
+
+    const promiseAny1 = new Promise((resolve, reject) => setTimeout(resolve, 100, "one"));
+    const promiseAny2 = new Promise((resolve, reject) => setTimeout(resolve, 200, "two"));
+    const promiseAny3 = new Promise((resolve, reject) => setTimeout(resolve, 300, "three"));
+
+    Promise.any([promiseAny1, promiseAny2, promiseAny3])
+    .then(value => {
+      console.log("Resolved:", value);
+    });
+
 }
