@@ -2209,4 +2209,43 @@ const title = "JavaScript Breakdown";
       console.error("Rejected:", error.message);
     });
 
+    // 14. .finally(): The .finally() method in JavaScript is used to run cleanup code after a Promise is settled (resolved or rejected). It is called regardless of the Promise's outcome and allows you to perform cleanup tasks like closing resources, releasing memory, or logging final results.
+
+    // .finally() - Example:
+
+    const promiseFinally = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const randomValue = Math.random();
+        if (randomValue >= 0.5) {
+          resolve(randomValue);
+        } else {
+          reject(new Error("Value is too low"));
+        }
+      }, 1000);
+    })
+
+    promiseFinally.then(value => {
+      console.log("Resolved:", value);
+    }).catch(error => {
+      console.error("Rejected:", error.message);
+    }).finally(() => {
+      console.log("Cleanup code here");
+    });
+
+    // 15. .catch(): The .catch() method in JavaScript is used to handle errors in Promises. It is a shorthand for .then(null, onRejected) and is called when a Promise is rejected. The .catch() method allows you to handle errors in a more concise and readable way.
+
+    // .catch() - Example:
+
+    const promiseCatch = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        reject(new Error("Promise rejected"));
+      }, 1000);
+    })
+
+    promiseCatch.then(value => {
+      console.log("Resolved:", value);
+    }).catch(error => {
+      console.error("Rejected:", error.message);
+    });
+
 }
