@@ -1140,7 +1140,7 @@ const title = "JavaScript Breakdown";
   }
 }
 
-/* Modules */
+/* 6. Modules */
 
 {
   // 1. ES Modules: ES Modules (ECMAScript Modules) are a standard for working with modules in JavaScript. They provide a way to organize and structure code by splitting it into separate files, each containing a module. ES Modules use the import and export keywords to define dependencies between modules and share code between them.
@@ -1281,7 +1281,7 @@ const title = "JavaScript Breakdown";
 
 }
 
-/* Number */
+/* 7. Number */
 
 {
   // 1. .toString(): The .toString() method in JavaScript converts a number to a string. It takes an optional parameter that specifies the base of the number system to use for the conversion. By default, .toString() converts the number to a base-10 string.
@@ -1418,7 +1418,7 @@ const title = "JavaScript Breakdown";
 
 }
 
-/* Objects */
+/* 8. Objects */
 
 {
   // 1. ... (spread operator): The spread operator (...) in JavaScript is used to expand an iterable (e.g., an array) into individual elements. It allows you to copy and merge arrays, objects, and other iterables easily. The spread operator is commonly used for creating shallow copies of arrays and objects, combining multiple arrays, and passing multiple arguments to functions.
@@ -1831,7 +1831,7 @@ const title = "JavaScript Breakdown";
 
 }
 
-/* Promises */
+/* 9. Promises */
 
 {
   // 1. Promise: A Promise in JavaScript represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It provides a way to handle asynchronous code in a more structured and manageable way. Promises have three states: pending, fulfilled, and rejected. A Promise is created using the new Promise() constructor, which takes a function as an argument with two parameters: resolve and reject.
@@ -2247,5 +2247,67 @@ const title = "JavaScript Breakdown";
     }).catch(error => {
       console.error("Rejected:", error.message);
     });
+
+}
+
+/* 10. Strings */
+
+{
+  // 1. [] (character access): The square brackets [] in JavaScript are used to access individual characters in a string. You can access characters by their index position, starting from 0 for the first character. The character at a specific index can be retrieved or modified using square brackets notation.
+
+  // [] - Examples:
+
+  // [] - Accessing characters in a string
+
+  const textString = "Hello, Ernestico!";
+
+  console.log(textString[0]); // "H"
+  console.log(textString[7]); // "E"
+  console.log(textString[13]); // "!"
+
+  // [] - Modifying characters in a string
+
+  const nameString = "Ernestico!";
+  nameString[0] = "A"; // This does not modify the string
+  console.log(nameString); // "Ernestico!"
+  nameString = "A" + nameString.slice(1); // This modifies the string
+  console.log(nameString); // "Arnestico!"
+
+  // 2. Template strings: Template strings in JavaScript are a way to create strings that allow for embedded expressions and multi-line strings. They are enclosed in backticks (`) instead of single or double quotes. Template strings support string interpolation, allowing you to embed variables and expressions inside the string using ${...} syntax.
+
+  // Template strings - Examples:
+
+  // Template strings - String interpolation
+
+  const nameTemplate = "Ernestico";
+  const greetingTemplate = `Hello, ${nameTemplate}!`;
+
+  console.log(greetingTemplate); // "Hello, Ernestico!"
+
+  // Template strings - Multi-line strings
+
+  const multiLineString = `
+    This is a
+    multi-line
+    string.
+  `;
+  console.log(multiLineString); // "This is a\nmulti-line\nstring."
+
+  // Template strings - Expressions and calculations
+
+  const number1 = 5;
+  const number2 = 10;
+
+  const sumTemplate = `${number1} + ${number2} = ${number1 + number2}`;
+
+  console.log(sumTemplate); // "5 + 10 = 15"
+
+
+
+  
+
+
+
+
 
 }
