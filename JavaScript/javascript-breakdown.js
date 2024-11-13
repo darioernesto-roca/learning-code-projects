@@ -2302,6 +2302,37 @@ const title = "JavaScript Breakdown";
 
   console.log(sumTemplate); // "5 + 10 = 15"
 
+  // 3. Concatenation: Concatenation in JavaScript refers to combining multiple strings into a single string. It is commonly used to build dynamic strings by joining static text with variables, expressions, or other strings. Concatenation can be done using the + operator or template strings.
+
+  // Concatenation - Examples:
+
+  // Concatenation - Using the + operator
+
+  const firstNameConcat = "Ernestico";
+
+  const fullNameConcat = "Hello, " + firstNameConcat + "!";
+
+  console.log(fullNameConcat); // "Hello, Ernestico!"
+
+  // Concatenation - Using template strings
+
+  const lastNameConcat = "Roca";
+
+  const fullNameTemplate = `Hello, ${firstNameConcat} ${lastNameConcat}!`;
+
+  console.log(fullNameTemplate); // "Hello, Ernestico Roca!"
+
+  // Concatenation - Combining multiple strings
+
+  const text1 = "Hello, ";
+  const text2 = "Ernestico";
+
+  const messageConcat = text1 + text2 + "!";
+
+  console.log(messageConcat); // "Hello, Ernestico!"
+
+  
+
 
 
   
