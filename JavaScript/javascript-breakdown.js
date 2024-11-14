@@ -2331,7 +2331,26 @@ const title = "JavaScript Breakdown";
 
   console.log(messageConcat); // "Hello, Ernestico!"
 
-  
+  // 4. .trim(): The .trim() method in JavaScript is used to remove whitespace characters from the beginning and end of a string. It trims leading and trailing spaces, tabs, and line breaks, but not spaces within the string. The .trim() method is useful for cleaning up user input, normalizing strings, and comparing strings without leading or trailing whitespace. 
+
+  // .trim() - Examples:
+
+  const textTrim = "   Hello, Ernestico!   ";
+  console.log(textTrim.trim()); // "Hello, Ernestico!"
+
+  // .trim() - Removing leading and trailing spaces
+
+  const textLeading = "   Hello, Ernestico!";
+  console.log(textLeading.trim()); // "Hello, Ernestico!"
+
+  const textTrailing = "Hello, Ernestico!   ";
+  console.log(textTrailing.trim()); // "Hello, Ernestico!"
+
+  // .trim() - Normalizing user input
+
+  const userInput = " Ernestico    ";
+  const normalizedInput = userInput.trim();
+  console.log(normalizedInput); // "Ernestico"
 
 
 
