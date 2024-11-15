@@ -2352,12 +2352,45 @@ const title = "JavaScript Breakdown";
   const normalizedInput = userInput.trim();
   console.log(normalizedInput); // "Ernestico"
 
+  // 5. .toUpperCase(): The .toUpperCase() method in JavaScript is used to convert a string to uppercase letters. It returns a new string with all characters converted to uppercase. The .toUpperCase() method is useful for normalizing text, comparing strings case-insensitively, and formatting text in a consistent way.
 
+  // .toUpperCase() - Examples:
 
-  
+  const textUpper = "Hello, Ernestico!";
+  console.log(textUpper.toUpperCase()); // "HELLO, ERNESTICO!"
 
+  // 6. .toLowerCase(): The .toLowerCase() method in JavaScript is used to convert a string to lowercase letters. It returns a new string with all characters converted to lowercase. The .toLowerCase() method is useful for normalizing text, comparing strings case-insensitively, and formatting text in a consistent way.
 
+  // .toLowerCase() - Examples:
 
+  const textLower = "Hello, Ernestico!";
+  console.log(textLower.toLowerCase()); // "hello, ernestico!"
+
+  // 7. .substring(): The .substring() method in JavaScript is used to extract a substring from a string. It takes two parameters: the starting index (inclusive) and the ending index (exclusive) of the substring. The .substring() method returns a new string containing the characters between the specified indices.
+
+  // .substring() - Examples:
+
+  const textSubstring = "Hello, Ernestico!";
+  console.log(textSubstring.substring(7, 16)); // "Ernestico"
+
+  // 8. .startsWith(): The .startsWith() method in JavaScript is used to check if a string starts with a specific substring. It returns true if the string starts with the specified substring, and false otherwise. The .startsWith() method is useful for checking prefixes, patterns, or keywords at the beginning of a string. It is case-sensitive.
+
+  // .startsWith() - Examples:
+
+  const textStartsWith = "Hello, Ernestico!";
+  console.log(textStartsWith.startsWith("Hello")); // true
+  console.log(textStartsWith.startsWith("Ernestico")); // false
+  console.log(textStartsWith.startsWith("H")); // true
+  console.log(textStartsWith.startsWith("hello")); // false
+
+  // 9. .split(): The .split() method in JavaScript is used to split a string into an array of substrings based on a specified separator. It takes a separator as an argument and returns an array of substrings. The .split() method is useful for parsing strings, extracting values, and splitting text into smaller parts.
+
+  // .split() - Examples:
+
+  const textSplit = "Hello, Ernestico!";
+  console.log(textSplit.split(",")); // ["Hello", " Ernestico!"]
+  console.log(textSplit.split(" ")); // ["Hello,", "Ernestico!"]
+  console.log(textSplit.split("o")); // ["Hell", ", Ernestic", "!"] 
 
 
 }
