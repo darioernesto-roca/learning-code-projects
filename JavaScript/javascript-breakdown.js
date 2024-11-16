@@ -2392,5 +2392,21 @@ const title = "JavaScript Breakdown";
   console.log(textSplit.split(" ")); // ["Hello,", "Ernestico!"]
   console.log(textSplit.split("o")); // ["Hell", ", Ernestic", "!"] 
 
+  // 10. .replaceAll(): The .replaceAll() method in JavaScript is used to replace all occurrences of a specified substring with another substring in a string. It takes two parameters: the substring to be replaced and the new substring to replace it with. The .replaceAll() method returns a new string with all occurrences of the specified substring replaced.
+
+  // .replaceAll() - Examples:
+
+  const textReplaceAll = "Hello, Ernestico!";
+  console.log(textReplaceAll.replaceAll("Hello", "Hi")); // "Hi, Ernestico!"
+  console.log(textReplaceAll.replaceAll("o", "0")); // "Hell0, Ernestic0!"
+
+  // 11. .replace(): The .replace() method in JavaScript is used to replace a specified substring with another substring in a string. It takes two parameters: the substring to be replaced and the new substring to replace it with. The .replace() method replaces only the first occurrence of the specified substring.
+
+  // .replace() - Examples:
+
+  const textReplace = "Hello, Ernestico!";
+  console.log(textReplace.replace("Hello", "Hi")); // "Hi, Ernestico!"
+  console.log(textReplace.replace("o", "0")); // "Hell0, Ernestico!"
+
 
 }
