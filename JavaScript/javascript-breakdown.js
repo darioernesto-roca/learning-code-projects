@@ -2408,5 +2408,32 @@ const title = "JavaScript Breakdown";
   console.log(textReplace.replace("Hello", "Hi")); // "Hi, Ernestico!"
   console.log(textReplace.replace("o", "0")); // "Hell0, Ernestico!"
 
+  // 12. lenght: The length property in JavaScript is used to get the number of characters in a string. It returns the length of the string as an integer value. The length property is useful for checking the size of a string, iterating over characters, and performing string manipulation operations.
+
+  // length - Examples:
+
+  const textLength = "Hello, Ernestico!";
+  console.log(textLength.length); // 17
+
+  // 13. .includes(): The .includes() method in JavaScript is used to check if a string contains a specific substring. It returns true if the string contains the specified substring, and false otherwise. The .includes() method is case-sensitive.
+
+  // .includes() - Examples:
+
+  const textIncludes = "Hello, Ernestico!";
+  console.log(textIncludes.includes("Hello")); // true
+  console.log(textIncludes.includes("Ernestico")); // true
+  console.log(textIncludes.includes("hello")); // false
+  console.log(textIncludes.includes("ello")); // true
+
+  // 14. .indexOf(): The .indexOf() method in JavaScript is used to find the index of the first occurrence of a specified substring in a string. It returns the index of the substring if found, and -1 if the substring is not present. The .indexOf() method is case-sensitive.
+
+  // .indexOf() - Examples:
+
+  const textIndexOf = "Hello, Ernestico!";
+  console.log(textIndexOf.indexOf("Hello")); // 0
+  console.log(textIndexOf.indexOf("Ernestico")); // 7
+  console.log(textIndexOf.indexOf("hello")); // -1
+  console.log(textIndexOf.indexOf("o")); // 4
+
 
 }
