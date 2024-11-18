@@ -2408,7 +2408,7 @@ const title = "JavaScript Breakdown";
   console.log(textReplace.replace("Hello", "Hi")); // "Hi, Ernestico!"
   console.log(textReplace.replace("o", "0")); // "Hell0, Ernestico!"
 
-  // 12. lenght: The length property in JavaScript is used to get the number of characters in a string. It returns the length of the string as an integer value. The length property is useful for checking the size of a string, iterating over characters, and performing string manipulation operations.
+  // 12. .length: The length property in JavaScript is used to get the number of characters in a string. It returns the length of the string as an integer value. The length property is useful for checking the size of a string, iterating over characters, and performing string manipulation operations.
 
   // length - Examples:
 
@@ -2435,5 +2435,29 @@ const title = "JavaScript Breakdown";
   console.log(textIndexOf.indexOf("hello")); // -1
   console.log(textIndexOf.indexOf("o")); // 4
 
+  // 15. .endsWith(): The .endsWith() method in JavaScript is used to check if a string ends with a specific substring. It returns true if the string ends with the specified substring, and false otherwise. The .endsWith() method is case-sensitive.
 
+  // .endsWith() - Examples:
+
+  const textEndsWith = "Hello, Ernestico!";
+  console.log(textEndsWith.endsWith("Ernestico!")); // true
+  console.log(textEndsWith.endsWith("Hello")); // false
+
+  // 16. .charAt(): The .charAt() method in JavaScript is used to get the character at a specific index in a string. It takes an index as an argument and returns the character at that index. The .charAt() method is useful for accessing individual characters in a string.
+
+  // .charAt() - Examples:
+
+  const textCharAt = "Hello, Ernestico!";
+  console.log(textCharAt.charAt(0)); // "H"
+  console.log(textCharAt.charAt(7)); // "E"
+  console.log(textCharAt.charAt(13)); // "!"
+
+  // 17. .at(): The .at() method in JavaScript is used to get the character at a specific index in a string. It takes an index as an argument and returns the character at that index. The .at() method is similar to the .charAt() method but supports negative indices and Unicode characters. The difference between .at() and .charAt() is that .at() returns an empty string for out-of-bounds indices, while .charAt() returns an empty string for negative indices.
+
+  // .at() - Examples:
+
+  const textAt = "Hello, Ernestico!";
+  console.log(textAt.at(0)); // "H"
+  console.log(textAt.at(7)); // "E"
+  console.log(textAt.at(13)); // "!"
 }
