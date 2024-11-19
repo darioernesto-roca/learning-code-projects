@@ -2461,3 +2461,51 @@ const title = "JavaScript Breakdown";
   console.log(textAt.at(7)); // "E"
   console.log(textAt.at(13)); // "!"
 }
+
+/* 11. Syntax */
+
+{
+  // 1. try...catch...finally: The try...catch...finally statement in JavaScript is used to handle exceptions and errors in code. It consists of three blocks: try, catch, and finally. The try block contains the code that may throw an exception. The catch block is executed when an exception is thrown, and it handles the error. The finally block is executed after the try and catch blocks, regardless of whether an exception occurred.
+
+  // try...catch...finally - Example:
+
+  try {
+    // Code that may throw an exception
+    throw new Error("An error occurred");
+  } catch (error) {
+    // Handle the error
+    console.error("Error:", error.message);
+  } finally {
+    // Cleanup code
+    console.log("Finally block executed");
+  }
+
+  // Real cases of use:
+
+  // try...catch...finally - Handling file operations in Node.js:
+
+  const fs = require("fs");
+
+  try {
+    const data = fs.readFileSync("file.txt", "utf8");
+    console.log("File content:", data);
+  } catch (error) {
+    console.error("Error reading file:", error.message);
+  } finally {
+    console.log("File operation completed");
+  }
+
+  // try...catch...finally - Handling database operations in web applications:
+
+  try {
+    const data = await fetchDataFromDatabase();
+    console.log("Data from database:", data);
+  }
+  catch (error) {
+    console.error("Error fetching data:", error.message);
+  }
+  finally {
+    console.log("Database operation completed");
+  }
+
+}
