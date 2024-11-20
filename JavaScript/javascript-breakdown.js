@@ -2508,4 +2508,56 @@ const title = "JavaScript Breakdown";
     console.log("Database operation completed");
   }
 
+  // 2. throw: The throw statement in JavaScript is used to throw an exception or error. It interrupts the execution of the code and transfers control to the nearest enclosing try...catch block. The throw statement is useful for signaling errors, handling exceptional conditions, and customizing error messages.
+
+  // throw - Example:
+
+  const ageThrow = -1;
+
+  if (ageThrow < 0) {
+    throw new Error("Age cannot be negative");
+  }
+
+  // Real cases of use:
+
+  // throw - Validating user input in web forms:
+
+  function validateUserInput(input) {
+    if (!input) {
+      throw new Error("Input is required");
+    }
+  }
+
+  // throw - Handling invalid arguments in functions:
+
+  function calculateArea(width, height) {
+    if (width <= 0 || height <= 0) {
+      throw new Error("Invalid dimensions");
+    }
+    return width * height;
+  }
+
+  // 3. return: The return statement in JavaScript is used to end the execution of a function and specify the value to be returned. It returns the value of the expression following the return keyword to the caller of the function. The return statement is used to provide the output of a function and exit the function's execution.
+
+  // return - Example:
+
+  function sum(a, b) {
+    return a + b;
+  }
+
+  const result = sum(5, 10);
+  console.log(result); // 15
+
+  // Real cases of use:
+
+  // return - Calculating total price in a shopping cart:
+
+  function calculateTotalPrice(items) {
+    let total = 0;
+    for (const item of items) {
+      total += item.price;
+    }
+    return total;
+  }
+
 }
