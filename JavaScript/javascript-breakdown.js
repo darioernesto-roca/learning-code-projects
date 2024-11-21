@@ -2560,4 +2560,14 @@ const title = "JavaScript Breakdown";
     return total;
   }
 
+  // 4. Ternary operator: The ternary operator in JavaScript is a conditional operator that evaluates a condition and returns one of two expressions based on the result of the condition. It consists of three parts: a condition, a true expression, and a false expression. The ternary operator is a concise way to write conditional statements and is often used for simple if-else checks. It is like a shorthand for an if-else statement.
+
+  // Ternary operator - Example:
+
+  const ageTernary = 25;
+  const messageTernary = ageTernary >= 18 ? "You are an adult" : "You are a minor";
+
+  console.log(messageTernary); // "You are an adult"
+
+
 }
