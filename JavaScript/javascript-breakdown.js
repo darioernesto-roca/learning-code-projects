@@ -2569,5 +2569,64 @@ const title = "JavaScript Breakdown";
 
   console.log(messageTernary); // "You are an adult"
 
+  // 5. if...else: The if...else statement in JavaScript is used to execute different blocks of code based on a condition. It consists of an if block, an optional else block, and one or more else if blocks. The if block contains the code to be executed if the condition is true. The else block contains the code to be executed if the condition is false. The else if block allows for multiple conditions to be checked.
 
+  // if...else - Example:
+
+  const temperature = 25;
+
+  if (temperature > 30) {
+    console.log("It's hot outside");
+  } else if (temperature > 20) {
+    console.log("It's warm outside");
+  } else {
+    console.log("It's cold outside");
+  }
+
+  // Real cases of use:
+
+  // if...else - Validating user input in a web form:
+
+  if (input === "") {
+    console.log("Input is required");
+  } else {
+    console.log("Input is valid");
+  }
+
+  // if...else - Handling user authentication in a web application:
+
+  if (isValidCredentials(credentials)) {
+    console.log("User is authenticated");
+  } else {
+    console.log("Invalid credentials");
+  }
+
+  // 6. for...of: The for...of statement in JavaScript is used to iterate over the elements of an iterable object, such as an array, string, or collection. It provides a concise and readable way to loop through the elements of an iterable without using traditional index-based loops. The for...of statement works with any object that has a Symbol.iterator method. It is commonly used for iterating over arrays, strings, and other iterable objects. The diffence with the for...in loop is that for...of iterates over the values of an iterable, while for...in iterates over the keys or indices.
+
+  // for...of - Example:
+
+  const forOfNumbers = [1, 2, 3, 4, 5];
+
+  for (const number of forOfNumbers) {
+    console.log(number); // 1, 2, 3, 4, 5
+  }
+
+  // Real cases of use:
+
+  // for...of - Processing items in a shopping cart:
+
+  const shoppingCart = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  let totalPrice = 0;
+
+  for (const item of shoppingCart) {
+    totalPrice += item.price;
+  }
+
+  console.log("Total price:", totalPrice);
+ 
 }
