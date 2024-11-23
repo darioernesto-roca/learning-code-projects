@@ -2628,5 +2628,30 @@ const title = "JavaScript Breakdown";
   }
 
   console.log("Total price:", totalPrice);
+
+  // 7. for (loops): The for loop in JavaScript is used to iterate over a block of code a specified number of times. It consists of three parts: an initialization, a condition, and an increment or decrement. The for loop executes the code block as long as the condition is true. It is commonly used for iterating over arrays, generating sequences, and performing repetitive tasks.
+
+  // for (loops) - Example:
+
+  for (let i = 0; i < 5; i++) {
+    console.log(i); // 0, 1, 2, 3, 4
+  }
  
+  // Real cases of use:
+
+  // for (loops) - Generating a sequence of numbers:
+
+  for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
+
+  // for (loops) - Iterating over an array:
+
+  const numbersFor = [1, 2, 3, 4, 5];
+
+  for (let i = 0; i < numbersFor.length; i++) {
+    console.log(numbersFor[i]);
+  }
+
+  // 8. while: The while loop in JavaScript is used to execute a block of code as long as a specified condition is true. It consists of a condition that is evaluated before each iteration of the loop. The while loop continues to execute the code block until the condition becomes false. It is commonly used for repeating tasks with an unknown number of iterations.
 }
