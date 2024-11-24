@@ -2654,4 +2654,53 @@ const title = "JavaScript Breakdown";
   }
 
   // 8. while: The while loop in JavaScript is used to execute a block of code as long as a specified condition is true. It consists of a condition that is evaluated before each iteration of the loop. The while loop continues to execute the code block until the condition becomes false. It is commonly used for repeating tasks with an unknown number of iterations.
+
+  // while - Example:
+
+  let count = 0;
+
+  while (count < 5) {
+    console.log(count);
+    count++;
+  }
+
+  // Real cases of use:
+
+  // while - Processing user input until valid:
+
+  let userInput = "";
+
+  while (userInput === "") {
+    userInput = prompt("Enter your name:");
+  }
+
+  console.log("User input:", userInput);
+
+  // while - Generating a sequence of random numbers:
+
+  let randomNumbers = [];
+
+  while (randomNumbers.length < 5) {
+    randomNumbers.push(Math.random());
+  }
+
+  console.log("Random numbers:", randomNumbers);
+
+  // 9. Semi-colons: Semi-colons in JavaScript are used to terminate statements and separate multiple statements on the same line. While semi-colons are optional in JavaScript due to automatic semicolon insertion (ASI), it is recommended to use them to avoid potential issues and improve code readability. Semi-colons are used to indicate the end of a statement and prevent syntax errors.
+
+  // Semi-colons - Examples:
+
+  const messageSemiColon = "Hello, Ernestico!"; // Semi-colon at the end of the statement
+
+  let countSemiColon = 0; // Semi-colon at the end of the statement
+
+  countSemiColon++; // Semi-colon at the end of the statement
+
+  // Real cases of use:
+
+  // Semi-colons - Terminating statements in JavaScript:
+
+  const firstNameSemiColon = "Ernestico"; // Semi-colon at the end of the statement
+
+  let ageSemiColon = 25; // Semi-colon at the end of the statement
 }
