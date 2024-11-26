@@ -2703,4 +2703,45 @@ const title = "JavaScript Breakdown";
   const firstNameSemiColon = "Ernestico"; // Semi-colon at the end of the statement
 
   let ageSemiColon = 25; // Semi-colon at the end of the statement
+
+  // 10. Exceptions: Exceptions in JavaScript are used to handle errors, exceptional conditions, and unexpected behavior in code. They provide a way to gracefully handle errors and prevent the program from crashing. Exceptions can be thrown using the throw statement and caught using try...catch blocks. They allow you to handle errors, recover from failures, and provide meaningful error messages to users.
+
+  // Exceptions - Example:
+
+  try {
+    throw new Error("An error occurred");
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+
+  // Real cases of use:
+
+  // Exceptions - Handling file operations in Node.js:
+
+  const fs = require("fs");
+
+  try {
+    const data = fs.readFileSync("file.txt", "utf8");
+    console.log("File content:", data);
+  } catch (error) {
+    console.error("Error reading file:", error.message);
+  }
+
+  // Exceptions - Validating user input in web forms:
+
+  function validateUserInput(input) {
+    if (!input) {
+      throw new Error("Input is required");
+    }
+  }
+
+  // Exceptions - Handling database operations in web applications:
+
+  try {
+    const data = await fetchDataFromDatabase();
+    console.log("Data from database:", data);
+  }
+  catch (error) {
+    console.error("Error fetching data:", error.message);
+  }
 }
