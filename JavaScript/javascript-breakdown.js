@@ -2745,3 +2745,24 @@ const title = "JavaScript Breakdown";
     console.error("Error fetching data:", error.message);
   }
 }
+
+/* 12. Arrays */
+
+{
+  // 1. ... (spread operator): The spread operator (...) in JavaScript is used to expand an iterable object, such as an array or string, into individual elements. It allows you to split an array into individual elements or combine multiple elements into an array. The spread operator is useful for creating copies of arrays, merging arrays, and passing multiple arguments to functions.
+
+  // ... (spread operator) - Examples:
+
+  // ... (spread operator) - Splitting an array into individual elements
+
+  const numbersSpread = [1, 2, 3, 4, 5];
+
+  console.log(...numbersSpread); // 1 2 3 4 5
+
+  // ... (spread operator) - Combining multiple elements into an array
+
+  const numbersCombined = [...numbersSpread, 6, 7, 8, 9, 10];
+
+  console.log(numbersCombined); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+}
