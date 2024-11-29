@@ -2775,4 +2775,15 @@ const title = "JavaScript Breakdown";
   console.log(numbersAt.at(2)); // 3
   console.log(numbersAt.at(4)); // 5
 
+  // 3. .every(): The .every() method in JavaScript is used to check if all elements in an array pass a specified condition. It takes a callback function as an argument, which is called for each element in the array. The .every() method returns true if all elements satisfy the condition, and false otherwise. It is useful for checking if all elements meet a specific criteria or condition.
+
+  // .every() - Examples:
+
+  const numbersEvery = [1, 2, 3, 4, 5];
+
+  const isPositive = numbersEvery.every(number => number > 0);
+
+  console.log(isPositive); // true
+
+  
 }
