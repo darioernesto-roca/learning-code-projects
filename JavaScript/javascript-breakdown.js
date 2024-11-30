@@ -2785,5 +2785,28 @@ const title = "JavaScript Breakdown";
 
   console.log(isPositive); // true
 
-  
+  // 4. .filter(): The .filter() method in JavaScript is used to create a new array with elements that pass a specified condition. It takes a callback function as an argument, which is called for each element in the array. The .filter() method returns a new array containing only the elements that satisfy the condition. It is useful for selecting or filtering elements based on a specific criteria. The difference with .every() is that .every() returns a boolean value, while .filter() returns a new array with the elements that pass the condition.
+
+  // .filter() - Examples:
+
+  const numbersFilter = [1, -2, 3, -4, 5];
+
+  const positiveNumbers = numbersFilter.filter(number => number > 0);
+
+  console.log(positiveNumbers); // [1, 3, 5]
+
+  // Real cases of use:
+
+  // .filter() - Filtering products in an e-commerce website:
+
+  const products = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  const affordableProducts = products.filter(product => product.price < 20);
+
+  console.log(affordableProducts); // [{ name: "Product 1", price: 10 }]
+
 }
