@@ -2809,4 +2809,13 @@ const title = "JavaScript Breakdown";
 
   console.log(affordableProducts); // [{ name: "Product 1", price: 10 }]
 
+  // 5. .find(): The .find() method in JavaScript is used to find the first element in an array that passes a specified condition. It takes a callback function as an argument, which is called for each element in the array. The .find() method returns the first element that satisfies the condition, or undefined if no element matches the condition. It is useful for searching for a specific element in an array.
+
+  // .find() - Examples:
+
+  const numbersFind = [1, 2, 3, 4, 5];
+
+  const foundNumber = numbersFind.find(number => number > 3);
+
+  console.log(foundNumber); // 4
 }
