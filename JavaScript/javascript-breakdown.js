@@ -2828,5 +2828,38 @@ const title = "JavaScript Breakdown";
   const index = numbersFindIndex.findIndex(number => number > 3);
 
   console.log(index); // 3
+
+  // 7. .foreach(): The .forEach() method in JavaScript is used to iterate over the elements of an array and perform a specified action for each element. It takes a callback function as an argument, which is called for each element in the array. The .forEach() method does not return a new array but executes the callback function for each element. It is useful for performing side effects, such as logging, updating variables, or interacting with the DOM.
+
+  // .forEach() - Examples:
+
+  const numbersForEach = [1, 2, 3, 4, 5];
+
+  numbersForEach.forEach(number => {
+    console.log(number);
+  });
+
+  // Real cases of use:
+
+  // .forEach() - Logging items in a shopping cart:
+
+  const shoppingCart = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  shoppingCart.forEach(item => {
+    console.log(item.name, item.price);
+  });
+
+  // 8. .includes(): The .includes() method in JavaScript is used to check if an array contains a specific element. It returns true if the array includes the element, and false otherwise. The .includes() method is case-sensitive and works with primitive values, objects, and arrays. It is useful for checking the presence of an element in an array.
+
+  // .includes() - Examples:
+
+  const numbersIncludes = [1, 2, 3, 4, 5];
+
+  console.log(numbersIncludes.includes(3)); // true
+  console.log(numbersIncludes.includes(6)); // false
   
 }
