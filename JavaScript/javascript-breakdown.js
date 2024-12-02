@@ -2818,4 +2818,15 @@ const title = "JavaScript Breakdown";
   const foundNumber = numbersFind.find(number => number > 3);
 
   console.log(foundNumber); // 4
+
+  // 6. .findIndex(): The .findIndex() method in JavaScript is used to find the index of the first element in an array that passes a specified condition. It takes a callback function as an argument, which is called for each element in the array. The .findIndex() method returns the index of the first element that satisfies the condition, or -1 if no element matches the condition. It is useful for finding the position of a specific element in an array.
+
+  // .findIndex() - Examples:
+
+  const numbersFindIndex = [1, 2, 3, 4, 5];
+
+  const index = numbersFindIndex.findIndex(number => number > 3);
+
+  console.log(index); // 3
+  
 }
