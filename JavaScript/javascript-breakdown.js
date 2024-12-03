@@ -2861,5 +2861,47 @@ const title = "JavaScript Breakdown";
 
   console.log(numbersIncludes.includes(3)); // true
   console.log(numbersIncludes.includes(6)); // false
+
+  // 9. .join(): The .join() method in JavaScript is used to join the elements of an array into a string. It takes an optional separator as an argument, which is inserted between the elements in the resulting string. The .join() method returns a new string containing the elements of the array joined together. It is useful for converting arrays into strings with custom separators.
+
+  // .join() - Examples:
+
+  const fruits = ["apple", "banana", "orange"];
+
+  console.log(fruits.join(", ")); // "apple, banana, orange"
+  console.log(fruits.join(" | ")); // "apple | banana | orange"
+
+  // Real cases of use:
+
+  // .join() - Formatting a list of items for display:
+
+  const items = ["item1", "item2", "item3"];
+
+  const formattedList = items.join(", ");
+
+  console.log("Items:", formattedList);
+
+  // 10. .map(): The .map() method in JavaScript is used to create a new array by applying a specified function to each element in an existing array. It takes a callback function as an argument, which is called for each element in the array. The .map() method returns a new array containing the results of applying the callback function to each element. It is useful for transforming, modifying, or extracting values from an array. The difference between .map() and .forEach() is that .map() returns a new array with the transformed elements, while .forEach() does not return a new array. In general is recommend to use .map() when you want to transform the elements of an array and create a new array with the transformed values.
+
+  // .map() - Examples:
+
+  const numbersMap = [1, 2, 3, 4, 5];
+
+  const squaredNumbers = numbersMap.map(number => number ** 2);
+
+  console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+
+  // Real cases of use:
+
+  // .map() - Formatting data for display in a web application:
+
+  const data = [10, 20, 30, 40, 50];
+
+  const formattedData = data.map(value => `$${value}`);
+
+  console.log("Formatted data:", formattedData.join(", ")); // Formatted data: "$10, $20, $30, $40, $50"
+
+
+
   
 }
