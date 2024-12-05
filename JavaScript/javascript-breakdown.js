@@ -2901,7 +2901,27 @@ const title = "JavaScript Breakdown";
 
   console.log("Formatted data:", formattedData.join(", ")); // Formatted data: "$10, $20, $30, $40, $50"
 
+  // 11. .push(): The .push() method in JavaScript is used to add one or more elements to the end of an array. It takes one or more arguments, which are appended to the array in the order they are provided. The .push() method modifies the original array and returns the new length of the array. It is useful for adding elements to an array dynamically.
 
+  // .push() - Examples:
+
+  const numbersPush = [1, 2, 3, 4, 5];
+  numbersPush.push(6);
+  console.log(numbersPush); // [1, 2, 3, 4, 5, 6]
+
+  numbersPush.push(7, 8, 9);
+  console.log(numbersPush); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  // Real cases of use:
+
+  // .push() - Adding items to a shopping cart:
+
+  const shoppingCartPush = [];
+
+  shoppingCartPush.push({ name: "Product 1", price: 10 });
+  shoppingCartPush.push({ name: "Product 2", price: 20 });
+
+  console.log("Shopping cart:", shoppingCartPush); // 
 
   
 }
