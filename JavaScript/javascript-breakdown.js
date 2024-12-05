@@ -2923,5 +2923,33 @@ const title = "JavaScript Breakdown";
 
   console.log("Shopping cart:", shoppingCartPush); // 
 
+  // 12. .reduce(): The .reduce() method in JavaScript is used to reduce an array to a single value by applying a specified function to each element in the array. It takes a callback function and an optional initial value as arguments. The callback function is called for each element in the array, and the result is accumulated into a single value. The .reduce() method returns the final accumulated value. It is useful for calculating totals, aggregating data, and performing complex transformations on arrays. The difference between .reduce() and .map() is that .reduce() reduces an array to a single value, while .map() transforms each element of an array and returns a new array with the transformed values.
+  // The value of 0 in the second argument of the .reduce() method is the initial value of the accumulator. The first argument of the reduce method is a callback function that takes two parameters: the accumulator and the current value of the array. The callback function returns the new value of the accumulator after processing the current value.
+
+
+
+  // .reduce() - Examples:
+
+  const numbersReduce = [1, 2, 3, 4, 5];
+
+  const sumReduce = numbersReduce.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+  console.log(sumReduce); // 15
+
+  // Real cases of use:
+
+  // .reduce() - Calculating the total price of items in a shopping cart:
+
+  const shoppingCartReduce = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  const totalPriceReduce = shoppingCartReduce.reduce((total, item) => total + item.price, 0);
+
+  console.log("Total price:", totalPriceReduce); // Total price: 60
+
   
+
 }
