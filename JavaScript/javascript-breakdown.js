@@ -2950,6 +2950,28 @@ const title = "JavaScript Breakdown";
 
   console.log("Total price:", totalPriceReduce); // Total price: 60
 
-  
+  // 13. .some(): The .some() method in JavaScript is used to check if at least one element in an array passes a specified condition. It takes a callback function as an argument, which is called for each element in the array. The .some() method returns true if at least one element satisfies the condition, and false otherwise. It is useful for checking if any element meets a specific criteria or condition.
+
+  // .some() - Examples:
+
+  const numbersSome = [1, 2, 3, 4, 5];
+
+  const hasNegativeNumber = numbersSome.some(number => number < 0);
+
+  console.log(hasNegativeNumber); // false
+
+  // Real case of use:
+
+  // .some() - Checking if any item is on sale in an e-commerce website:
+
+  const productsSome = [
+    { name: "Product 1", price: 10, onSale: false },
+    { name: "Product 2", price: 20, onSale: true },
+    { name: "Product 3", price: 30, onSale: false }
+  ];
+
+  const hasSale = productsSome.some(product => product.onSale);
+
+  console.log("Sale available:", hasSale); // Sale available: true
 
 }
