@@ -2974,4 +2974,29 @@ const title = "JavaScript Breakdown";
 
   console.log("Sale available:", hasSale); // Sale available: true
 
+  // 14. .sort(): The .sort() method in JavaScript is used to sort the elements of an array in place. By default, the .sort() method sorts the elements as strings in ascending order. It modifies the original array and returns the sorted array. The .sort() method can also take a compare function as an argument to specify a custom sorting order. It is useful for arranging elements in a specific order, such as alphabetical, numerical, or custom sorting criteria.
+
+  // .sort() - Examples:
+
+  const numbersSort = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+
+  numbersSort.sort();
+
+  console.log(numbersSort); // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+  // Real cases of use:
+
+  // .sort() - Sorting products by price in an e-commerce website:
+
+  const productsSort = [
+    { name: "Product 1", price: 30 },
+    { name: "Product 2", price: 10 },
+    { name: "Product 3", price: 20 }
+  ];
+
+  productsSort.sort((a, b) => a.price - b.price);
+
+  console.log("Sorted products:", productsSort); // Sorted products: [{ name: "Product 2", price: 10 }, { name: "Product 3", price: 20 }, { name: "Product 1", price: 30 }]
+
+
 }
