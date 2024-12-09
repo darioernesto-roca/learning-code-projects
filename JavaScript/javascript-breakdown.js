@@ -2998,5 +2998,33 @@ const title = "JavaScript Breakdown";
 
   console.log("Sorted products:", productsSort); // Sorted products: [{ name: "Product 2", price: 10 }, { name: "Product 3", price: 20 }, { name: "Product 1", price: 30 }]
 
+  // 15. .splice(): The .splice() method in JavaScript is used to add or remove elements from an array at a specified index. It takes three arguments: the start index, the number of elements to remove, and optional elements to add. The .splice() method modifies the original array and returns the removed elements as a new array. It is useful for inserting, removing, or replacing elements in an array.
+
+  // .splice() - Examples:
+
+  const numbersSplice = [1, 2, 3, 4, 5];
+
+  const removedNumbers = numbersSplice.splice(2, 2);
+
+  console.log(removedNumbers); // [3, 4]
+  console.log(numbersSplice); // [1, 2, 5]
+
+  numbersSplice.splice(2, 0, 3, 4);
+  console.log(numbersSplice); // [1, 2, 3, 4, 5]
+
+  // Real cases of use:
+
+  // .splice() - Removing items from a shopping cart:
+
+  const shoppingCartSplice = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  const removedItems = shoppingCartSplice.splice(1, 2);
+
+  console.log("Removed items:", removedItems); // Removed items: [{ name: "Product 2", price: 20 }, { name: "Product 3", price: 30 }]
+
 
 }
