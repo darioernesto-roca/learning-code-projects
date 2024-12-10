@@ -3026,5 +3026,25 @@ const title = "JavaScript Breakdown";
 
   console.log("Removed items:", removedItems); // Removed items: [{ name: "Product 2", price: 20 }, { name: "Product 3", price: 30 }]
 
+  // 16. ?. (optional chaining): The optional chaining operator (?.) in JavaScript is used to access properties of an object without causing an error if the property is undefined or null. It allows you to safely navigate nested object properties without checking for each level of existence. The optional chaining operator returns undefined if any property in the chain is null or undefined. It is useful for handling optional properties, nested objects, and avoiding "TypeError: Cannot read property 'x' of undefined" errors.
+
+  // ?. (optional chaining) - Examples:
+
+  let userOptionalChaining = {
+    name: "Ernestico",
+    address: {
+      city: "San Francisco"
+    }
+  };
+
+  console.log(userOptionalChaining.address?.city); // "San Francisco
+
+  userOptionalChaining = {
+    name: "Ernestico"
+  };
+
+  console.log(userOptionalChaining.address?.city); // undefined
+
+
 
 }
