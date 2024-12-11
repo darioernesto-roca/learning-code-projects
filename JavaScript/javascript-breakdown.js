@@ -3045,6 +3045,33 @@ const title = "JavaScript Breakdown";
 
   console.log(userOptionalChaining.address?.city); // undefined
 
+  // 17. Arrays of objects: Arrays of objects in JavaScript are used to store collections of related data in a structured format. Each element in the array is an object that contains key-value pairs of properties and values. Arrays of objects are useful for representing complex data structures, such as lists of products, users, or items. They allow you to group related data together and perform operations on the collection as a whole.
+
+  // Arrays of objects - Examples:
+
+  const productsArray = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  console.log(productsArray[0].name); // "Product 1"
+  console.log(productsArray[1].price); // 20
+  console.log(productsArray.length); // 3
+
+  // Real cases of use:
+
+  // Arrays of objects - Storing user information in a web application:
+
+  const usersArray = [
+    { name: "User 1", email: "user1@email.com" },
+    { name: "User 2", email: "user2@email.com" },
+    { name: "User 3", email: "user3@email.com" }
+  ];
+
+  console.log(usersArray[0].name); // "User 1"
+  console.log(usersArray[1].email); // "user2@email.com"
+  console.log(usersArray.length); // 3
 
 
 }
