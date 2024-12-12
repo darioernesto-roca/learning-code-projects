@@ -3073,5 +3073,15 @@ const title = "JavaScript Breakdown";
   console.log(usersArray[1].email); // "user2@email.com"
   console.log(usersArray.length); // 3
 
+  // 18. [] get item: The [] operator in JavaScript is used to access elements in an array by their index. It takes an index as an argument and returns the element at that index. The [] operator is used to retrieve, update, or remove elements from an array. It is useful for working with arrays and accessing individual elements by their position.
+
+  // [] get item - Examples:
+
+  const numbersGetItem = [1, 2, 3, 4, 5];
+
+  console.log(numbersGetItem[0]); // 1
+
+  const firstNumber = numbersGetItem[0];
+  console.log(firstNumber); // 1
 
 }
