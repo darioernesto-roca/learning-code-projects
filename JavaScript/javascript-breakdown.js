@@ -1,5 +1,7 @@
 /* JAVASCRIP BREAKDOWN */
 
+const { log } = require("console");
+
 const title = "JavaScript Breakdown";
 
 /* 1. Variables */
@@ -3084,4 +3086,74 @@ const title = "JavaScript Breakdown";
   const firstNumber = numbersGetItem[0];
   console.log(firstNumber); // 1
 
+  // 19. Destructuring: Destructuring in JavaScript is a way to extract values from arrays or objects and assign them to variables in a concise and readable manner. It allows you to unpack values from arrays or objects into individual variables using a syntax that mirrors the structure of the array or object. Destructuring is useful for working with complex data structures, such as arrays of objects or nested objects.
+
+  // Destructuring - Examples:
+
+  const numbersDestructuring = [1, 2, 3];
+
+  const [first, second, third] = numbersDestructuring;
+
+  console.log(first); // 1
+  console.log(second); // 2
+  console.log(third); // 3
+
+  const userDestructuring = {
+    name: "Ernestico",
+    age: 25
+  };
+
+  const { name, age } = userDestructuring;
+
+  console.log(name); // "Ernestico"
+  console.log(age); // 25
+
+  // Real cases of use:
+
+  // Destructuring - Extracting data from an API response:
+
+  const apiResponse = {
+    data: {
+      id: 1,
+      name: "Product 1",
+      price: 10
+    }
+  };
+
+  const { id, nameApi, price } = apiResponse.data;
+
+  console.log(nameApi); // "Product 1"
+  console.log(price); // 10
+  console.log(id); // 1
+
+  // Destructuring - Simplifying function parameters:
+
+  function printUser({ name, age }) {
+    console.log(`Name: ${name}, Age: ${age}`);
+  }
+
+  const user = {
+    name: "Ernestico",
+    age: 25
+  };
+
+  printUser(user);
+
+  // Destructuring in React components:
+
+  const UserComponent = ({ name, age }) => {
+    return (
+      <div>
+        <h1>{name}</h1>
+        <p>{age}</p>
+      </div>
+    );
+  }
+
+  const userProps = {
+    name: "Ernestico",
+    age: 25
+  };
+
+  <UserComponent {...userProps} />
 }
