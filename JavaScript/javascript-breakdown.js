@@ -3156,4 +3156,32 @@ const title = "JavaScript Breakdown";
   };
 
   <UserComponent {...userProps} />
+
+  // 20. [] set item: The [] operator in JavaScript is used to update elements in an array by their index. It takes an index and a new value as arguments and assigns the new value to the element at that index. The [] operator is used to update, add, or remove elements from an array. It is useful for modifying arrays and updating individual elements by their position.
+
+  // [] set item - Examples:
+
+  const numbersSetItem = [1, 2, 3, 4, 5];
+
+  numbersSetItem[0] = 10;
+
+  console.log(numbersSetItem); // [10, 2, 3, 4, 5]
+
+  numbersSetItem[2] = 30;
+
+  console.log(numbersSetItem); // [10, 2, 30, 4, 5]
+
+  // Real cases of use:
+
+  // [] set item - Updating items in a shopping cart:
+
+  const shoppingCartSetItem = [
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ];
+
+  shoppingCartSetItem[1].price = 25;
+
+  console.log(shoppingCartSetItem); // [{ name: "Product 1", price: 10 }, { name: "Product 2", price: 25 }, { name: "Product 3", price: 30 }]
 }
