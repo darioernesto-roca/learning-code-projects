@@ -3185,3 +3185,34 @@ const title = "JavaScript Breakdown";
 
   console.log(shoppingCartSetItem); // [{ name: "Product 1", price: 10 }, { name: "Product 2", price: 25 }, { name: "Product 3", price: 30 }]
 }
+
+/* 13. Objects */
+{
+  // 1. Object.keys(): The Object.keys() method in JavaScript is used to extract the keys of an object as an array. It takes an object as an argument and returns an array containing the keys of the object. The Object.keys() method is useful for iterating over the keys of an object, accessing specific properties, and performing operations on object properties.
+
+  // Object.keys() - Examples:
+
+  const userKeys = {
+    name: "Ernestico",
+    age: 25
+  };
+
+  const keys = Object.keys(userKeys);
+
+  console.log(keys); // ["name", "age"]
+
+  // Real cases of use:
+
+  // Object.keys() - Iterating over object properties:
+
+  const userProperties = {
+    name: "Ernestico",
+    age: 25
+  };
+
+  Object.keys(userProperties).forEach(key => {
+    console.log(key, userProperties[key]);
+  }
+
+  
+}
