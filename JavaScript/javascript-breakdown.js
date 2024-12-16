@@ -3186,33 +3186,25 @@ const title = "JavaScript Breakdown";
   console.log(shoppingCartSetItem); // [{ name: "Product 1", price: 10 }, { name: "Product 2", price: 25 }, { name: "Product 3", price: 30 }]
 }
 
-/* 13. Objects */
+/* 13. Classes */
+
 {
-  // 1. Object.keys(): The Object.keys() method in JavaScript is used to extract the keys of an object as an array. It takes an object as an argument and returns an array containing the keys of the object. The Object.keys() method is useful for iterating over the keys of an object, accessing specific properties, and performing operations on object properties.
+  // 1. Classes: Classes in JavaScript are used to define blueprints for creating objects with shared properties and methods. They provide a way to create objects with similar characteristics and behaviors by encapsulating data and functionality into a single unit. Classes are a fundamental concept in object-oriented programming (OOP) and are used to model real-world entities, such as users, products, or vehicles.
 
-  // Object.keys() - Examples:
+  // Classes - Examples:
 
-  const userKeys = {
-    name: "Ernestico",
-    age: 25
-  };
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
 
-  const keys = Object.keys(userKeys);
-
-  console.log(keys); // ["name", "age"]
-
-  // Real cases of use:
-
-  // Object.keys() - Iterating over object properties:
-
-  const userProperties = {
-    name: "Ernestico",
-    age: 25
-  };
-
-  Object.keys(userProperties).forEach(key => {
-    console.log(key, userProperties[key]);
+    greet() {
+      console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+    }
   }
 
-  
+  const person = new Person("Ernestico", 25);
+  person.greet(); // "Hello, my name is Ernestico and I am 25 years old"
+
 }
