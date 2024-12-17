@@ -3207,4 +3207,43 @@ const title = "JavaScript Breakdown";
   const person = new Person("Ernestico", 25);
   person.greet(); // "Hello, my name is Ernestico and I am 25 years old"
 
+  // 2. Getters: Getters in JavaScript are used to define computed properties that are accessed like object properties but are computed on the fly. They allow you to define custom behavior when accessing a property of an object. Getters are useful for calculating derived values, formatting data, or performing validation logic.
+
+  // Getters - Examples:
+
+  class Circle {
+    constructor(radius) {
+      this.radius = radius;
+    }
+
+    get area() {
+      return Math.PI * this.radius ** 2;
+    }
+  }
+
+  const circle = new Circle(5);
+  console.log(circle.area); // 78.54
+
+  // Real cases of use:
+
+  // Getters - Calculating the total price of items in a shopping cart:
+
+  class ShoppingCart {
+    constructor(items) {
+      this.items = items;
+    }
+
+    get totalPrice() {
+      return this.items.reduce((total, item) => total + item.price, 0);
+    }
+  }
+
+  const shoppingCart = new ShoppingCart([
+    { name: "Product 1", price: 10 },
+    { name: "Product 2", price: 20 },
+    { name: "Product 3", price: 30 }
+  ]);
+
+  console.log(shoppingCart.totalPrice); // 60
+
 }
