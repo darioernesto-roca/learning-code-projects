@@ -3250,6 +3250,36 @@ const title = "JavaScript Breakdown";
 
   {
     // 3.1. Class vs Function: The class keyword in JavaScript is used to define a class, which is a blueprint for creating objects with shared properties and methods. Classes provide a way to create objects with similar characteristics and behaviors by encapsulating data and functionality into a single unit. Classes are a fundamental concept in object-oriented programming (OOP) and are used to model real-world entities, such as users, products, or vehicles. Functions in JavaScript are used to define reusable blocks of code that can be called and executed multiple times. Functions can take parameters, return values, and perform specific tasks. They are a fundamental building block of JavaScript and are used for organizing and structuring code.
+
+    // 3.2 Private class fields: Private class fields in JavaScript are used to define private properties and methods that are accessible only within the class. They provide encapsulation and data hiding by restricting access to internal class members. Private class fields are declared using the # symbol before the field name. They are useful for protecting sensitive data, preventing external modifications, and enforcing encapsulation.
+
+    // Private class fields - Examples:
+
+    class Counter {
+      #count = 0;
+
+      increment() {
+        this.#count++;
+      }
+
+      decrement() {
+        this.#count--;
+      }
+
+      getCount() {
+        return this.#count;
+      }
+    }
+
+    const counter = new Counter();
+
+    counter.increment();
+    counter.increment();
+    counter.decrement();
+
+    console.log(counter.getCount()); // 1
+
+    
   }
 
 }
