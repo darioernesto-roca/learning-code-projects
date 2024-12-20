@@ -3277,9 +3277,27 @@ const title = "JavaScript Breakdown";
     counter.increment();
     counter.decrement();
 
-    console.log(counter.getCount()); // 1
-
+    console.log(counter.getCount()); // 1   
     
+    // 3.3. Public class fields: Public class fields in JavaScript are used to define public properties and methods that are accessible outside the class. They provide a way to expose class members to external code and allow for interaction with the class. Public class fields are declared without the # symbol before the field name. They are useful for defining properties and methods that can be accessed and modified from external code.
+
+    // Public class fields - Examples:
+
+    class Person {
+      name = "Ernestico";
+      age = 25;
+
+      greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+      }
+    }
+
+    const person = new Person();
+
+    console.log(person.name); // "Ernestico"
+
+    person.greet(); // "Hello, my name is Ernestico and I am 25 years old"
+
   }
 
 }
