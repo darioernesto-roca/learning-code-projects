@@ -3298,6 +3298,28 @@ const title = "JavaScript Breakdown";
 
     person.greet(); // "Hello, my name is Ernestico and I am 25 years old"
 
+    // 3.4. Inheritance: Inheritance in JavaScript is a mechanism that allows a class to inherit properties and methods from another class. It enables code reuse and promotes a hierarchical structure of classes. Inheritance is a fundamental concept in object-oriented programming (OOP) and is used to model relationships between objects.
+
+    // Inheritance - Examples:
+
+    class Animal {
+      constructor(name) {
+        this.name = name;
+      }
+
+      speak() {
+        console.log(`${this.name} makes a sound`);
+      }
+    }
+
+    class Dog extends Animal {
+      speak() {
+        console.log(`${this.name} barks`);
+      }
+    }
+
+    const dog = new Dog("Buddy");
+
   }
 
 }
