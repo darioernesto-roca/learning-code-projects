@@ -3322,4 +3322,30 @@ const title = "JavaScript Breakdown";
 
   }
 
+  // 3.5. Prototypal inheritance: Prototypal inheritance in JavaScript is a mechanism that allows objects to inherit properties and methods from other objects. It is based on the prototype chain, where objects inherit from other objects through a prototype link. Prototypal inheritance is a fundamental concept in JavaScript and is used to model relationships between objects. The relation between prototypal inheritance and inheritance is that prototypal inheritance is a specific type of inheritance that is based on the prototype chain. Other types of inheritance, such as class-based inheritance, are also used in object-oriented programming.
+
+  // Prototypal inheritance - Examples:
+
+  function Animal(name) {
+    this.name = name;
+  }
+
+  Animal.prototype.speak = function() {
+    console.log(`${this.name} makes a sound`);
+  }
+
+  function Dog(name) {
+    Animal.call(this, name);
+  }
+
+  Dog.prototype = Object.create(Animal.prototype);
+
+  Dog.prototype.speak = function() {
+    console.log(`${this.name} barks`);
+  }
+
+  const dog = new Dog("Buddy");
+
+  dog.speak(); // "Buddy barks"
+
 }
