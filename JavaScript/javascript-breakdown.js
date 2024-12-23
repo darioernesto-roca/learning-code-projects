@@ -3348,4 +3348,31 @@ const title = "JavaScript Breakdown";
 
   dog.speak(); // "Buddy barks"
 
+  //  3.6. Prototype chain: The prototype chain in JavaScript is a mechanism that allows objects to inherit properties and methods from other objects through a prototype link. It is a fundamental concept in JavaScript and is used to model relationships between objects. The prototype chain is a chain of objects linked through their prototype property, where each object inherits from its prototype object. The prototype chain enables objects to share behavior and functionality through inheritance.
+
+  // Prototype chain - Examples:
+
+  function Animal(name) {
+    this.name = name;
+  }
+
+  Animal.prototype.speak = function() {
+    console.log(`${this.name} makes a sound`);
+  }
+
+  function Dog(name) {
+    Animal.call(this, name);
+  }
+
+  Dog.prototype = Object.create(Animal.prototype);
+
+  Dog.prototype.speak = function() {
+    console.log(`${this.name} barks`);
+  }
+
+  const dog2 = new Dog("Buddy");
+
+  console.log(dog2 instanceof Dog); // true
+
+
 }
