@@ -3373,6 +3373,54 @@ const title = "JavaScript Breakdown";
   const dog2 = new Dog("Buddy");
 
   console.log(dog2 instanceof Dog); // true
+  console.log(dog2 instanceof Animal); // true
 
+  // 3.7. Super keyword: The super keyword in JavaScript is used to call methods on the superclass within a subclass. It is used to access and invoke methods defined on the superclass from the subclass. The super keyword is useful for reusing behavior and functionality from the superclass in the subclass. It allows you to call the constructor, methods, and properties of the superclass from the subclass.
+
+  // Super keyword - Examples:
+
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+
+    speak() {
+      console.log(`${this.name} makes a sound`);
+    }
+  } 
+
+  class Dog extends Animal {
+    constructor(name, breed) {
+      super(name);
+      this.breed = breed;
+    }
+
+    speak() {
+      super.speak();
+      console.log(`${this.name} barks`);
+    }
+  }
+
+  const dog3 = new Dog("Buddy", "Golden Retriever");
+
+  dog3.speak(); // "Buddy makes a sound" "Buddy barks"
+
+  // Real cases of use:
+
+  // Super keyword - Extending built-in classes in JavaScript:
+
+  class CustomArray extends Array {
+    constructor(...args) {
+      super(...args);
+    }
+
+    unique() {
+      return [...new Set(this)];
+    }
+  }
+
+  const numbers = new CustomArray(1, 2, 3, 1, 2, 3);
+
+  console.log(numbers.unique()); // [1, 2, 3]
 
 }
