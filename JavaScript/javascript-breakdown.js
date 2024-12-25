@@ -3423,4 +3423,72 @@ const title = "JavaScript Breakdown";
 
   console.log(numbers.unique()); // [1, 2, 3]
 
+  // 4. Instance methods: Instance methods in JavaScript are methods that are defined on the prototype of a class and are accessible on instances of the class. They provide behavior and functionality that can be shared across multiple instances of the class. Instance methods are used to define actions and operations that can be performed on individual objects created from the class.
+
+  // Instance methods examples:
+
+  // Example 1: Basic Class with Instance Methods
+  class Car {
+    constructor(make, model, year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+    }
+
+    // Instance method
+    startEngine() {
+      return `${this.make} ${this.model}'s engine has started.`;
+    }
+
+    // Instance method
+    displayDetails() {
+      return `Car: ${this.make} ${this.model}, Year: ${this.year}`;
+    }
+  }
+
+  // Creating instances
+  const car1 = new Car("Toyota", "Corolla", 2020);
+  const car2 = new Car("Honda", "Civic", 2022);
+
+  // Using instance methods
+  console.log(car1.startEngine()); // Output: Toyota Corolla's engine has started.
+  console.log(car2.displayDetails()); // Output: Car: Honda Civic, Year: 2022
+
+
+  // Example 2: Advanced Instance Methods with Operations
+  class BankAccount {
+    constructor(owner, balance = 0) {
+      this.owner = owner;
+      this.balance = balance;
+    }
+
+    // Instance method: Deposit money
+    deposit(amount) {
+      if (amount <= 0) {
+        return "Deposit amount must be positive.";
+      }
+      this.balance += amount;
+      return `Deposited $${amount}. New balance: $${this.balance}.`;
+    }
+
+    // Instance method: Withdraw money
+    withdraw(amount) {
+      if (amount > this.balance) {
+        return "Insufficient funds.";
+      }
+      this.balance -= amount;
+      return `Withdrew $${amount}. Remaining balance: $${this.balance}.`;
+    }
+  }
+
+  // Creating an instance
+  const myAccount = new BankAccount("John Doe", 500);
+
+  // Using instance methods
+  console.log(myAccount.deposit(200)); // Output: Deposited $200. New balance: $700.
+  console.log(myAccount.withdraw(100)); // Output: Withdrew $100. Remaining balance: $600.
+
+
+
+
 }
