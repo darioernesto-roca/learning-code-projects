@@ -3488,7 +3488,60 @@ const title = "JavaScript Breakdown";
   console.log(myAccount.deposit(200)); // Output: Deposited $200. New balance: $700.
   console.log(myAccount.withdraw(100)); // Output: Withdrew $100. Remaining balance: $600.
 
+  // 5. Instance variables: Instance variables in JavaScript are properties that are defined on individual instances of a class. They store data specific to each instance and are accessible through the this keyword within instance methods. Instance variables are used to store state and data associated with individual objects created from the class. They provide a way to encapsulate data within objects and maintain separate state for each instance.
 
+  // Instance variables - Examples:
 
+  class Counter {
+    constructor() {
+      this.count = 0;
+    }
+
+    increment() {
+      this.count++;
+    }
+
+    decrement() {
+      this.count--;
+    }
+
+    getCount() {
+      return this.count;
+    }
+  }
+
+  const counter = new Counter();
+
+  counter.increment();
+
+  console.log(counter.getCount()); // 1
+
+  counter.decrement();
+
+  console.log(counter.getCount()); // 0
+
+  // Real cases of use:
+
+  // Instance variables - Tracking user interactions in a web application:
+
+  class UserActivity {
+    constructor() {
+      this.actions = [];
+    }
+
+    logAction(action) {
+      this.actions.push(action);
+    }
+
+    getActions() {
+      return this.actions;
+    }
+  }
+
+  const userActivity = new UserActivity();
+
+  userActivity.logAction("Clicked on button");
+
+  console.log(userActivity.getActions()); // ["Clicked on button"]
 
 }
