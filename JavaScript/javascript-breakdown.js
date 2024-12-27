@@ -3544,4 +3544,80 @@ const title = "JavaScript Breakdown";
 
   console.log(userActivity.getActions()); // ["Clicked on button"]
 
+  // 6. Setters: In JavaScript, setters are special methods within classes that allow you to define logic for setting a value to a property. They are part of the getter/setter concept, enabling controlled access to an object's properties. When you assign a value to a property, the setter method for that property is automatically called instead of directly changing the property.
+
+  // Key Features of Setters:
+    // Encapsulation: They allow you to control how values are assigned to object properties.
+    // Validation: You can add logic to validate or manipulate the data before assigning it to a property.
+    // Syntax: Setters are defined using the set keyword.
+
+  // Setters - Examples:
+
+  class BankAccount {
+    constructor(owner, initialBalance) {
+      this.owner = owner;
+      this._balance = initialBalance; // Use an internal property for encapsulation
+    }
+  
+    // Getter for balance
+    get balance() {
+      return this._balance;
+    }
+  
+    // Setter for balance
+    set balance(amount) {
+      if (amount < 0) {
+        console.error("Error: Balance cannot be negative.");
+      } else {
+        this._balance = amount;
+      }
+    }
+  
+    // Deposit method
+    deposit(amount) {
+      if (amount > 0) {
+        this.balance = this._balance + amount; // Use setter
+        console.log(`Deposited: $${amount}`);
+      } else {
+        console.error("Deposit amount must be positive.");
+      }
+    }
+  
+    // Withdraw method
+    withdraw(amount) {
+      if (amount > this._balance) {
+        console.error("Insufficient funds.");
+      } else if (amount > 0) {
+        this.balance = this._balance - amount; // Use setter
+        console.log(`Withdrew: $${amount}`);
+      } else {
+        console.error("Withdrawal amount must be positive.");
+      }
+    }
+  }
+  
+  // Example Usage
+  const account = new BankAccount("Alice", 1000);
+  
+  console.log(`Initial Balance: $${account.balance}`); // Getter used
+  
+  account.deposit(500); // Adds $500 to balance
+  console.log(`Updated Balance: $${account.balance}`);
+  
+  account.withdraw(300); // Deducts $300 from balance
+  console.log(`Updated Balance: $${account.balance}`);
+  
+  account.balance = -100; // Setter blocks this, shows error
+  console.log(`Final Balance: $${account.balance}`);
+
+  // Output:
+  // Initial Balance: $1000
+  // Deposited: $500
+  // Updated Balance: $1500
+  // Withdrew: $300
+  // Updated Balance: $1200
+  // Error: Balance cannot be negative.
+  // Final Balance: $1200
+
+
 }
