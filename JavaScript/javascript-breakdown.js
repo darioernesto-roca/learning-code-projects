@@ -3619,5 +3619,19 @@ const title = "JavaScript Breakdown";
   // Error: Balance cannot be negative.
   // Final Balance: $1200
 
+  // 7. Static Methods: In JavaScript, static methods are methods defined on the class itself rather than on instances of the class. They are used for functionality that doesn't depend on an individual instance of the class and can be called directly on the class without creating an object.
 
+    // Syntax: Static methods are defined using the static keyword:
+    class MyClass {
+      static myStaticMethod() {
+          return "I am a static method!";
+        }
+    }
+
+    // You call them directly on the class:
+    console.log(MyClass.myStaticMethod()); // Output: I am a static method!
+
+    // Static methods cannot be called on instances of the class.
+    // They are typically used for utility or helper functions, factory methods, or to define application-wide constants.
+    
 }
