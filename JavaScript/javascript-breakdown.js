@@ -4,6 +4,8 @@ const { log } = require("console");
 
 const title = "JavaScript Breakdown";
 
+console.log(title);
+
 /* 1. Variables */
 {
   // var (legacy)
@@ -51,6 +53,62 @@ const title = "JavaScript Breakdown";
   let lastNameFermina = null;
   let result = lastNameFermina ?? "Daza";
   console.log(result); // Daza
+}
+
+/* 1.2. Primitive Types */
+
+{
+  // 1.2.1 .String: String is a primitive type that holds a sequence of characters. String in Javascript is written within a pair of single quotation marks '', double quotation marks "", or backticks `` (template literals). All types of quotes can be used to contain a string but only if the starting quote is the same as the end quote.
+
+  const backticksString = "backticks"
+
+  const stringExample = "This is a string";
+  const stringExampleTwo = 'This is another string';
+  const stringExampleThree = `This is a string with ${backticksString}`;
+  const stringExampleFour = 'This is ' + 'a concatenated string';
+
+  console.log(stringExample) // This is a string
+  console.log(stringExampleTwo) // This is another string
+  console.log(stringExampleThree) // This is a string with backticks
+  console.log(stringExampleFour) // This is a concatenated string
+
+  // 1.2.2. Undefined: Whenever a variable is declared but not initialized or assigned a value, then it is stored as undefined. A function returns undefined if a value was not returned. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value.
+
+  // 1.2.3. Number: The Number data type in JavaScript represents floating-point numbers, such as 37 or -9.25. The Number constructor provides constants and methods to work with numbers, and values of other types can be converted to numbers using the Number() function.
+
+  // 1.2.4. Bigint: BigInt is a built-in JavaScript object that allows you to work with integers of arbitrary size. Unlike the Number type, which can accurately represent integers only within the range of ±2^53 , BigInt can handle integers far beyond this limit. This makes it particularly useful for applications requiring high precision with very large numbers, such as cryptography or scientific computations.
+
+    // Bigint examples:
+
+    const previouslyMaxSafeInteger = 9007199254740991n;
+
+    const alsoHuge = BigInt(9007199254740991);
+    // 9007199254740991n
+
+    const hugeString = BigInt("9007199254740991");
+    // 9007199254740991n
+
+    const hugeHex = BigInt("0x1fffffffffffff");
+    // 9007199254740991n
+
+    const hugeOctal = BigInt("0o377777777777777777");
+    // 9007199254740991n
+
+    const hugeBin = BigInt(
+      "0b11111111111111111111111111111111111111111111111111111",
+    );
+    // 9007199254740991n
+
+    // When tested against typeof, a BigInt value (bigint primitive) will give "bigint":
+
+    typeof 1n === "bigint"; // true
+    typeof BigInt("1") === "bigint"; // true
+
+    // A BigInt value can also be wrapped in an Object:
+
+    typeof Object(1n) === "object"; // true
+
+  
 }
 
 /* 2. DOM */
