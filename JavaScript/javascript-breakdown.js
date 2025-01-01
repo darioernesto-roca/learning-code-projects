@@ -2530,6 +2530,42 @@ console.log(title);
   console.log(textAt.at(0)); // "H"
   console.log(textAt.at(7)); // "E"
   console.log(textAt.at(13)); // "!"
+
+  // 18. Null: The null value in JavaScript signifies the deliberate absence of any object value. It is considered as one of JavaScript’s primitive values and a falsy value. Deliberate absence emphasises the intentional use of null to indicate that a variable does not point to any object. This explicit declaration conveys the purposeful nature of null, showing that the variable is meant to be empty or non-existent at execution time. In essence, null is a way to reset a variable, signalling that it should not reference any object.
+
+  // Null examples:
+
+    // Initializing a Variable to Indicate No Value. Why null? It explicitly communicates that the variable is intentionally empty, not undefined by accident.
+
+    let selectedCountry = null;
+
+    // Later in the code
+    if (selectedCountry === null) {
+        console.log("No country selected yet.");
+    }
+
+    // Resetting a Variable. Why null? It signifies the deliberate removal of the object data, indicating that there’s no active session.
+
+    let userSession = {
+        id: 123,
+        name: "John Doe"
+    };
+
+    // When the user logs out
+    userSession = null;
+
+    console.log(userSession); // Output: null
+
+    // Representing Missing Data. Why null? It clarifies that the middle name is intentionally left blank, rather than being undefined due to an error.
+
+    let user = {
+        firstName: "Alice",
+        middleName: null, // Middle name is not provided
+        lastName: "Smith"
+    };
+    
+    console.log(user.middleName); // Output: null
+    
 }
 
 /* 11. Syntax */
