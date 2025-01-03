@@ -3743,7 +3743,30 @@ console.log(title);
     
 }
 
-/* 14. JS Frameworks */
+/* 14. Type Casting */
+/* Type conversion (or typecasting) means the transfer of data from one data type to another. Implicit conversion happens when the compiler (for compiled languages) or runtime (for script languages like JavaScript) automatically converts data types. The source code can also explicitly require a conversion to take place. */
+
+{
+  // 1. Implicit Type Conversion: Implicit type conversion, also known as coercion, is an automatic type conversion by the compiler. It is performed when data types are mixed in expressions. For example, in JavaScript, the addition operator (+) can concatenate strings and add numbers. When a string and a number are added, the string is converted to a number.
+
+  // Implicit Type Conversion - Examples:
+
+  // Example 1: String and Number
+  const num = 10;
+  const str = "20";
+
+  console.log(num + str); // Output: "1020"
+
+  // Example 2: Boolean and Number
+
+  const bool = true;
+  const num2 = 10;
+
+  console.log(bool + num2); // Output: 11
+}
+
+
+/* 15. JS Frameworks */
 
 {
   // 1. React: 
