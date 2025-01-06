@@ -3763,6 +3763,25 @@ console.log(title);
   const num2 = 10;
 
   console.log(bool + num2); // Output: 11
+
+  // 2. Type Conversion/Coercion: Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). Type conversion is similar to type coercion because they convert values from one data type to another with one key difference — type coercion is implicit. In contrast, type conversion can be either implicit or explicit.
+
+  // Type Conversion/Coercion - Examples:
+
+  // Example 1: String to Number
+
+  const strToNum = "10";
+  const numFromString = Number(strToNum);
+
+  console.log(numFromString); // Output: 10
+
+  // Example 2: Number to String
+
+  const numToStr = 10;
+  const strFromNumber = String(numToStr);
+
+  console.log(strFromNumber); // Output: "10"
+
 }
 
 
