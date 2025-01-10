@@ -3825,6 +3825,19 @@ console.log(title);
 }
 
 
+/* Data Structures */
+/* A Data structure is a format to organize, manage and store data in a way that allows efficient access and modification. JavaScript has primitive (built-in) and non-primitive (not built-in) data structures. Primitive data structures come by default with the programming language and you can implement them out of the box (like arrays and objects). Non-primitive data structures don’t come by default and you have to code them up if you want to use them. */
+
+{
+  // 1. Arrays: Arrays in JavaScript are used to store multiple values in a single variable. They are a type of data structure that allows you to store and access elements by index. Arrays can contain elements of different data types, such as numbers, strings, objects, or even other arrays. They are useful for storing collections of related data, such as a list of items, user information, or product details.
+
+  // Arrays - Examples:
+
+  // Example 1: Creating an Array
+
+  const numbersArray = [1, 2, 3, 4, 5];
+}
+
 /* 15. JS Frameworks */
 
 {
