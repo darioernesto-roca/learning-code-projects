@@ -3829,13 +3829,103 @@ console.log(title);
 /* A Data structure is a format to organize, manage and store data in a way that allows efficient access and modification. JavaScript has primitive (built-in) and non-primitive (not built-in) data structures. Primitive data structures come by default with the programming language and you can implement them out of the box (like arrays and objects). Non-primitive data structures don’t come by default and you have to code them up if you want to use them. */
 
 {
-  // 1. Arrays: Arrays in JavaScript are used to store multiple values in a single variable. They are a type of data structure that allows you to store and access elements by index. Arrays can contain elements of different data types, such as numbers, strings, objects, or even other arrays. They are useful for storing collections of related data, such as a list of items, user information, or product details.
+  // 1. Stack Data Structure: A stack is a linear data structure that follows the Last In First Out (LIFO) principle. In a stack, elements are added and removed from the same end, known as the top of the stack. The last element added to the stack is the first one to be removed. Stacks are used in programming for function calls, expression evaluation, and undo mechanisms.
 
-  // Arrays - Examples:
+  // Stack Data Structure - Examples:
 
-  // Example 1: Creating an Array
+  class Stack {
+    constructor() {
+      this.items = [];
+    }
 
-  const numbersArray = [1, 2, 3, 4, 5];
+    push(element) {
+      this.items.push(element);
+    }
+
+    pop() {
+      if (this.items.length === 0) {
+        return "Underflow";
+      }
+      return this.items.pop();
+    }
+
+    peek() {
+      return this.items[this.items.length - 1];
+    }
+
+    isEmpty() {
+      return this.items.length === 0;
+    }
+
+    printStack() {
+      let str = "";
+      for (let i = 0; i < this.items.length; i++) {
+        str += this.items[i] + " ";
+      }
+      return str;
+    }
+  }
+
+  const stack = new Stack();
+
+  console.log(stack.isEmpty()); // true
+
+  stack.push(10);
+
+  console.log(stack.printStack()); // 10
+
+  stack.push(20);
+
+  console.log(stack.printStack()); // 10 20
+
+  stack.push(30);
+
+  console.log(stack.printStack()); // 10 20 30
+
+  console.log(stack.peek()); // 30
+
+  console.log(stack.pop()); // 30
+
+  console.log(stack.printStack()); // 10 20
+
+  // Real cases of use:
+
+  // Stack Data Structure - Implementing a browser history feature:
+
+  class BrowserHistory {
+    constructor() {
+      this.history = new Stack();
+    }
+
+    visit(url) {
+      this.history.push(url);
+    }
+
+    goBack() {
+      return this.history.pop();
+    }
+
+    getCurrentPage() {
+      return this.history.peek();
+    }
+  }
+
+  const browser = new BrowserHistory();
+
+  browser.visit("https://www.google.com");
+
+  browser.visit("https://www.facebook.com");
+
+  console.log(browser.getCurrentPage()); // "https://www.facebook.com"
+
+  browser.visit("https://www.twitter.com");
+
+  console.log(browser.getCurrentPage()); // "https://www.twitter.com"
+
+  console.log(browser.goBack()); // "https://www.facebook.com"
+
+  console.log(browser.getCurrentPage()); // "https://www.facebook.com"
+
 }
 
 /* 15. JS Frameworks */
