@@ -3926,6 +3926,103 @@ console.log(title);
 
   console.log(browser.getCurrentPage()); // "https://www.facebook.com"
 
+  // 2. Queue Data Structure: A queue is a linear data structure that follows the First In First Out (FIFO) principle. In a queue, elements are added at the rear end and removed from the front end. The first element added to the queue is the first one to be removed. Queues are used in programming for task scheduling, breadth-first search, and printer queues.
+
+  // Queue Data Structure - Examples:
+
+  class Queue {
+    constructor() {
+      this.items = [];
+    }
+
+    enqueue(element) {
+      this.items.push(element);
+    }
+
+    dequeue() {
+      if (this.items.length === 0) {
+        return "Underflow";
+      }
+      return this.items.shift();
+    }
+
+    front() {
+      if (this.items.length === 0) {
+        return "No elements in Queue";
+      }
+      return this.items[0];
+    }
+
+    isEmpty() {
+      return this.items.length === 0;
+    }
+
+    printQueue() {
+      let str = "";
+      for (let i = 0; i < this.items.length; i++) {
+        str += this.items[i] + " ";
+      }
+      return str;
+    }
+  }
+
+  const queue = new Queue();
+
+  console.log(queue.isEmpty()); // true
+
+  queue.enqueue(10);
+
+  console.log(queue.printQueue()); // 10
+
+  queue.enqueue(20);
+
+  console.log(queue.printQueue()); // 10 20
+
+  queue.enqueue(30);
+
+  console.log(queue.printQueue()); // 10 20 30
+
+  console.log(queue.front()); // 10
+
+  console.log(queue.dequeue()); // 10
+
+  console.log(queue.printQueue()); // 20 30
+
+  // Real cases of use:
+
+  // Queue Data Structure - Implementing a task scheduler in a web application:
+
+  class TaskScheduler {
+    constructor() {
+      this.queue = new Queue();
+    }
+
+    addTask(task) {
+      this.queue.enqueue(task);
+    }
+
+    processTasks() {
+      while (!this.queue.isEmpty()) {
+        const task = this.queue.dequeue();
+        console.log(`Processing task: ${task}`);
+      }
+    }
+  }
+
+  const scheduler = new TaskScheduler();
+
+  scheduler.addTask("Task 1");
+  scheduler.addTask("Task 2");
+  scheduler.addTask("Task 3");
+
+  scheduler.processTasks();
+
+  // Output:
+
+  // Processing task: Task 1
+  // Processing task: Task 2
+  // Processing task: Task 3
+
 }
 
 /* 15. JS Frameworks */
