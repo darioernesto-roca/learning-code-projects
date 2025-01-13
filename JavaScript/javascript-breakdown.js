@@ -3825,7 +3825,7 @@ console.log(title);
 }
 
 
-/* Data Structures */
+/* 15 Data Structures */
 /* A Data structure is a format to organize, manage and store data in a way that allows efficient access and modification. JavaScript has primitive (built-in) and non-primitive (not built-in) data structures. Primitive data structures come by default with the programming language and you can implement them out of the box (like arrays and objects). Non-primitive data structures don’t come by default and you have to code them up if you want to use them. */
 
 {
@@ -4023,9 +4023,54 @@ console.log(title);
   // Processing task: Task 2
   // Processing task: Task 3
 
+  // 3. Recursion: Recursion is a programming technique where a function calls itself to solve a problem. It is a powerful concept that allows functions to break down complex problems into simpler subproblems. Recursion is commonly used in algorithms, data structures, and mathematical computations. In computer science, recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. Recursion solves such recursive problems by using functions that call themselves from within their own code. For example, we can define the operation "find your way home" as: If you are at home, stop moving. Take one step toward home. Recursively apply this operation until you are home.
+
+  // Recursion - Examples:
+
+  // Example 1: Factorial using Recursion
+
+  function factorial(n) {
+    if (n === 0) {
+      return 1;
+    }
+    return n * factorial(n - 1);
+  }
+
+  console.log(factorial(5)); // Output: 120
+
+  // Example 2: Fibonacci using Recursion
+
+  function fibonacci(n) {
+    if (n <= 1) {
+      return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+
+  console.log(fibonacci(6)); // Output: 8
+
+  // Real cases of use:
+
+  // Recursion - Traversing a directory structure in a file system:
+
+  function traverseDirectory(directory) {
+    const files = directory.getFiles();
+    files.forEach(file => {
+      if (file.isDirectory()) {
+        traverseDirectory(file);
+      } else {
+        console.log(file.getName());
+      }
+    });
+  }
+
+  const rootDirectory = new Directory("root");
+
+  traverseDirectory(rootDirectory);
+
 }
 
-/* 15. JS Frameworks */
+/* 16. JS Frameworks */
 
 {
   // 1. React: 
