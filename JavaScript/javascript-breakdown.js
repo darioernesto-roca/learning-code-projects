@@ -4068,6 +4068,188 @@ console.log(title);
 
   traverseDirectory(rootDirectory);
 
+  // 4. Binary Tree Algorithms for Technical Interviews: Binary trees are a fundamental data structure in computer science used to represent hierarchical relationships between elements. They consist of nodes, each with a value and two child nodes (left and right). Binary trees are commonly used in algorithms and data structures, such as binary search trees, binary heaps, and expression trees. Understanding binary trees and their algorithms is essential for technical interviews in software engineering and computer science.
+
+  // Binary Tree Algorithms for Technical Interviews - Examples:
+
+  // Example 1: Binary Search Tree (BST) Implementation
+
+  class Node {
+    constructor(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+  }
+
+  class BinarySearchTree {
+    constructor() {
+      this.root = null;
+    }
+
+    insert(value) {
+      const newNode = new Node(value);
+
+      if (this.root === null) {
+        this.root = newNode;
+      } else {
+        this.insertNode(this.root, newNode);
+      }
+    }
+
+    insertNode(node, newNode) {
+      if (newNode.value < node.value) {
+        if (node.left === null) {
+          node.left = newNode;
+        } else {
+          this.insertNode(node.left, newNode);
+        }
+      } else {
+        if (node.right === null) {
+          node.right = newNode;
+        } else {
+          this.insertNode(node.right, newNode);
+        }
+      }
+    }
+
+    search(value) {
+      return this.searchNode(this.root, value);
+    }
+
+    searchNode(node, value) {
+      if (node === null) {
+        return false;
+      }
+
+      if (value < node.value) {
+        return this.searchNode(node.left, value);
+      } else if (value > node.value) {
+        return this.searchNode(node.right, value);
+      } else {
+        return true;
+      }
+    }
+  }
+
+  const bst = new BinarySearchTree();
+
+  bst.insert(10);
+  bst.insert(5);
+  bst.insert(15);
+  bst.insert(3);
+  bst.insert(7);
+
+  console.log(bst.search(7)); // Output: true
+
+  console.log(bst.search(20)); // Output: false
+
+  // Example 2: Depth-First Search (DFS) Algorithm
+
+  class NodeDFS {
+    constructor(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+  }
+
+  class BinaryTreeDFS {
+    constructor() {
+      this.root = null;
+    }
+
+    dfsInOrder() {
+      const result = [];
+
+      function traverse(node) {
+        if (node.left) traverse(node.left);
+        result.push(node.value);
+        if (node.right) traverse(node.right);
+      }
+
+      traverse(this.root);
+
+      return result;
+    }
+  }
+
+  const btdfs = new BinaryTreeDFS();
+
+  btdfs.root = new NodeDFS(10);
+  btdfs.root.left = new NodeDFS(5);
+  btdfs.root.right = new NodeDFS(15);
+  btdfs.root.left.left = new NodeDFS(3);
+  btdfs.root.left.right = new NodeDFS(7);
+
+  console.log(btdfs.dfsInOrder()); // Output: [3, 5, 7, 10, 15]
+
+  // Real cases of use:
+
+  // Binary Tree Algorithms for Technical Interviews - Implementing a binary search tree in a search algorithm:
+
+  class BinarySearchTreeSearch {
+    constructor() {
+      this.root = null;
+    }
+
+    insert(value) {
+      const newNode = new Node(value);
+
+      if (this.root === null) {
+        this.root = newNode;
+      } else {
+        this.insertNode(this.root, newNode);
+      }
+    }
+
+    insertNode(node, newNode) {
+      if (newNode.value < node.value) {
+        if (node.left === null) {
+          node.left = newNode;
+        } else {
+          this.insertNode(node.left, newNode);
+        }
+      } else {
+        if (node.right === null) {
+          node.right = newNode;
+        } else {
+          this.insertNode(node.right, newNode);
+        }
+      }
+    }
+
+    search(value) {
+      return this.searchNode(this.root, value);
+    }
+
+    searchNode(node, value) {
+      if (node === null) {
+        return false;
+      }
+
+      if (value < node.value) {
+        return this.searchNode(node.left, value);
+      } else if (value > node.value) {
+        return this.searchNode(node.right, value);
+      } else {
+        return true;
+      }
+    }
+  }
+
+  const bstSearch = new BinarySearchTreeSearch();
+
+  bstSearch.insert(10);
+  bstSearch.insert(5);
+  bstSearch.insert(15);
+  bstSearch.insert(3);
+  bstSearch.insert(7);
+
+  console.log(bstSearch.search(7)); // true
+
+
+
 }
 
 /* 16. JS Frameworks */
