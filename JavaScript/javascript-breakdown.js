@@ -4248,6 +4248,71 @@ console.log(title);
 
   console.log(bstSearch.search(7)); // true
 
+  // 5. Graph Algorithms for Technical Interviews: Graphs are a fundamental data structure in computer science used to represent relationships between elements. They consist of nodes (vertices) connected by edges (links). Graphs are commonly used in algorithms and data structures, such as depth-first search, breadth-first search, and shortest path algorithms. Understanding graphs and their algorithms is essential for technical interviews in software engineering and computer science.
+
+  // Graph Algorithms for Technical Interviews - Examples:
+
+  // Example 1: Depth-First Search (DFS) Algorithm
+
+  class GraphDFS {
+    constructor() {
+      this.adjacencyList = {};
+    }
+
+    addVertex(vertex) {
+      if (!this.adjacencyList[vertex]) {
+        this.adjacencyList[vertex] = [];
+      }
+    }
+
+    addEdge(vertex1, vertex2) {
+      this.adjacencyList[vertex1].push(vertex2);
+      this.adjacencyList[vertex2].push(vertex1);
+    }
+
+    dfs(startingVertex) {
+      const result = [];
+      const visited = {};
+
+      const dfsHelper = vertex => {
+        if (!vertex) {
+          return null;
+        }
+
+        visited[vertex] = true;
+        result.push(vertex);
+
+        this.adjacencyList[vertex].forEach(neighbor => {
+          if (!visited[neighbor]) {
+            return dfsHelper(neighbor);
+          }
+        });
+      };
+
+      dfsHelper(startingVertex);
+
+      return result;
+    }
+  }
+
+  const graphDFS = new GraphDFS();
+
+  graphDFS.addVertex("A");
+  graphDFS.addVertex("B");
+  graphDFS.addVertex("C");
+  graphDFS.addVertex("D");
+  graphDFS.addVertex("E");
+  graphDFS.addVertex("F");
+
+  graphDFS.addEdge("A", "B");
+  graphDFS.addEdge("A", "C");
+  graphDFS.addEdge("B", "D");
+  graphDFS.addEdge("C", "E");
+  graphDFS.addEdge("D", "E");
+  graphDFS.addEdge("D", "F");
+  graphDFS.addEdge("E", "F");
+
+  console.log(graphDFS.dfs("A")); // Output: ["A", "B", "D", "E", "C", "F"]
 
 
 }
