@@ -4314,6 +4314,72 @@ console.log(title);
 
   console.log(graphDFS.dfs("A")); // Output: ["A", "B", "D", "E", "C", "F"]
 
+    // 6. Dynamic Programming: Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems. It is a powerful technique used in algorithms and computer science to optimize the time and space complexity of solutions. Dynamic programming is commonly used in problems that involve overlapping subproblems and optimal substructure. It is essential for technical interviews in software engineering and computer science.
+
+    // Dynamic Programming - Examples:
+
+    // Example 1: Fibonacci using Dynamic Programming
+
+    function fibonacciDP(n) {
+      const fib = [0, 1];
+
+      for (let i = 2; i <= n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+      }
+
+      return fib[n];
+    }
+
+    console.log(fibonacciDP(6)); // Output: 8
+    console.log(fibonacciDP(50)); // Output: 12586269025
+
+    // Example 2: Longest Common Subsequence (LCS) using Dynamic Programming
+
+    function lcsDP(str1, str2) {
+      const m = str1.length;
+      const n = str2.length;
+      const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+
+      for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+          if (str1[i - 1] === str2[j - 1]) {
+            dp[i][j] = dp[i - 1][j - 1] + 1;
+          } else {
+            dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+          }
+        }
+      }
+
+      return dp[m][n];
+    }
+
+    console.log(lcsDP("AGGTAB", "GXTXAYB")); // Output: 4
+
+    // Real cases of use:
+
+    // Dynamic Programming - Solving the knapsack problem in a shopping application:
+
+    function knapsackDP(capacity, weights, values, n) {
+      const dp = Array.from({ length: n + 1 }, () => Array(capacity + 1).fill(0));
+
+      for (let i = 1; i <= n; i++) {
+        for (let w = 1; w <= capacity; w++) {
+          if (weights[i - 1] <= w) {
+            dp[i][w] = Math.max(values[i - 1] + dp[i - 1][w - weights[i - 1]], dp[i - 1][w]);
+          } else {
+            dp[i][w] = dp[i - 1][w];
+          }
+        }
+      }
+
+      return dp[n][capacity];
+    }
+
+    const capacity = 50;
+    const weights = [10, 20, 30];
+    const values = [60, 100, 120];
+
+    console.log(knapsackDP(capacity, weights, values, weights.length)); // Output: 220
 
 }
 
