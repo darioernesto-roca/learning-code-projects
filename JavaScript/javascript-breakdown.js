@@ -1846,7 +1846,7 @@ console.log(title);
   }
 
 
-  // Object shorthand: Object shorthand in JavaScript is a concise way to create objects by using variable names as property names. It allows you to define object properties with the same name as the variables used to assign their values. Object shorthand is useful for reducing redundancy and improving code readability when creating objects.
+  // 11. Object shorthand: Object shorthand in JavaScript is a concise way to create objects by using variable names as property names. It allows you to define object properties with the same name as the variables used to assign their values. Object shorthand is useful for reducing redundancy and improving code readability when creating objects.
 
   // Object shorthand - Examples:
 
@@ -1868,7 +1868,7 @@ console.log(title);
   const user = { firstName, lastName };
   console.log(user); // { firstName: "Alice", lastName: "Smith" }
 
-  // Property access: Property access in JavaScript refers to accessing and modifying object properties using dot notation (.) or bracket notation ([]). It allows you to read, write, and delete object properties dynamically based on their names. Property access is a fundamental concept in JavaScript and is used extensively when working with objects.
+  // 12. Property access: Property access in JavaScript refers to accessing and modifying object properties using dot notation (.) or bracket notation ([]). It allows you to read, write, and delete object properties dynamically based on their names. Property access is a fundamental concept in JavaScript and is used extensively when working with objects.
 
   // Property access - Examples:
 
@@ -1901,6 +1901,65 @@ console.log(title);
   personDynamicWrite[keyAccess] = valueAccess;
 
   console.log(personDynamicWrite); // { name: "Alice" }
+
+  // 13. Set: The Set object in JavaScript is a collection of unique values. It is similar to an array, but with some key differences. Sets are used to store distinct values of any type, whether primitive values or object references. The Set object provides methods for adding, removing, and checking the presence of elements in the set. Sets are commonly used in algorithms and data structures to store unique values and perform set operations.
+
+  // Set - Examples:
+
+  // Set - Creating a new set
+
+  const colorsSet = new Set();
+
+  // Adding elements to the set
+
+  colorsSet.add("red");
+  colorsSet.add("green");
+  colorsSet.add("blue");
+
+  console.log(colorsSet); // Set { "red", "green", "blue" }
+
+  // Checking the size of the set
+
+  console.log(colorsSet.size); // 3
+
+  // Checking if an element is in the set
+
+  console.log(colorsSet.has("red")); // true
+
+  // Removing an element from the set
+
+  colorsSet.delete("green");
+
+  console.log(colorsSet); // Set { "red", "blue" }
+
+  // Real cases of use:
+
+  // Set - Removing duplicate values from an array:
+
+  const numbersSet = [1, 2, 3, 1, 2, 3, 4, 5];
+
+  const uniqueNumbers = new Set(numbersSet);
+
+  console.log([...uniqueNumbers]); // [1, 2, 3, 4, 5]
+
+  // Set - Checking for unique values in user input:
+
+  const userInput = ["red", "green", "blue", "red", "yellow"];
+
+  const uniqueInput = new Set(userInput);
+
+  console.log([...uniqueInput]); // ["red", "green", "blue", "yellow"]
+
+  // Set - Performing set operations like union, intersection, and difference:
+
+  const setA = new Set([1, 2, 3]);
+  const setB = new Set([2, 3, 4]);
+
+  // Union
+
+  const unionSet = new Set([...setA, ...setB]);
+
+  console.log([...unionSet]); // [1, 2, 3, 4]
 
 }
 
@@ -2990,7 +3049,7 @@ console.log(title);
 
   console.log("Items:", formattedList);
 
-  // 10. .map(): The .map() method in JavaScript is used to create a new array by applying a specified function to each element in an existing array. It takes a callback function as an argument, which is called for each element in the array. The .map() method returns a new array containing the results of applying the callback function to each element. It is useful for transforming, modifying, or extracting values from an array. The difference between .map() and .forEach() is that .map() returns a new array with the transformed elements, while .forEach() does not return a new array. In general is recommend to use .map() when you want to transform the elements of an array and create a new array with the transformed values.
+  // 10. .map(): The .map() method in JavaScript is used to create a new array by applying a specified function to each element in an existing array. It takes a callback function as an argument, which is called for each element in the array. The .map() method returns a new array containing the results of applying the callback function to each element. It is useful for transforming, modifying, or extracting values from an array. The difference between .map() and .forEach() is that .map() returns a new array with the transformed elements, while .forEach() does not return a new array. In general is recommend to use .map() when you want to transform the elements of an array and create a new array with the transformed values. .map() is a type of keyed collection, where each element is associated with a key or index.
 
   // .map() - Examples:
 
@@ -4382,6 +4441,7 @@ console.log(title);
     console.log(knapsackDP(capacity, weights, values, weights.length)); // Output: 220
 
 }
+
 
 /* 16. JS Frameworks */
 
